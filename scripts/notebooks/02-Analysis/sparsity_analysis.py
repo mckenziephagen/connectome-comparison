@@ -6,25 +6,18 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.15.2
+#       jupytext_version: 1.16.4
 #   kernelspec:
 #     display_name: FC
 #     language: python
 #     name: fc
 # ---
 
-# To do:
-#
-# - finger print/ descriminability (see Noble et a., 2021?) 
-# - sparsify Pearson for modularity, in/out degree, etc - find common thresholds
-# - correlation with movement (see Mahadevan et al 2021)
-#     - pull text file from datalad, compile dataframe w/ qc metrics
-#     
-# - update github
-# - compare selection accuracy
-# - can we predict better? use code from LASSO project
-# - debug runtime of small world networkx calculation
-# - refactor code, make functions
+# Visualize and compare sparsities for different models. 
+
+import matplotlib
+
+import scipy
 
 # +
 import pickle
@@ -35,8 +28,7 @@ from glob import glob
 
 from nilearn import datasets, plotting
 
-from scipy import mean
-
+import scipy
 import numpy as np
 
 import pingouin as pg
@@ -50,13 +42,16 @@ import matplotlib.pyplot as plt
 import networkx as nx
 # -
 
-with open('results/2023-11-07_lasso_dict.pkl', 'rb') as f:
+date_string='2023-11-07'
+
+
+with open(f'../../results/{date_string}_lasso_dict.pkl', 'rb') as f:
         lasso_dict = pickle.load(f)
 
-with open('results/2023-11-07_uoi_dict.pkl', 'rb') as f:
+with open(f'../../results/{date_string}_uoi_dict.pkl', 'rb') as f:
         uoi_dict = pickle.load(f)
 
-with open('results/2023-11-07_pearson_dict.pkl', 'rb') as f:
+with open('../../results/2023-11-07_pearson_dict.pkl', 'rb') as f:
         pearson_dict = pickle.load(f)
 
 len(lasso_dict)
@@ -100,103 +95,192 @@ ax2.set_ylim(0,500)
 ax2.legend()
 f.set_figwidth(15)
 #the log scale looked weird
+plt.savefig('zeros.png')
 # -
 
-# As expected, the lasso matrix is MUCH sparser than the Pearson matrix, and still sparse compared to Lasso. The LASSO edges between 0-.1 are likely false positives.
-#
-# @Kris: is there someway to validate that they're false pos, aside from pointing to simulation data? 
-
-lasso_list = []
-pearson_list = []
-uoi_list = []
-
-for outer in pearson_dict.keys():
-    for inner in pearson_dict[outer].keys():
-        [pearson_list.extend(i) for i in pearson_dict[outer][inner]]
-
-for outer in lasso_dict.keys():
-    for inner in lasso_dict[outer].keys():
-        [lasso_list.extend(i) for i in lasso_dict[outer][inner]]
-
-for outer in uoi_dict.keys():
-    for inner in uoi_dict[outer].keys():
-        [uoi_list.extend(i) for i in uoi_dict[outer][inner]]
+# As expected, the lasso matrix is MUCH sparser than the Pearson matrix, and still sparse compared to Lasso. The LASSO edges between 0-.1 are likely false positives according to simulations in one of Kris's papers.
 
 # +
-_, axes = plt.subplots(1, 3, figsize=(15, 5))
+f, (ax1, ax2) = plt.subplots(1, 2, sharey=False, width_ratios=[1, 3], layout='compressed')
+ax1.xaxis.set_tick_params(labelsize=14)
+ax1.yaxis.set_tick_params(labelsize=14)
 
-n_rois=100
-yeo_networks=7
-resolution_mm=1
-schaefer = datasets.fetch_atlas_schaefer_2018(n_rois,yeo_networks,resolution_mm)
+ax1.hist(uoi_median_list, 
+         np.linspace(-.2, 1, 100), 
+         alpha=.5, 
+        label='UofI', color='#00313C')
 
-plotting.plot_matrix(
-    np.arctanh(pearson_dict['sub-793465']['ses-1_run-1']),
-    axes=axes.flatten()[0], 
-    vmax=0.8,
-    vmin=-0.8,
-    auto_fit=True)
+ax1.hist(lasso_median_list, 
+         np.linspace(-.2, 1, 100),
+         alpha=.5, 
+        label='LASSO', color='#007681')
+ax1.hist(pearson_median_list,
+        np.linspace(-.2, 1, 100), 
+        alpha=.5, 
+        label='Pearson', color='#B1B3B3')
 
-plotting.plot_matrix(
-    lasso_dict['sub-793465']['ses-1_run-1'],
-    axes=axes.flatten()[1], 
-    vmax=0.4,
-    vmin=-0.4)
+ax1.axes.set_ylabel('Number of Edges', fontsize=14)
 
-plotting.plot_matrix(
-    uoi_dict['sub-793465']['ses-1_run-1'],
-    axes=axes.flatten()[2], 
-    vmax=0.4,
-    vmin=-0.4)
+ax2.hist(lasso_median_list, 
+         np.linspace(-.2, 1, 100),
+         alpha=.3, 
+        label='LASSO', color='#007681')
+
+ax2.hist(uoi_median_list, 
+         np.linspace(-.2, 1, 100), 
+         alpha=.7, 
+        label='UofI', color='#00313C')
+# ax2.hist(pearson_median_list,
+#         np.linspace(-.2, 1, 100), 
+#         alpha=.4, 
+#         label='Pearson', color='#B1B3B3')
+
+ax2.xaxis.set_tick_params(labelsize=14)
+ax2.yaxis.set_tick_params(labelsize=14)
+ax2.set_ylim(0,400)
+ax2.set_xlim(-.2,.5)
+ax2.legend(prop={'size': 16})
+f.set_figwidth(10)
+plt.xlabel('Edge Weight', size=14) 
+ax2.axes.set_ylabel('Number of Edges', size=14) 
 
 
-# -
-
-plotting.plot_matrix(
-    lasso_dict['sub-204521']['ses-1_run-1']- uoi_dict['sub-204521']['ses-1_run-1'],
-    vmax=0.4,
-    vmin=-0.4)
-
-labels = [schaefer['labels'][i] if (i % 3) == 0 else " " for i in range(len(schaefer['labels']))]
+#plt.suptitle('Median Connectivity Values Across Individuals', size=20)
+plt.savefig('plots/sparsity_average_minus_pearson.png') 
 
 # +
-_, axes = plt.subplots(1, 3, figsize=(15, 15))
+cmap1 = plt.cm.RdPu
+cmap1.set_under('b',1)
 
-plotting.plot_matrix(
-    np.arctanh(pearson_dict['sub-680250']['ses-1_run-1']),
-    axes=axes.flatten()[0], 
-    vmax=0.8,
-    vmin=-0.8,
-    labels = labels,
-    auto_fit=True)
+cmap2 = plt.cm.Purples
+cmap2.set_under('b',1)
 
-plotting.plot_matrix(
-    lasso_dict['sub-680250']['ses-1_run-1'],
-    axes=axes.flatten()[1], 
-    vmax=0.4,
-    vmin=-0.4)
+h1 = plt.hist2d(pd.Series(lasso_mat.ravel()).dropna(),
+                pd.Series(uoi_mat.ravel()).dropna(),
+                bins=(100, 50), norm=matplotlib.colors.LogNorm(), 
+                cmap = cmap1)
 
-plotting.plot_matrix(
-    uoi_dict['sub-680250']['ses-1_run-1'],
-    axes=axes.flatten()[2], 
-    vmax=0.4,
-    vmin=-0.4)
+# h2 = plt.hist2d((pearson_dict['sub-793465']['ses-2_run-2'].ravel()), 
+#            uoi_dict['sub-793465']['ses-2_run-2'].ravel(), 
+#           bins=(50, 50), norm=matplotlib.colors.LogNorm(), 
+#               cmap = cmap2)
+plt.colorbar(h1[3])
 
+
+# +
+pearson_mat = np.zeros((100,100, 0))
+
+for participant in pearson_dict.keys():
+    for ses in pearson_dict[participant].keys():
+        temp_mat = pearson_dict[participant][ses]
+        np.fill_diagonal(temp_mat, np.nan)
+        pearson_mat = np.dstack((pearson_mat, temp_mat)  ) 
+
+# +
+lasso_mat = np.zeros((100,100, 0))
+
+for participant in lasso_dict.keys():
+    for ses in lasso_dict[participant].keys():
+        temp_mat = lasso_dict[participant][ses]
+        np.fill_diagonal(temp_mat, np.nan)
+        lasso_mat = np.dstack((lasso_mat, temp_mat)  ) 
+
+# +
+uoi_mat = np.zeros((100,100, 0))
+
+for participant in uoi_dict.keys():
+    for ses in uoi_dict[participant].keys():
+        temp_mat = uoi_dict[participant][ses]
+        np.fill_diagonal(temp_mat,np.nan)
+        uoi_mat = np.dstack((uoi_mat, temp_mat)  ) 
+# -
+uoi_median_list = np.median(uoi_mat, axis=2).ravel()
+lasso_median_list = np.median(lasso_mat, axis=2).ravel()
+pearson_median_list = np.median(np.arctanh(pearson_mat), axis=2).ravel()
+
+
+# +
+ax = plotting.plot_matrix(lasso_median_list.reshape(100,100) , 
+    vmax=.5,
+    vmin=-0.5, 
+    reorder=False) 
+
+#ax.set_xticklabels([])
+# plotting.plot_matrix(lasso_median_list.reshape(100,100) , 
+#     vmax=.5,
+#     vmin=-0.5, 
+#     reorder=False)
+plt.savefig('matrix.png') 
 # -
 
+plotting.plot_matrix((pearson_median_list.reshape(100,100)) , 
+    vmax=1,
+    vmin=-0.8, 
+    reorder=False,
+    labels=labels)
+
+labels = [(' ').join(str(schaefer['labels'][i]).split('_')[-3:-1])  if (i % 3) == 0 else " " for i in range(len(schaefer['labels']))]
+
+check_list = [] 
+
+for i in range(len(labels)): 
+ #   print(labels[i]) 
+    if labels[i] in check_list: 
+        labels[i] = ''
+    check_list.append(labels[i]) 
+
+# +
+f, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
+
 plotting.plot_matrix(
-     pearson_dict['sub-680250']['ses-1_run-1'],
-    vmax=0.8,
-    vmin=-0.8,
-    labels = labels,
-    auto_fit=True)
+    lasso_median_list.reshape(100,100),
+    axes=ax1, 
+    vmax=0.4,
+    vmin=-0.4,
+    labels=labels, 
+    colorbar=False)
+
+plotting.plot_matrix(
+    uoi_median_list.reshape(100,100),
+    axes=ax2, 
+    vmax=0.4,
+    vmin=-0.4,
+    colorbar=True)
+
+
+
+ax1.set_xticklabels([]) 
+ax1.set_title('LASSO') 
+ax2.set_title('Union of Intersections') 
+ax3.set_title('Pearson') 
+f.show()
+plt.savefig('model_medians.png')
+# -
+
 
 # This looks like noise left after subtracting out the lasso adjcaceny matrix - maybe the false pos? 
 
+np.max(pearson_median_list)
+
+# +
 plotting.plot_matrix(
-    uoi_dict['sub-680250']['ses-1_run-1'] -lasso_dict['sub-680250']['ses-1_run-1'],
+    pearson_median_list.reshape(100,100), 
+    vmax=.8,
+    vmin=-.8,
+    label=labels,
+    auto_fit=False)
+
+plt.title('Pearson') 
+plt.savefig('Pearson_median.png')
+# -
+
+plotting.plot_matrix(
+    uoi_median_list.reshape(100,100),
     vmax=0.4,
-    vmin=-0.4)
+    vmin=-0.4,
+    colorbar=False)
+
+
 
 # +
 # #standardizations? 
@@ -230,12 +314,6 @@ axes[2].set_ylabel('Lasso Edge Weights')
 axes[2].set_xlabel('Pearson Edge Weights')
 
 fig.suptitle('Comparison of Edge Weights by Method for Example Subject')
-# -
-
-
-
-# ### Networks: 
-
 # +
 lasso_edges_list = []
 lasso_ratio = []
@@ -262,6 +340,8 @@ for outer in pearson_dict.keys():
         
         pearson_ratio.append(sum(sum(pearson_dict[outer][inner] < 0)) / sum(sum(pearson_dict[outer][inner] > 0 )))
 
+plt.scatter(pearson_edges_list, uoi_edges_list)
+
 # +
 plt.hist(lasso_ratio, color='red', alpha=.75, label = 'LASSO') 
 plt.hist(uoi_ratio, alpha=.75, label = 'UoI')
@@ -273,14 +353,59 @@ plt.vlines(np.mean(pearson_ratio), ymin=0, ymax=80, color='black')
 
 plt.legend()
 plt.title('Ratio of Negative Edges to Positive Edges')
+plt.show()
 # -
 
-plt.hist(lasso_edges_list, color='red', alpha=.75, label = 'LASSO') 
-plt.hist(uoi_edges_list, label = 'UoI')
-#this will be more informative with more subjects
+import scipy
+
+scipy.stats.ttest_ind(lasso_edges_list, uoi_edges_list, equal_var=False).confidence_interval() 
+
+print(np.mean(uoi_edges_list))
+print(np.std(uoi_edges_list))
+
+print(np.mean(lasso_edges_list)) 
+print(np.std(lasso_edges_list)) 
+
+len(lasso_edges_list) 
+
+len(uoi_edges_list) 
+
+# +
+bins = np.linspace(0, .7, 50)
+
+plt.hist(uoi_edges_list, bins, alpha=.75, label = 'UoI', color=matplotlib.colors.to_rgba('#00313C')) 
+plt.hist(lasso_edges_list, bins, alpha=.75, label = 'LASSO', color=matplotlib.colors.to_rgba('#007681')) 
+
+# plt.vlines(np.mean(lasso_edges_list), ymin=0, ymax=100, color='black')
+# plt.vlines(np.mean(uoi_edges_list), ymin=0, ymax=100, color='black')
+plt.gca().set_aspect(1/250)
+plt.legend(prop={'size': 16})
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.ylabel('Number of Participants', size=14) 
+plt.xlabel('Selection Ratio', size=14) 
+plt.savefig('selection_ratio.png', bbox_inches="tight") 
+
+# +
+bins = np.linspace(0, .7, 50)
+
+plt.hist(uoi_edges_list, bins, alpha=.75, label = 'UoI', color=matplotlib.colors.to_rgba('#00313C')) 
+plt.hist(lasso_edges_list, bins, alpha=.75, label = 'LASSO', color=matplotlib.colors.to_rgba('#007681')) 
+plt.hist(pearson_edges_list, alpha=.75, label = 'pearson') 
+
+# plt.vlines(np.mean(lasso_edges_list), ymin=0, ymax=100, color='black')
+# plt.vlines(np.mean(uoi_edges_list), ymin=0, ymax=100, color='black')
+plt.gca().set_aspect(1/250)
 plt.legend()
-txt="Selection Ratio"
-plt.title(txt)
+plt.savefig('selection_ratio.png', bbox_inches="tight") 
+# -
+
+plt.hist2d(pearson_edges_list, uoi_edges_list, bins=(100,100) ) 
+
+
+np.mean(uoi_edges_list)
+
+np.mean(lasso_edges_list)
 
 plt.scatter(lasso_edges_list, uoi_edges_list) 
 plt.axline((0, 0), slope=1)
@@ -339,6 +464,3 @@ plt.hist(mod_uoi, label='UoI')
 
 plt.legend()
 plt.title('Modularity Index') 
-
-# +
-#threshold pearson and do all of these gain

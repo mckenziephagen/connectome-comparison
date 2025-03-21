@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.15.2
+#       jupytext_version: 1.16.4
 #   kernelspec:
 #     display_name: FC
 #     language: python
@@ -101,9 +101,9 @@ def create_df(mat_dict, ses_string, rms='absolute'):
 
 # +
 def wrap_qcfc(df): 
-    covarates = df[['Gender']]
+    #covarates = df[['Gender']]
     movement = df[['mean_framewise_displacement']]
-    connectomes = df.drop(['mean_framewise_displacement', 'Gender'], axis=1)
+    connectomes = df.drop(['mean_framewise_displacement'], axis=1)
 
     qcfc_results = qcfc(movement=movement, connectomes=connectomes, covarates=covarates)
     return(qcfc_results) 
@@ -136,21 +136,17 @@ pearson_results = wrap_qcfc(pearson_df)
 pearson_pval, pearson_corr_list = unpack_qcfc(pearson_results)
 plt.hist(pearson_corr_list) 
 
-color=[,]
-
 # ?plt.savefig
 
 plt.figure(figsize=[6,3])
-plt.hist(uoi_corr_list, alpha=.75, label=f'UoI ({len(uoi_corr_list) })', color='#00313C') 
-plt.hist(lasso_corr_list, alpha=.75, label = f'LASSO ({len(lasso_corr_list) }) ', color='#007681') 
-plt.hist(pearson_corr_list, alpha=.75, label = f'Pearson ({len(pearson_corr_list) })', color='#B1B3B3')
+plt.hist(uoi_corr_list, alpha=.75, 
+         label=f'UoI ({len(uoi_corr_list) })', 
+         color='#00313C') 
+plt.hist(lasso_corr_list, alpha=.75, 
+         label = f'LASSO ({len(lasso_corr_list) }) ', 
+         color='#007681') 
+plt.hist(pearson_corr_list, alpha=.75, 
+         label = f'Pearson ({len(pearson_corr_list) })', 
+         color='#B1B3B3')
 plt.legend() 
 plt.savefig('qcfc.png',  bbox_inches="tight", )
-
-len(pearson_corr_list) 
-
-len(uoi_corr_list) 
-
-len(lasso_corr_list) 
-
-
