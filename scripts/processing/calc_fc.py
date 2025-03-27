@@ -60,7 +60,7 @@ parser.add_argument('--atlas_name', default='schaefer')
 parser.add_argument('--n_rois', default=100, type=int) #default for hcp; 
 parser.add_argument('--n_trs', default=1200, type=int) #default for hcp;
 parser.add_argument('--n_folds', default=5) 
-parser.add_argument('--model', default='lasso-bic') 
+parser.add_argument('--model', default='uoi-lasso') 
 parser.add_argument('--cv', default='blocks') 
 
 parser.add_argument('--fc_data_path', 
@@ -196,3 +196,6 @@ elif model_str in ['correlation', 'tangent']:
     
 with open(op.join(results_path,file), 'wb') as f:
     pickle.dump(results_dict, f) 
+# -
+
+
