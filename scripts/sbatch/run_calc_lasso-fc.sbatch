@@ -12,13 +12,16 @@
 source /global/homes/m/mphagen/.bash_profile
 conda activate fc
 
+script="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py"
+subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/all_subjects.txt"
+
 echo $PATH
 
 for i in {0..100}; do
 
-    subject_id=$( sed -n $(($SLURM_ARRAY_TASK_ID+$i))p ../test_subjects.txt )
+    subject_id=$( sed -n $(($SLURM_ARRAY_TASK_ID+$i))p $subject_file )
     echo $subject_id
-    srun -n 1 -c 2 python ../01-Processing/calc_fc.py --subject_id $subject_id --model 'lasso-bic' &    
+    srun -n 1 -c 2 python $script --subject_id $subject_id --model 'lasso-bic' &    
 done
 wait
 

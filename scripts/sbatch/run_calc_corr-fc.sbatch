@@ -13,14 +13,16 @@
 #activate conda envs
 source ${HOME}/.bashrc
 conda activate fc
+
 echo $( pwd ) 
 
 for i in {0..100}; do
-#parse subject ID from text file
+
+    #parse subject ID from text file
     subject_id=$( sed -n $(($SLURM_ARRAY_TASK_ID+$i))p test_subjects.txt )
     echo $subject_id
 
-    srun -n 1 -c 2 python calc_fc.py --subject_id $subject_id --model 'correlation' &
+    srun -n 1 -c 2 --exclusive python calc_fc.py --subject_id $subject_id --model 'correlation' &
     
 done
 
