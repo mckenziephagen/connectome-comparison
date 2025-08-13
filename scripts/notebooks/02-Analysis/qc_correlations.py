@@ -8,15 +8,15 @@
 #       format_version: '1.5'
 #       jupytext_version: 1.16.4
 #   kernelspec:
-#     display_name: FC
+#     display_name: fc_311
 #     language: python
-#     name: fc
+#     name: fc_311
 # ---
 
 import sys
 
 #janky, but ok
-sys.path.append("/global/u1/m/mphagen/functional_connectivity_comparison/fmriprep-denoise-benchmark/fmriprep_denoise")
+sys.path.append("/global/homes/m/mphagen/old/model-fc/fmriprep-denoise-benchmark/fmriprep_denoise")
 from features.quality_control_connectivity import qcfc, partial_correlation
 
 
@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
-import fmriprep_denoise
+#import fmriprep_denoise
 
 from scipy import stats, linalg
 
@@ -48,6 +48,8 @@ rename_dict = {'RelativeRMS-rfMRI_REST1_RL' : 'relative_ses-1_run-1',
              'AbsoluteRMS-rfMRI_REST2_LR' : 'absolute_ses-2_run-2'
               }
 
+# ls ../../../data
+
 # +
 qa_df = pd.read_csv('../temp_qa_vals.csv', index_col=0).sort_index()
 qa_df.index = [f'sub-{i}' for i in qa_df.index] 
@@ -55,7 +57,7 @@ qa_df.index = [f'sub-{i}' for i in qa_df.index]
 qa_df = qa_df.rename(rename_dict, axis=1) 
 # -
 
-unrestricted_df = pd.read_csv('../Data/unrestricted_mphagen_1_27_2022_20_50_7.csv')
+unrestricted_df = pd.read_csv('../../../data/unrestricted_mphagen_1_27_2022_20_50_7.csv')
 unrestricted_df.index = [f'sub-{i}' for i in unrestricted_df['Subject']]
 
 restricted_df = pd.read_csv('../Data/RESTRICTED_arokem_1_31_2022_23_26_45.csv')
@@ -136,8 +138,6 @@ pearson_results = wrap_qcfc(pearson_df)
 pearson_pval, pearson_corr_list = unpack_qcfc(pearson_results)
 plt.hist(pearson_corr_list) 
 
-# ?plt.savefig
-
 plt.figure(figsize=[6,3])
 plt.hist(uoi_corr_list, alpha=.75, 
          label=f'UoI ({len(uoi_corr_list) })', 
@@ -150,3 +150,5 @@ plt.hist(pearson_corr_list, alpha=.75,
          color='#B1B3B3')
 plt.legend() 
 plt.savefig('qcfc.png',  bbox_inches="tight", )
+
+
