@@ -8,17 +8,21 @@
 #       format_version: '1.5'
 #       jupytext_version: 1.16.4
 #   kernelspec:
-#     display_name: FC
+#     display_name: fc_311
 #     language: python
-#     name: fc
+#     name: fc_311
 # ---
 
-# +
+# This code expects to find parcellated timeseries data in `f'deriv_dir/timeseries/{proc_type}/sub-{sub_id}/sub-{sub_id}*ses-1*timeseries.ptseries.nii'`. 
+#
+#
+
 import sys
 import os
-
+import numpy.matlib
 from numpy.matlib import repmat
-# -
+import nibabel as nib
+import json
 
 #work around until I install fc_comparison as an actual package
 sys.path.append(os.path.dirname('/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc'))
@@ -53,15 +57,19 @@ from model_fc.models import init_model, run_model
 args = argparse.Namespace()
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--subject_id',default='112516')
-parser.add_argument('--ses_id', default='ses-1') 
+parser.add_argument('--sub_id',default='sub-159441')
+parser.add_argument('--ses_id', default=1)
+parser.add_argument('--task_id', default='rest') 
 
-parser.add_argument('--atlas_name', default='schaefer')
+parser.add_argument('--atlas_spec', default='fsLR_seg-4S156Parcels_den-91k')
 parser.add_argument('--n_rois', default=100, type=int) #default for hcp; 
 parser.add_argument('--n_trs', default=1200, type=int) #default for hcp;
 parser.add_argument('--n_folds', default=5) 
-parser.add_argument('--model', default='uoi-lasso') 
+parser.add_argument('--model', default='correlation') 
 parser.add_argument('--cv', default='blocks') 
+parser.add_argument('--proc_type', default='minProc') 
+
+parser.add_argument('--profile', action='store_true') 
 
 parser.add_argument('--fc_data_path', 
                     default='/pscratch/sd/m/mphagen/hcp-functional-connectivity') 
@@ -71,47 +79,58 @@ parser.add_argument('--max_iter', default=1000)
 try: 
     os.environ['_']
     args = parser.parse_args()
+    notebook = False
 except KeyError: 
     args = parser.parse_args([])
     notebook = True
     results_path = 'notebook_results'
-    
-subject_id = args.subject_id
+
+args.sub_id = str(args.sub_id).replace('sub-', '')
+sub_id = args.sub_id
+args.ses_id = str(args.ses_id).replace('ses-', '')
 ses_id = args.ses_id
-atlas_name = args.atlas_name
+task_id = args.task_id
+atlas_spec = args.atlas_spec 
 n_rois = args.n_rois
 n_trs = args.n_trs
 n_folds = args.n_folds
 model_str = args.model
 cv = args.cv
 fc_data_path = args.fc_data_path
+profile = args.profile
+proc_type = args.proc_type
 
 max_iter = args.max_iter
 
 random_state = 1
 print(args)
+# -
+
+args_dict = vars(args) 
 
 # +
 #this is brittle - but adhering to BEP-17 will make it les brittle
 ts_files = glob(op.join(fc_data_path, 
                         'derivatives', 
-                        'parcellated-timeseries',
-                        f'sub-{subject_id}',
-                        f'{ses_id}*',
-                        '*',
-                        '*.tsv'))
+                        'timeseries',
+                        proc_type,
+                        f'sub-{sub_id}',
+                        f'sub-{sub_id}*task-{task_id}*ses-{ses_id}*ptseries.nii'))
+
+#
 if notebook == False:
     results_path = op.join(fc_data_path, 
                     'derivatives',
                     'connectivity-matrices',
-                    f'{model_str}-{cv}',
-                    f'sub-{subject_id}')
+                    proc_type, 
+                    f"{model_str.replace('-', '')}_{cv}",
+                    f'sub-{sub_id}')
                        
 os.makedirs(results_path, exist_ok=True)
 
-assert len(ts_files) == 2 
+assert len(ts_files) == 1 
 
-print(f"Found {len(ts_files)} rest scans for subject {subject_id}.") 
+print(f"Found {len(ts_files)} rest scans for subject {sub_id}.") 
 
 print(f"Saving results to {results_path}.")
 # -
@@ -131,7 +150,7 @@ def split_kfold(cv, time_series):
         
     if cv == 'blocks':
         group =  repmat(np.arange(1, n_folds+1), 
-                        int(2400/n_folds), 1).T.ravel()
+                        int(time_series.shape[0]/n_folds), 1).T.ravel()
         
         kfold = GroupKFold(n_splits=n_folds)
         
@@ -144,30 +163,26 @@ def split_kfold(cv, time_series):
     return splits
 
 
-def read_ts(file, n_trs, n_rois):
-    if len(ts_files) > 1: 
-        
-        time_series = np.loadtxt(file, delimiter='\t').reshape(-1, n_rois)
-    
-    else: 
-        time_series = np.loadtxt(file, delimiter='\t').reshape(n_trs, n_rois)
+def read_cifti(file): 
+    time_series = nib.load(file).get_fdata(dtype=np.float32)
+    if n_rois != time_series.shape[1]: 
+        time_series = time_series[:, :n_rois]
+    return time_series
 
-        
-    return(time_series)
 
-time_series = np.append(read_ts(ts_files[0], n_trs, n_rois), 
-                        read_ts(ts_files[1], n_trs, n_rois)).reshape(2400,100)
-
+time_series = read_cifti(ts_files[0]) 
 
 # +
 results_dict = {}    
-file = f'sub-{subject_id}_{atlas_name}-{n_rois}_task-Rest_{ses_id}_fc-{model_str}.pkl'
-print(f"Calculating {model_str} FC for {ses_id}")
+print(f"Calculating {model_str} FC for {sub_id} {ses_id}")
 
 scaler = StandardScaler()
+file = f"sub-{sub_id}_task-{task_id}_ses-{ses_id}_{atlas_spec}_model-{model_str.replace('-', '')}_results.pkl"
 
 if model_str in ["lasso-cv", "uoi-lasso", "enet", "lasso-bic"] :
     splits = split_kfold(cv, time_series)
+    print(model_str) 
+
     for fold_idx, (train_idx, test_idx) in enumerate( splits ): 
         
         print(f"Fold {fold_idx}:")
@@ -183,12 +198,15 @@ if model_str in ["lasso-cv", "uoi-lasso", "enet", "lasso-bic"] :
 
         start_time = time.time()
         results_dict[f'fold_{fold_idx}'] = run_model(train_ts, test_ts, n_rois, model=model)
-
+        results_dict[f'fold_{fold_idx}']['model'] = model
         print(time.time() - start_time, ' seconds')     
 
+        if profile == True: 
+            break 
+    
 elif model_str in ['correlation', 'tangent']: 
 
-    corr_mat = model.fit_transform([time_series])[0]
+    corr_mat = model.fit_transform(np.array(time_series))[0]
     np.fill_diagonal(corr_mat, 1)
 
     results_dict['fc_matrix'] = corr_mat
@@ -196,6 +214,10 @@ elif model_str in ['correlation', 'tangent']:
     
 with open(op.join(results_path,file), 'wb') as f:
     pickle.dump(results_dict, f) 
+
+config_file = file.replace('_results.pkl', '_results.json')
+with open(op.join(results_path, config_file), "w") as f:
+    json.dump(args_dict, f, indent=4)
 # -
 
 

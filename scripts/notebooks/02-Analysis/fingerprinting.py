@@ -23,7 +23,6 @@ import random
 # +
 results_path = '/global/homes/m/mphagen/functional-connectivity/connectome-comparison/results'
 date_string='2023-11-07'
-op.join
 with open(op.join(results_path, f'{date_string}_lasso_dict.pkl'), 'rb') as l:
         lasso_dict = pickle.load(l)
         
@@ -32,9 +31,10 @@ with open(op.join(results_path, f'{date_string}_uoi_dict.pkl'), 'rb') as u:
         
 with open(op.join(results_path, f'{date_string}_pearson_dict.pkl'), 'rb') as f:
         pearson_dict = pickle.load(f)
-
-
 # -
+
+lasso_dict
+
 
 #the data I'm currently working with is done by run, not session
 #this won't be necessary for future analyses

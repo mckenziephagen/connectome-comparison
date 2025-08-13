@@ -2,9 +2,9 @@
 #SBATCH --qos=shared
 #SBATCH --time=2:00:00
 #SBATCH --constraint=cpu
-#SBATCH --ntasks=1
+#SBATCH --ntasks=2
 #SBATCH --job-name=shared
-#SBATCH --array=15
+#SBATCH --array=1-50
 #SBATCH --error logs/%A_%a.error
 #SBATCH --out logs/%A_%a.out
 #SBATCH --account=m1266
@@ -20,12 +20,12 @@ conda activate fc_py311
 script="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py"
 subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/all_subjects.txt"
 
-cat /global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/sbatch/run_calc_pyuoi-fc_shared.sbatch
-
+cat $0
 
 subject_id=$( sed -n $(($SLURM_ARRAY_TASK_ID))p $subject_file )
 echo $subject_id
-srun --cpu-bind=cores --exclusive python $script --subject_id $subject_id --model 'uoi-lasso' --ses_id 'ses-1'
+
+srun --cpu-bind=cores --exclusive python $script --sub_id $subject_id --model 'uoi-lasso' --ses_id 'ses-1'
 
 
 

@@ -6,13 +6,14 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.15.2
+#       jupytext_version: 1.16.4
 #   kernelspec:
-#     display_name: FC
+#     display_name: fc_311
 #     language: python
-#     name: fc
+#     name: fc_311
 # ---
 
+import os
 import os.path as op
 from glob import glob
 import pickle
@@ -20,49 +21,98 @@ import numpy as np
 import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
+import re
+
+
+def bids_entities(file): 
+    base = op.basename(file) 
+    sub_id = re.search(r'(?<=sub-)\d+', base).group()
+    task_id = re.search(r'(?<=task-)[^_]+', base).group()
+    ses_id = re.search(r'(?<=ses-)[^_]+', base).group()
+
+    return sub_id, task_id, ses_id
+
+
+proc_type = 'minProc'
+
+model_id = 'connectivity_blocks'
+
+organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
 
 # +
-fc_data_path = '/pscratch/sd/m/mphagen/hcp-functional-connectivity'
+fc_bids = '/pscratch/sd/m/mphagen/hcp-functional-connectivity/'
+derivatives = op.join(fc_bids, 'derivatives') 
+conn_path = op.join(derivatives, 'connectivity-matrices', proc_type, '*') 
 
+if model_id == 'lasso-bic-blocks': 
+    model_id = 'lassoBic'
+    
 
-pearson_results_path = op.join(fc_data_path, 'derivatives', 
-                               f'fc-matrices_schaefer*', '*',
-                               '*correlation*')
-lasso_results_path = op.join(fc_data_path, 'derivatives', 
-                             f'fc-matrices_schaefer*', '*', 
-                             '*fc-lasso*model*')
-uoi_results_path = op.join(fc_data_path, 'derivatives', 
-                           f'fc-matrices_schaefer*', '*', 
-                           '*uoi-*model*')
-# -
+# +
+fc_bids = '/pscratch/sd/m/mphagen/hcp-functional-connectivity/'
+derivatives = op.join(fc_bids, 'derivatives') 
+conn_path = op.join(derivatives, 'connectivity-matrices', proc_type, '*') 
 
-uoi_r2_path = op.join(fc_data_path, 'derivatives',
-                      f'fc-matrices_schaefer*', '*', '*uoi-*r2*')
+if model_id == 'lasso-bic-blocks': 
+    model_id = 'lassoBic'
+    
+results = glob(op.join(conn_path, 'sub-*', '*.pkl'))
 
-pearson_results_files = glob(pearson_results_path) 
-lasso_result_files = glob(lasso_results_path)
-pyuoi_result_files = glob(uoi_results_path) 
-
-pyuoi_r2_files = glob(uoi_r2_path)
-
-len(pearson_results_files)
-
-len(lasso_result_files) 
+#ask chatgpt for the regex for this
+atlas_spec = 'fsLR_seg-4S156Parcels_den-91k'
 
 lasso_dict = {} 
-for idx, file in enumerate(lasso_result_files): 
-    with open(file, 'rb') as f:
-         mat = pickle.load(f)    
-    ses_id = '_'.join(file.split('/')[-1].split('_')[-4:-2])
-    sub_id = file.split('/')[-2]
+for file in lasso_results: 
+    sub_id, task_id, ses_id = bids_entities(file)
+    print(sub_id, ses_id) 
 
+    file_string = op.join(organized_data_path, 
+                          f'sub-{sub_id}_ses-{ses_id}_task-{task_id}_space-{atlas_spec}_model-{model_id}_stat-median_relmat.dense.tsv')
+
+    #if not op.exists(file_string): 
+    with open(file, 'rb') as f:
+         mat = pickle.load(f) 
+    #take median of all folds
+    conn_mat = np.median([mat[key]['fc_matrix'] for key in mat.keys()], axis=0)
+    pd.DataFrame(conn_mat).to_csv(file_string, sep='\t')
+    
     if sub_id not in lasso_dict.keys(): 
-        lasso_dict[sub_id] = {} 
+        lasso_dict[f'sub-{sub_id}'] = {} 
+    lasso_dict[f'sub-{sub_id}'][f'sub-{ses_id}'] = conn_mat
+
+with open(op.join(organized_data_path, 
+                  f'{str(datetime.date.today())}_task-{task_id}_ses-{ses_id}_space-{atlas_spec}_model-{model_id}_stat-median_relmat.pkl'), 'wb') as f:
+    pickle.dump(lasso_dict, f)
+# -
+
+lasso_dict.keys() 
+
+lasso_dict['sub-174841']
+
+for ii in lasso_dict.keys(): 
+    print(lasso_dict[ii].keys())
+
+pearson_dict = {} 
+for file in pearson_results: 
+    with open(file, 'rb') as f:
+         mat = pickle.load(f) 
+    conn_mat = mat['fc_matrix']
+    sub_id = file.split('/')[-1].split('_')[0]
+    ses_id = file.split('/')[-1].split('_')[-2]
+    task_id = pearson_results[0].split('/')[-1].split('_')[2]
+    file_string = op.join(org_data_path, 'pearson_connectome', 
+                          '_'.join([sub_id, ses_id, task_id, 
+                                    'meas-pearson', 'desc-Schaefer100'])) 
+    pd.DataFrame(conn_mat).to_csv(f'{file_string}_relmat.dense.tsv', sep='\t')
+
+    
+    if sub_id not in pearson_dict.keys(): 
+        pearson_dict[sub_id] = {} 
     #average five folds together
-    lasso_dict[sub_id].update({ses_id: np.median(np.array([*mat.values()]), axis=0)})
-#now I have a dictionary of lasso fc matrices averaged over five folds  
-with open(op.join('results', f'{str(datetime.date.today())}_lasso_dict.pkl'), 'wb') as f:
-        pickle.dump(lasso_dict, f)
+    pearson_dict[sub_id].update({ses_id: conn_mat})
+    with open(op.join(org_dat_path, 
+                      f'{str(datetime.date.today())}_pearson_dict.pkl'), 'wb') as f:
+        pickle.dump(pearson_dict, f)
 
 pearson_dict = {} 
 for idx, file in enumerate(pearson_results_files): 
@@ -116,8 +166,6 @@ for outer in lasso_dict.keys():
         lasso_icc_df = pd.concat([lasso_icc_df, temp_df])
 lasso_icc_df.to_csv('lasso_icc_df.csv')
 
-uoi_dict[outer][inner].shape
-
 # +
 uoi_icc_df = pd.DataFrame(columns=['values', 'ses', 'sub'] )
 for outer in uoi_dict.keys():
@@ -129,12 +177,6 @@ for outer in uoi_dict.keys():
         
 uoi_icc_df.to_csv('uoi_icc_df.csv')
 # -
-
-len(uoi_dict)
-
-lasso_dict.keys() 
-
-len(pearson_dict)
 
 r2_mean_list = []
 for i in pyuoi_r2_files: 

@@ -2,9 +2,9 @@
 #SBATCH --qos=regular
 #SBATCH --constraint=cpu
 #SBATCH --job-name=parallel
-#SBATCH --time=1:00:00
+#SBATCH --time=1:30:00
 #SBATCH --ntasks=128
-#SBATCH --array=1
+#SBATCH --array=200
 #SBATCH --nodes=1
 
 #SBATCH --error logs/%A_%a.error
@@ -26,9 +26,11 @@ cat $0
 for i in {0..127}; do
     subject_id=$( sed -n $(($SLURM_ARRAY_TASK_ID+$i))p $subject_file )
     echo $subject_id
-    srun --ntasks 1 --cpus-per-task 2 --cpu-bind=cores --exclusive python $script --subject_id $subject_id --model 'uoi-lasso' --ses_id 'ses-1' --profile & 
-done 
 
+    srun --ntasks 1 --cpus-per-task 2 --cpu-bind=cores --exclusive \
+        python $script --subject_id $subject_id --model 'uoi-lasso' \
+        --ses_id 'ses-1' --profile & 
+done 
 wait
 
 
