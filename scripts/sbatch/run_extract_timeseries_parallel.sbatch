@@ -1,5 +1,3 @@
-##run_extract_timeseries_parallel.sbatch is more efficient. 
-
 #!/bin/bash
 #SBATCH --qos=debug
 #SBATCH --time=30:00
@@ -16,13 +14,11 @@
 source ${HOME}/.bashrc
 
 script_path="${HOME}/functional-connectivity/connectome-comparison/scripts/processing/extract_timeseries.py" 
-subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/error_subs.txt"
+subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/test_subjects.txt"
 
-conda activate fc_w_datalad
+conda activate xcpd
 
 idx=$(( $SLURM_ARRAY_TASK_ID*100 )) 
 
-srun parallel python $script_path --subject_id '{}' ::: $( head -n $idx $subject_file  )
-
-#for ii in $( head -n $idx $subject_file | tail -n 100 ); do datalad drop $ii; done
+srun parallel python $script_path --sub_id '{}' ::: $( head -n $idx $subject_file  )
 

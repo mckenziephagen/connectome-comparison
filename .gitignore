@@ -1,7 +1,7 @@
 *.ipynb*
 Sylvia_code/
 *log*
-results/*
+*results/*
 .*
 renv/
 *.csv
