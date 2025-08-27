@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid004082: task 0: Exited with exit code 1
+srun: Terminating StepId=41614004.0

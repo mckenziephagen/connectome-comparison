@@ -1,0 +1,365 @@
+/global/common/software/nersc9/jupyter/ex/25-06/nersc-utils:/global/homes/m/mphagen/miniconda3/envs/fc_py311/bin:/global/homes/m/mphagen/miniconda3/condabin:/opt/nersc/pe/bin:/global/common/software/nersc/bin:/global/common/software/nersc9/darshan/default/bin:/global/common/software/nersc9/sqs/2.0/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/compute-sanitizer:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/libnvvp:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/profilers/Nsight_Compute:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/profilers/Nsight_Systems/bin:/opt/cray/pe/perftools/24.07.0/bin:/opt/cray/pe/papi/7.1.0.2/bin:/opt/cray/pe/gcc-native/13/bin:/opt/cray/pe/craype/2.7.32/bin:/opt/cray/pe/mpich/8.1.30/ofi/gnu/12.3/bin:/opt/cray/pe/mpich/8.1.30/bin:/opt/cray/libfabric/1.22.0/bin:/global/homes/m/mphagen/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/opt/workbench/bin_linux64:/opt/workbench/bin_linux64
+#!/bin/bash
+#SBATCH --qos=debug
+#SBATCH --time=30:00
+#SBATCH --constraint=cpu
+#SBATCH --array=200 #1-100%150
+#SBATCH --error logs/lasso_%A_%a.error
+#SBATCH --out logs/lasso_%A_%a.out
+#SBATCH --account=m1266
+#SBATCH --nodes=1
+#SBATCH --ntasks=200
+
+source /global/homes/m/mphagen/.bash_profile
+conda activate fc_py311
+
+script="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py"
+subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/all_subjects.txt"
+
+echo $PATH
+
+cat $0 
+
+idx=$(( $SLURM_ARRAY_TASK_ID )) 
+
+
+for i in {0..100}; do
+    
+    sub_id=$( sed -n $(($idx+$i))p $subject_file )
+    echo $sub_id
+
+    srun -n 1 -c 2 python $script --sub_id $sub_id --ses_id 1 --model 'lassoBic' --proc_type 'minProc' &  
+    srun -n 1 -c 2 python $script --sub_id $sub_id --ses_id 2 --model 'lassoBic' --proc_type 'minProc' &  
+
+done
+wait
+
+
+
+138231
+138332
+138534
+138837
+139233
+139435
+139637
+139839
+140117
+140319
+140420
+140824
+140925
+141119
+141422
+141826
+142424
+142828
+143224
+143325
+143426
+143527
+143830
+144125
+144226
+144428
+144731
+144832
+144933
+145127
+145531
+145632
+145834
+146129
+146331
+146432
+146533
+146634
+146735
+146836
+146937
+147030
+147636
+147737
+148032
+148133
+148335
+148436
+148840
+148941
+149236
+149337
+149539
+149741
+149842
+150019
+150423
+150524
+150625
+150726
+150928
+151021
+151223
+151324
+151425
+151526
+151627
+151728
+151829
+151930
+152225
+152427
+152831
+153025
+153126
+153227
+153429
+153631
+153732
+153833
+153934
+154229
+154330
+154431
+154532
+154734
+154835
+154936
+155231
+155635
+155938
+156031
+156233
+156334
+156435
+156536
+156637
+157336
+157437
+157942
+158035
+Namespace(sub_id='153934', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144933', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='145834', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150928', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149741', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='147737', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='147636', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='138332', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146533', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='141826', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='143325', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140420', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153631', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151728', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144125', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='155938', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154936', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='155635', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146432', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156031', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 156031.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-156031.
+Namespace(sub_id='144226', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156334', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144125', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='143224', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='145834', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='152225', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149236', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 149236.
+Namespace(sub_id='146836', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-149236.
+Namespace(sub_id='150019', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154532', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153833', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146129', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148133', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151425', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='139435', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='158035', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149337', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153025', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154532', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='141119', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='155231', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146735', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153126', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 153126.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-153126.
+Namespace(sub_id='143426', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149741', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140824', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='147030', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='138534', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='141119', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='138231', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153429', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='147737', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='139233', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='142424', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153631', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140319', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150423', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='141422', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 141422.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-141422.
+Namespace(sub_id='146331', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144731', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='139839', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154431', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140420', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='158035', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='138837', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154229', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146634', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='143830', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154835', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 154835.
+Namespace(sub_id='151829', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-154835.
+Namespace(sub_id='146937', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156233', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='139435', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151526', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='145531', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148840', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156637', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153429', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146735', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151021', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='145127', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='152831', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148840', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='139233', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='139637', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 139637.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-139637.
+Namespace(sub_id='143527', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='138231', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='157437', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150625', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='142828', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='145531', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151627', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='138534', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148335', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146129', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149539', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144428', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148436', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140925', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='138332', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140925', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146836', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='139637', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 139637.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-139637.
+Namespace(sub_id='152225', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140117', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151425', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='143830', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='147636', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151930', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149236', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 149236.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-149236.
+Namespace(sub_id='144933', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140824', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='141826', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144428', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144832', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='143325', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140117', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148032', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='141422', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 141422.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-141422.
+Namespace(sub_id='149842', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='140319', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='142424', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='139839', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='138837', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='143426', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='142828', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149842', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='145127', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='155635', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='145632', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='152427', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153227', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149539', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150726', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156435', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146432', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148436', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148941', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150423', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148133', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156334', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='152831', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='149337', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151526', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151829', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154229', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148335', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153732', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150019', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151324', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154734', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151223', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='147030', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154936', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150524', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148941', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151627', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153732', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156536', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150625', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154330', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151930', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='155231', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151223', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='157437', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='157942', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150928', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153227', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156233', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146533', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='145632', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='148032', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153833', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='157336', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144226', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146634', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146937', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154330', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='157336', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='143527', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153025', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151728', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='151324', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='152427', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150726', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='143224', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156637', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='146331', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='150524', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156536', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='155938', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154835', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 154835.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-154835.
+Namespace(sub_id='154431', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144832', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156031', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 156031.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-156031.
+Namespace(sub_id='153934', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='157942', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='153126', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 153126.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lassoBic_blocks/sub-153126.
+Namespace(sub_id='151021', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='156435', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='154734', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='144731', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lassoBic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)

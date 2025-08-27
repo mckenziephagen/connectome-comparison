@@ -1,0 +1,243 @@
+/global/common/software/nersc9/jupyter/ex/25-06/nersc-utils:/global/homes/m/mphagen/miniconda3/envs/fc_py311/bin:/global/homes/m/mphagen/miniconda3/condabin:/opt/nersc/pe/bin:/global/common/software/nersc/bin:/global/common/software/nersc9/darshan/default/bin:/global/common/software/nersc9/sqs/2.0/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/compute-sanitizer:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/libnvvp:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/profilers/Nsight_Compute:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/profilers/Nsight_Systems/bin:/opt/cray/pe/perftools/24.07.0/bin:/opt/cray/pe/papi/7.1.0.2/bin:/opt/cray/pe/gcc-native/13/bin:/opt/cray/pe/craype/2.7.32/bin:/opt/cray/pe/mpich/8.1.30/ofi/gnu/12.3/bin:/opt/cray/pe/mpich/8.1.30/bin:/opt/cray/libfabric/1.20.1/bin:/global/homes/m/mphagen/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/opt/workbench/bin_linux64:/opt/workbench/bin_linux64
+#!/bin/bash
+#SBATCH --qos=debug
+#SBATCH --time=15:00
+#SBATCH --constraint=cpu
+#SBATCH --array=1 #1-100%150
+#SBATCH --error logs/%A_%a_corr.error
+#SBATCH --out logs/%A_%a_corr.out
+#SBATCH --account=m1266
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=100 #can go up to 100
+
+#activate conda envs
+source /global/homes/m/mphagen/.bash_profile
+conda activate fc_py311
+
+script="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py"
+subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/test_subjects.txt"
+echo $PATH
+cat $0 
+
+idx=$(( $SLURM_ARRAY_TASK_ID*100 )) 
+
+for i in {0..200}; do
+
+    #parse subject ID from text file
+    subject_id=$( sed -n $(($idx+$i))p $subject_file )
+    echo $subject_id
+
+    srun -n 1 -c 2 --exclusive python $script --sub_id $subject_id --model 'correlation' &
+    
+done
+
+wait
+
+
+
+454140
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Namespace(sub_id='454140', ses_id=1, run_id=None, atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 0 rest scans for subject 454140.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation-blocks/sub-454140.
+ConnectivityMeasure(kind='correlation')

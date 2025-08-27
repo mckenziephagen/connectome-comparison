@@ -1,0 +1,951 @@
+Namespace(sub_id='141422', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 141422
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='513736', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 513736
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='826454', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 826454
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='677766', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 677766
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='118932', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 118932
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='930449', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 930449
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='406432', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 406432
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='188549', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 188549
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='173233', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 1 rest scans for subject 173233
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='979984', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 979984
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='102311', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 102311
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='947668', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 947668
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='882161', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 882161
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='159138', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 159138
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='134425', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 134425
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='959574', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 959574
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='175237', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 175237
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='130114', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 130114
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='597869', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 597869
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='197651', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 2 rest scans for subject 197651
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='111413', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 111413
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='867468', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 867468
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='680250', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 680250
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='552241', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 552241
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='118225', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 118225
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='856463', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 3 rest scans for subject 856463
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='742549', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 742549
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='134728', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 134728
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='105014', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 105014
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='176037', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 176037
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='356948', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 356948
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='176239', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 176239
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='559053', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 559053
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='169949', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 169949
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='159441', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 159441
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='454140', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 454140
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='793465', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 793465
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='204521', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 204521
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='770352', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 770352
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='662551', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 662551
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='521331', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 2 rest scans for subject 521331
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='531536', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 531536
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='590047', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 590047
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='352738', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 352738
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='162935', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 162935
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='871762', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 871762
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='341834', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 341834
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='342129', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 342129
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='635245', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 635245
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='822244', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 2 rest scans for subject 822244
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='160729', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 160729
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='113417', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 2 rest scans for subject 113417
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='485757', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 485757
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='601127', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 601127
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='919966', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 919966
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='196851', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 2 rest scans for subject 196851
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='126931', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Namespace(sub_id='300719', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 300719
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='908860', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 908860
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='368753', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 368753
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='153126', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 153126
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='107018', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 107018
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='837560', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 837560
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='139637', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 139637
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='130417', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 130417
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='205220', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 205220
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='231928', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 231928
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='208428', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 2 rest scans for subject 208428
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='103010', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 103010
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='102109', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 102109
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='180533', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 180533
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='149236', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 149236
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='761957', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 761957
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='887373', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 887373
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='870861', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 870861
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='353740', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 353740
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='130316', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 130316
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='878877', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 878877
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='899885', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 899885
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='174841', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 174841
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='136732', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 136732
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='579665', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 579665
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='117930', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 117930
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='195849', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 195849
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='788674', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 788674
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='673455', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 673455
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='208630', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 208630
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='176744', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 176744
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='154835', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 154835
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='704238', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 704238
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='130013', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 130013
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='937160', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 937160
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='156031', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 156031
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='333330', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 333330
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='129533', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 2 rest scans for subject 129533
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='406836', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 406836
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='204420', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 3 rest scans for subject 204420
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='107321', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 107321
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='336841', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 4 rest scans for subject 336841
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+Namespace(sub_id='202113', atlas_file='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii', dataset='HCP', MSMAll=False)
+Found 3 rest scans for subject 202113
+REST1
+<re.Match object; span=(0, 5), match='REST1'>
+REST2
+<re.Match object; span=(0, 5), match='REST2'>
+REST1
+<re.Match object; span=(0, 5), match='REST1'>

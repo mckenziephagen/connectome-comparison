@@ -1,0 +1,1512 @@
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+AssertionError
+Traceback (most recent call last):
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^^^^^^^^^^^^^^
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+AssertionError
+Traceback (most recent call last):
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+AssertionError
+           ^^^^^
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+    return model
+           ^^^^^
+Traceback (most recent call last):
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+           ^^^^^^^^^^^^^^^^^^
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+Traceback (most recent call last):
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+AssertionError
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.42
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.54
+srun: Terminating StepId=42047812.24
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.120
+srun: Step created for StepId=42047812.128
+srun: Step created for StepId=42047812.129
+srun: Step created for StepId=42047812.130
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.45
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.84
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.22
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.125
+srun: Step created for StepId=42047812.131
+srun: Step created for StepId=42047812.132
+srun: Step created for StepId=42047812.133
+srun: Step created for StepId=42047812.134
+srun: Step created for StepId=42047812.135
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.95
+srun: Step created for StepId=42047812.136
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.21
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.94
+srun: Step created for StepId=42047812.137
+srun: Step created for StepId=42047812.138
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.118
+srun: Terminating StepId=42047812.122
+srun: Step created for StepId=42047812.139
+srun: Step created for StepId=42047812.140
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.50
+srun: Step created for StepId=42047812.141
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.7
+srun: Terminating StepId=42047812.127
+srun: Step created for StepId=42047812.142
+srun: Step created for StepId=42047812.143
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.74
+srun: Step created for StepId=42047812.144
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.121
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.26
+srun: Terminating StepId=42047812.36
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.33
+srun: Step created for StepId=42047812.145
+srun: Step created for StepId=42047812.146
+srun: Step created for StepId=42047812.147
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Step created for StepId=42047812.148
+srun: Terminating StepId=42047812.11
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.34
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.1
+srun: Step created for StepId=42047812.149
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.111
+srun: Step created for StepId=42047812.150
+srun: Step created for StepId=42047812.151
+srun: Step created for StepId=42047812.152
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.89
+srun: Step created for StepId=42047812.153
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.17
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.56
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.99
+srun: Step created for StepId=42047812.154
+srun: Step created for StepId=42047812.155
+srun: Step created for StepId=42047812.156
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.75
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.10
+srun: Step created for StepId=42047812.157
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.27
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.112
+srun: Step created for StepId=42047812.158
+srun: Step created for StepId=42047812.159
+srun: Step created for StepId=42047812.160
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.83
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.64
+srun: Step created for StepId=42047812.161
+srun: Step created for StepId=42047812.162
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.80
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.40
+srun: Step created for StepId=42047812.163
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.51
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.82
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.81
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.4
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.23
+srun: Terminating StepId=42047812.88
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Step created for StepId=42047812.164
+srun: Terminating StepId=42047812.86
+srun: Step created for StepId=42047812.165
+srun: Step created for StepId=42047812.166
+srun: Step created for StepId=42047812.167
+srun: Step created for StepId=42047812.168
+srun: Step created for StepId=42047812.169
+srun: Step created for StepId=42047812.170
+srun: Step created for StepId=42047812.171
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.67
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.37
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.66
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.72
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.43
+srun: Step created for StepId=42047812.172
+srun: Step created for StepId=42047812.173
+srun: Step created for StepId=42047812.174
+srun: Step created for StepId=42047812.175
+srun: Step created for StepId=42047812.176
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.108
+srun: Terminating StepId=42047812.41
+srun: Terminating StepId=42047812.104
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.57
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.113
+srun: Terminating StepId=42047812.96
+srun: Terminating StepId=42047812.102
+srun: Terminating StepId=42047812.87
+srun: Step created for StepId=42047812.177
+srun: Step created for StepId=42047812.178
+srun: Step created for StepId=42047812.179
+srun: Step created for StepId=42047812.180
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Step created for StepId=42047812.181
+srun: Terminating StepId=42047812.115
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.60
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.109
+srun: Terminating StepId=42047812.79
+srun: Step created for StepId=42047812.182
+srun: Terminating StepId=42047812.85
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.71
+srun: Step created for StepId=42047812.183
+srun: Terminating StepId=42047812.63
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.47
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.119
+srun: Step created for StepId=42047812.184
+srun: Terminating StepId=42047812.93
+srun: Step created for StepId=42047812.185
+srun: Terminating StepId=42047812.68
+srun: Terminating StepId=42047812.52
+srun: Terminating StepId=42047812.70
+srun: Terminating StepId=42047812.12
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.58
+srun: Terminating StepId=42047812.116
+srun: Terminating StepId=42047812.65
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.76
+srun: Terminating StepId=42047812.90
+srun: Terminating StepId=42047812.13
+srun: Terminating StepId=42047812.6
+srun: Terminating StepId=42047812.78
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.110
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.9
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.101
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.92
+srun: Terminating StepId=42047812.8
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.97
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.106
+srun: Terminating StepId=42047812.77
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.19
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.91
+srun: Terminating StepId=42047812.98
+srun: Terminating StepId=42047812.107
+srun: Terminating StepId=42047812.73
+srun: Terminating StepId=42047812.126
+srun: Terminating StepId=42047812.35
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.49
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.62
+srun: Terminating StepId=42047812.30
+srun: Terminating StepId=42047812.39
+srun: Terminating StepId=42047812.105
+srun: Terminating StepId=42047812.5
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.2
+srun: Terminating StepId=42047812.25
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.100
+srun: Terminating StepId=42047812.32
+srun: Terminating StepId=42047812.46
+srun: Terminating StepId=42047812.61
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.16
+srun: Terminating StepId=42047812.123
+srun: Terminating StepId=42047812.48
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.69
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.29
+srun: Terminating StepId=42047812.38
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.20
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.44
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.53
+srun: Terminating StepId=42047812.14
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.59
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.0
+srun: Terminating StepId=42047812.124
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.31
+srun: Terminating StepId=42047812.28
+srun: Terminating StepId=42047812.3
+srun: Terminating StepId=42047812.15
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.114
+srun: Terminating StepId=42047812.117
+srun: Terminating StepId=42047812.55
+srun: Terminating StepId=42047812.18
+srun: Terminating StepId=42047812.103
+srun: Step created for StepId=42047812.186
+srun: Step created for StepId=42047812.187
+srun: Step created for StepId=42047812.188
+srun: Step created for StepId=42047812.189
+srun: Step created for StepId=42047812.190
+srun: Step created for StepId=42047812.191
+srun: Step created for StepId=42047812.192
+srun: Step created for StepId=42047812.193
+srun: Step created for StepId=42047812.194
+srun: Step created for StepId=42047812.195
+srun: Step created for StepId=42047812.196
+srun: Step created for StepId=42047812.197
+srun: Step created for StepId=42047812.198
+srun: Step created for StepId=42047812.199
+srun: Step created for StepId=42047812.200
+srun: Step created for StepId=42047812.201
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+Traceback (most recent call last):
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.129
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.133
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.142
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.145
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.148
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.144
+srun: Terminating StepId=42047812.132
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.143
+srun: Terminating StepId=42047812.138
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.147
+srun: Terminating StepId=42047812.135
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.128
+srun: Terminating StepId=42047812.139
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.130
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.137
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.146
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.140
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.136
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.141
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.134
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.131
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.162
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.151
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.154
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.160
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.157
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.159
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.163
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.150
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.153
+srun: Terminating StepId=42047812.152
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.156
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.149
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.155
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.161
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.158
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+AssertionError
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 141, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 101, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+AssertionError
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.178
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.165
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.174
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.182
+srun: Terminating StepId=42047812.176
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.201
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.172
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.185
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.181
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.173
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.164
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.170
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.184
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.180
+srun: Terminating StepId=42047812.179
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.171
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.177
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.175
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.166
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.183
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.199
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.198
+srun: Terminating StepId=42047812.168
+srun: Terminating StepId=42047812.197
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.169
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.192
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.188
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.194
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.190
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.200
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.187
+srun: Terminating StepId=42047812.193
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.167
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.186
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.195
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.191
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.189
+srun: error: nid004875: task 0: Exited with exit code 1
+srun: Terminating StepId=42047812.196

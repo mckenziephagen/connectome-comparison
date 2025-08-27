@@ -1,0 +1,1280 @@
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 160, in <module>
+    time_series = read_cifti(ts_files[0])
+                             ~~~~~~~~^^^
+IndexError: list index out of range
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.71
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.99
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.125
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.109
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.67
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.69
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.111
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.79
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.77
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.127
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.75
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.117
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.76
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.73
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.78
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.93
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.119
+srun: Terminating StepId=41583481.81
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.120
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.113
+srun: Terminating StepId=41583481.123
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.85
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.95
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.89
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.91
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.121
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.87
+srun: Terminating StepId=41583481.115
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.118
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.83
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.84
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.82
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.92
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.88
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.94
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.90
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.116
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.80
+srun: Terminating StepId=41583481.126
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.86
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.65
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.122
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.72
+srun: Terminating StepId=41583481.124
+srun: Terminating StepId=41583481.74
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.114
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.112
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.64
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.68
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.66
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.70
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.101
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.106
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.107
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.102
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.110
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.105
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.104
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.98
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.96
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.103
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.100
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.1
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.108
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.97
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.35
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.55
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.32
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.46
+srun: Terminating StepId=41583481.50
+srun: Terminating StepId=41583481.34
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.62
+srun: Terminating StepId=41583481.36
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.33
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.21
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.43
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.52
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 1
+srun: Terminating StepId=41583481.47
+srun: Terminating StepId=41583481.49
+srun: Terminating StepId=41583481.0
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.41
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.17
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.48
+srun: Terminating StepId=41583481.63
+srun: Terminating StepId=41583481.51
+srun: Terminating StepId=41583481.19
+srun: Terminating StepId=41583481.39
+srun: Terminating StepId=41583481.18
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.40
+srun: Terminating StepId=41583481.56
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.28
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.6
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.54
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.22
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.38
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.42
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.53
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.7
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.26
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.20
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.44
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.4
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.58
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.29
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.16
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.30
+srun: Terminating StepId=41583481.24
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.61
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.37
+srun: Terminating StepId=41583481.8
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.13
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.45
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.31
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.10
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.14
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.15
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.23
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.9
+srun: Terminating StepId=41583481.57
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.11
+srun: Terminating StepId=41583481.27
+srun: Terminating StepId=41583481.5
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.25
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.12
+srun: Terminating StepId=41583481.3
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.60
+srun: Terminating StepId=41583481.59
+srun: Step created for StepId=41583481.128
+srun: Step created for StepId=41583481.129
+srun: Step created for StepId=41583481.130
+srun: Step created for StepId=41583481.131
+srun: Step created for StepId=41583481.132
+srun: Step created for StepId=41583481.133
+srun: Step created for StepId=41583481.134
+srun: Step created for StepId=41583481.135
+srun: Step created for StepId=41583481.136
+srun: Step created for StepId=41583481.137
+srun: Step created for StepId=41583481.138
+srun: Step created for StepId=41583481.139
+srun: Step created for StepId=41583481.140
+srun: Step created for StepId=41583481.141
+srun: Step created for StepId=41583481.142
+srun: Step created for StepId=41583481.143
+srun: Step created for StepId=41583481.144
+srun: Step created for StepId=41583481.145
+srun: Step created for StepId=41583481.146
+srun: Step created for StepId=41583481.147
+srun: Step created for StepId=41583481.148
+srun: Step created for StepId=41583481.149
+srun: Step created for StepId=41583481.150
+srun: Step created for StepId=41583481.151
+srun: Step created for StepId=41583481.152
+srun: Step created for StepId=41583481.153
+srun: Step created for StepId=41583481.154
+srun: Step created for StepId=41583481.155
+srun: Step created for StepId=41583481.156
+srun: Step created for StepId=41583481.157
+srun: Step created for StepId=41583481.158
+srun: Step created for StepId=41583481.159
+srun: Step created for StepId=41583481.160
+srun: Step created for StepId=41583481.161
+srun: Step created for StepId=41583481.162
+srun: Step created for StepId=41583481.163
+srun: Step created for StepId=41583481.164
+srun: Step created for StepId=41583481.165
+srun: Step created for StepId=41583481.166
+srun: Step created for StepId=41583481.167
+srun: Step created for StepId=41583481.168
+srun: Step created for StepId=41583481.169
+srun: Step created for StepId=41583481.170
+srun: Step created for StepId=41583481.171
+srun: Step created for StepId=41583481.172
+srun: Step created for StepId=41583481.173
+srun: Step created for StepId=41583481.174
+srun: Step created for StepId=41583481.175
+srun: Step created for StepId=41583481.176
+srun: Step created for StepId=41583481.177
+srun: Step created for StepId=41583481.178
+srun: Step created for StepId=41583481.179
+srun: Step created for StepId=41583481.180
+srun: Step created for StepId=41583481.181
+srun: Step created for StepId=41583481.182
+srun: Step created for StepId=41583481.183
+srun: Step created for StepId=41583481.184
+srun: Step created for StepId=41583481.185
+srun: Step created for StepId=41583481.186
+srun: Step created for StepId=41583481.187
+srun: Step created for StepId=41583481.188
+srun: Step created for StepId=41583481.189
+srun: Step created for StepId=41583481.190
+srun: Step created for StepId=41583481.191
+srun: Step created for StepId=41583481.192
+srun: Step created for StepId=41583481.193
+srun: Step created for StepId=41583481.194
+srun: Step created for StepId=41583481.195
+srun: Step created for StepId=41583481.196
+srun: Step created for StepId=41583481.197
+srun: Step created for StepId=41583481.198
+srun: Step created for StepId=41583481.199
+srun: Step created for StepId=41583481.200
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.130
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.134
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.131
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.128
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.129
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.133
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.132
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+srun: error: nid004349: task 0: Exited with exit code 2
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+srun: Terminating StepId=41583481.141
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.188
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid004349: task 0: Exited with exit code 2
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+srun: Terminating StepId=41583481.179
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid004349: task 0: Exited with exit code 2
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: Terminating StepId=41583481.135
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.156
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.143
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.145
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.144
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.142
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+srun: error: nid004349: task 0: Exited with exit code 2
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: Terminating StepId=41583481.160
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.150
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--run_id RUN_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+calc_fc.py: error: argument --sub_id: expected one argument
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.136
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.161
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.157
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.165
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.138
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.162
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.167
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.154
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.137
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.200
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.140
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.139
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.147
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.180
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.155
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.171
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.152
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.182
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.163
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.187
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.186
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.146
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.151
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.178
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.198
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.176
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.191
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.195
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.148
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.192
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.159
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.166
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.174
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.175
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.168
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.153
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.170
+srun: Terminating StepId=41583481.199
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.158
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.193
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.181
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.177
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.169
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.184
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.194
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.185
+srun: Terminating StepId=41583481.164
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.196
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.197
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.149
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.183
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.189
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.172
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.190
+srun: error: nid004349: task 0: Exited with exit code 2
+srun: Terminating StepId=41583481.173
