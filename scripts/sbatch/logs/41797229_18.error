@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
-    assert len(ts_files) == 1
-           ^^^^^^^^^^^^^^^^^^
-AssertionError
-srun: error: nid004086: task 0: Exited with exit code 1
-srun: Terminating StepId=41797290.0

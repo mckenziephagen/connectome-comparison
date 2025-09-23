@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/extract_timeseries.py", line 160, in <module>
-    assert len(rest_scans) > 0 
-           ^^^^^^^^^^^^^^^^^^^
-AssertionError
-srun: error: nid006496: task 0: Exited with exit code 1
-srun: Terminating StepId=42057284.0
