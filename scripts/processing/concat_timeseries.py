@@ -34,8 +34,8 @@ args = argparse.Namespace()
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--sub_id',default='100307')
-parser.add_argument('--run_id', default='2') 
-parser.add_argument('--proc_type', default='parcellated-timeseries') 
+parser.add_argument('--run_id', default='1') 
+parser.add_argument('--proc_type', default='xcpd') 
 parser.add_argument('--atlas_spec', default='space-fsLR_seg-4S156Parcels_den-91k') 
 
 try: 
@@ -55,7 +55,7 @@ sub_id = sub_id.replace('sub-', '') #strip sub- if presentv
 
 # +
 pscratch = '/pscratch/sd/m/mphagen'
-derivatives = f'hcp-functional-connectivity/derivatives/{proc_type}'
+derivatives = f'hcp-functional-connectivity/derivatives/timeseries/{proc_type}'
 
 lr_file = glob(op.join(pscratch, 
                        derivatives, 
@@ -82,3 +82,5 @@ if op.exists(out_file):
 else: 
     merge_files = list([rl_file[0], lr_file[0] ]) 
     concatenate_niimgs(merge_files, out_file) 
+
+

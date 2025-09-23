@@ -23,6 +23,9 @@ import numpy.matlib
 from numpy.matlib import repmat
 import nibabel as nib
 import json
+from sklearn.exceptions import ConvergenceWarning
+import warnings
+
 
 #work around until I install fc_comparison as an actual package
 sys.path.append(os.path.dirname('/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc'))
@@ -57,17 +60,18 @@ from model_fc.models import init_model, run_model
 args = argparse.Namespace()
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--sub_id',default='sub-159441')
+parser.add_argument('--sub_id',default='sub-102109')
 parser.add_argument('--ses_id', default=1)
+parser.add_argument('--run_id', default=None)
 parser.add_argument('--task_id', default='rest') 
 
 parser.add_argument('--atlas_spec', default='fsLR_seg-4S156Parcels_den-91k')
 parser.add_argument('--n_rois', default=100, type=int) #default for hcp; 
 parser.add_argument('--n_trs', default=1200, type=int) #default for hcp;
 parser.add_argument('--n_folds', default=5) 
-parser.add_argument('--model', default='correlation') 
+parser.add_argument('--model', default='ridgeCV') 
 parser.add_argument('--cv', default='blocks') 
-parser.add_argument('--proc_type', default='minProc') 
+parser.add_argument('--proc_type', default='MSMAll') 
 
 parser.add_argument('--profile', action='store_true') 
 
@@ -101,21 +105,49 @@ profile = args.profile
 proc_type = args.proc_type
 
 max_iter = args.max_iter
-
+run_id = args.run_id
 random_state = 1
 print(args)
 # -
 
 args_dict = vars(args) 
 
-# +
-#this is brittle - but adhering to BEP-17 will make it les brittle
-ts_files = glob(op.join(fc_data_path, 
+
+def get_ts_files(fc_data_path, proc_type, sub_id, task_id, ses_id, run_id): 
+    if 'hcp' in fc_data_path: 
+        if run_id == None: 
+            ts_file = glob(op.join(fc_data_path, 
                         'derivatives', 
                         'timeseries',
                         proc_type,
                         f'sub-{sub_id}',
                         f'sub-{sub_id}*task-{task_id}*ses-{ses_id}*ptseries.nii'))
+            
+        elif run_id == '1': 
+            #YES, future self, it is supposed to be run-{ses_id}, 
+            #not run-{run_id}. 
+            #RL scan was always ran first.
+            #This is consistent with XCPDs HCP renaming code.
+            ts_file = glob(op.join(fc_data_path, 
+                        'derivatives', 
+                        'timeseries',
+                        proc_type,
+                        f'sub-{sub_id}',
+                        f'sub-{sub_id}*task-{task_id}_dir-RL_*run-{ses_id}**ptseries.nii'))
+            
+        elif run_id == '2': 
+            ts_file = glob(op.join(fc_data_path, 
+                        'derivatives', 
+                        'timeseries',
+                        proc_type,
+                        f'sub-{sub_id}',
+                        f'sub-{sub_id}*task-{task_id}_dir-LR_*run-{ses_id}**ptseries.nii'))
+
+        return ts_file
+
+
+# +
+ts_files = get_ts_files(fc_data_path, proc_type, sub_id, task_id, ses_id, run_id)
 
 #
 if notebook == False:
@@ -140,7 +172,16 @@ model = init_model(model_str, max_iter, random_state)
 print(model)
 
 
-def split_kfold(cv, time_series): 
+# +
+def set_warnings_filters():
+    warnings.filterwarnings("ignore", category=ConvergenceWarning)
+
+set_warnings_filters()
+
+
+# -
+
+def split_kfold(cv, time_series, n_folds): 
     if cv == 'random': 
         
         kfolds = KFold(n_splits=n_folds,
@@ -179,8 +220,8 @@ print(f"Calculating {model_str} FC for {sub_id} {ses_id}")
 scaler = StandardScaler()
 file = f"sub-{sub_id}_task-{task_id}_ses-{ses_id}_{atlas_spec}_model-{model_str.replace('-', '')}_results.pkl"
 
-if model_str in ["lasso-cv", "uoi-lasso", "enet", "lasso-bic"] :
-    splits = split_kfold(cv, time_series)
+if model_str in ["lassoCV", "uoiLasso", "enet", "lassoBIC", "ridgeCV"] :
+    splits = split_kfold(cv, time_series, n_folds)
     print(model_str) 
 
     for fold_idx, (train_idx, test_idx) in enumerate( splits ): 
@@ -219,5 +260,6 @@ config_file = file.replace('_results.pkl', '_results.json')
 with open(op.join(results_path, config_file), "w") as f:
     json.dump(args_dict, f, indent=4)
 # -
+
 
 
