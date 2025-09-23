@@ -1,0 +1,1060 @@
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.0
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.1
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.2
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.3
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.4
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.5
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.6
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.7
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.8
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.9
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.10
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.11
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.12
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.13
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.14
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.15
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.16
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.17
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.18
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.19
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.20
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.21
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.22
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.23
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.24
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.25
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.26
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.27
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.28
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.29
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.30
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.31
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.32
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.33
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.34
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.35
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.36
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.37
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.38
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.39
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.40
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.41
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.42
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.43
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.44
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.45
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.46
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.47
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.48
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.49
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.50
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.51
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.52
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.53
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.54
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.55
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.56
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.57
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.58
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.59
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.60
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.61
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.62
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.63
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.64
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.65
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.66
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.67
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.68
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.69
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.70
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.71
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.72
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.73
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.74
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.75
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.76
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.77
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.78
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.79
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.80
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.81
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.82
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.83
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.84
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.85
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.86
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.87
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.88
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.89
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.90
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.91
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.92
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.93
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.94
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.95
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.96
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.97
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.98
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid007121: task 0: Exited with exit code 1
+srun: Terminating StepId=41617456.99
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.100
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.101
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.102
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.103
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.104
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.105
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.106
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.107
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.108
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.109
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.110
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.111
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.112
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.113
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.114
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.115
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.116
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.117
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.118
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.119
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.120
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.121
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.122
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.123
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.124
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.125
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.126
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS] [--n_trs N_TRS]
+                  [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile] [--fc_data_path FC_DATA_PATH]
+                  [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+srun: error: nid007121: task 0: Exited with exit code 2
+srun: Terminating StepId=41617456.127

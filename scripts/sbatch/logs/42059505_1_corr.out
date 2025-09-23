@@ -1,0 +1,511 @@
+/global/common/software/nersc9/jupyter/ex/25-06/nersc-utils:/global/homes/m/mphagen/miniconda3/envs/fc_py311/bin:/global/homes/m/mphagen/miniconda3/condabin:/opt/nersc/pe/bin:/global/common/software/nersc/bin:/global/common/software/nersc9/darshan/default/bin:/global/common/software/nersc9/sqs/2.0/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/compute-sanitizer:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/libnvvp:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/profilers/Nsight_Compute:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/profilers/Nsight_Systems/bin:/opt/cray/pe/perftools/24.07.0/bin:/opt/cray/pe/papi/7.1.0.2/bin:/opt/cray/pe/gcc-native/13/bin:/opt/cray/pe/craype/2.7.32/bin:/opt/cray/pe/mpich/8.1.30/ofi/gnu/12.3/bin:/opt/cray/pe/mpich/8.1.30/bin:/opt/cray/libfabric/1.22.0/bin:/global/homes/m/mphagen/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/opt/workbench/bin_linux64:/opt/workbench/bin_linux64
+#!/bin/bash
+#SBATCH --qos=debug
+#SBATCH --time=15:00
+#SBATCH --constraint=cpu
+#SBATCH --array=1 #1-100%150
+#SBATCH --error logs/%A_%a_corr.error
+#SBATCH --out logs/%A_%a_corr.out
+#SBATCH --account=m1266
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=200 #can go up to 
+
+#activate conda envs
+source /global/homes/m/mphagen/.bash_profile
+conda activate fc_py311
+
+script="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py"
+subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/test_subjects.txt"
+echo $PATH
+cat $0 
+
+idx=$(( $SLURM_ARRAY_TASK_ID )) 
+
+for i in {0..100}; do
+
+    #parse subject ID from text file
+    subject_id=$( sed -n $(($idx+$i))p $subject_file )
+    echo $subject_id
+
+    srun -n 1 -c 1 --exclusive python $script --sub_id $subject_id --ses_id 1 --model 'correlation' --proc_type 'minProc' &
+    srun -n 1 -c 1 --exclusive python $script --sub_id $subject_id --ses_id 2 --model 'correlation' --proc_type 'minProc' &
+  
+done
+
+#for i in {0..100}; do
+
+#   #parse subject ID from text file
+#    subject_id=$( sed -n $(($idx+$i))p $subject_file )
+#    echo $subject_id
+
+#    srun -n 1 -c 1 --exclusive python $script --sub_id $subject_id --ses_id 1 --model 'correlation' --proc_type 'xcpd' &
+#    srun -n 1 -c 1 --exclusive python $script --sub_id $subject_id --ses_id 2 --model 'correlation' --proc_type 'xcpd' &
+  
+#done
+
+wait
+
+
+
+102109
+930449
+342129
+159441
+205220
+673455
+204521
+130316
+134425
+141422
+175237
+704238
+680250
+552241
+406836
+139637
+107321
+793465
+368753
+136732
+899885
+353740
+180533
+788674
+485757
+176037
+160729
+513736
+947668
+102311
+822244
+919966
+826454
+878877
+559053
+937160
+742549
+635245
+118932
+130417
+341834
+130114
+113417
+677766
+173233
+202113
+105014
+662551
+300719
+117930
+882161
+134728
+597869
+149236
+336841
+169949
+208428
+531536
+770352
+153126
+908860
+521331
+176239
+979984
+231928
+103010
+176744
+333330
+208630
+159138
+174841
+959574
+887373
+156031
+837560
+107018
+356948
+197651
+352738
+204420
+126931
+195849
+162935
+590047
+154835
+196851
+856463
+188549
+761957
+871762
+870861
+867468
+130013
+118225
+406432
+129533
+601127
+111413
+579665
+454140
+
+Namespace(sub_id='130316', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='130114', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='899885', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='176239', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='662551', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='300719', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 300719.
+Namespace(sub_id='919966', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 919966.
+Namespace(sub_id='102109', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 102109.
+Namespace(sub_id='662551', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 662551.
+Namespace(sub_id='635245', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 635245.
+Namespace(sub_id='677766', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 677766.
+Namespace(sub_id='908860', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 908860.
+Namespace(sub_id='979984', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 979984.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-300719.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-919966.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-102109.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-662551.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-635245.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-677766.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-908860.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-979984.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 300719 2
+Calculating correlation FC for 919966 2
+Calculating correlation FC for 102109 2
+Calculating correlation FC for 662551 2
+Calculating correlation FC for 635245 2
+Calculating correlation FC for 677766 2
+Calculating correlation FC for 908860 2
+Calculating correlation FC for 979984 2
+Namespace(sub_id='141422', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 141422.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-141422.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 141422 2
+Namespace(sub_id='169949', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='341834', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='118932', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='680250', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='704238', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 704238.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-704238.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 704238 2
+Namespace(sub_id='153126', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='521331', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='300719', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='113417', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='208428', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='937160', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='204521', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 204521.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-204521.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 204521 2
+Namespace(sub_id='149236', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='559053', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='635245', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='202113', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='105014', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='882161', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='202113', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='173233', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='107321', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='208428', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='677766', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='113417', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='908860', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='878877', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='822244', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='597869', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='173233', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='770352', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='742549', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 742549.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-742549.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 742549 2
+Namespace(sub_id='559053', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 559053.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-559053.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 559053 2
+Namespace(sub_id='336841', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='742549', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='979984', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='531536', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='130417', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='368753', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 368753.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-368753.
+Namespace(sub_id='878877', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='117930', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='105014', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 105014.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 368753 2
+Found 1 rest scans for subject 878877.
+Namespace(sub_id='521331', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-105014.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-878877.
+Namespace(sub_id='134728', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='788674', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 788674.
+Namespace(sub_id='118932', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 118932.
+Namespace(sub_id='937160', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 937160.
+Calculating correlation FC for 105014 2
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 878877 2
+Namespace(sub_id='341834', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 341834.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-788674.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='597869', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 597869.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-118932.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='160729', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-937160.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='947668', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 947668.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-341834.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 788674 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-597869.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 118932 2
+Calculating correlation FC for 937160 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-947668.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 341834 2
+Calculating correlation FC for 597869 2
+Calculating correlation FC for 947668 2
+Namespace(sub_id='336841', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 336841.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-336841.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 336841 2
+Namespace(sub_id='368753', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='406836', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='531536', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 531536.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-531536.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 531536 2
+Namespace(sub_id='176037', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='826454', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='788674', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='353740', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='770352', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 770352.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-770352.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 770352 2
+Namespace(sub_id='169949', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 169949.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-169949.
+Namespace(sub_id='102109', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='117930', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 117930.
+Namespace(sub_id='485757', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='102311', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='136732', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='134728', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 134728.
+Namespace(sub_id='930449', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 169949 2
+Namespace(sub_id='180533', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-117930.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='793465', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-134728.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='130114', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 130114.
+Calculating correlation FC for 117930 2
+Calculating correlation FC for 134728 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-130114.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 130114 2
+Namespace(sub_id='180533', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 180533.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-180533.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 180533 2
+Namespace(sub_id='149236', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 149236.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-149236.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 149236 2
+Namespace(sub_id='153126', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 153126.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-153126.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 153126 2
+Namespace(sub_id='130417', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 130417.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-130417.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 130417 2
+Namespace(sub_id='175237', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='704238', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='159441', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='136732', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 136732.
+Namespace(sub_id='673455', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='947668', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='353740', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 353740.
+Namespace(sub_id='513736', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 513736.
+Namespace(sub_id='205220', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='204521', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='485757', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 485757.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-136732.
+Namespace(sub_id='552241', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='342129', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='822244', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='826454', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 826454.
+Namespace(sub_id='134425', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 134425.
+Namespace(sub_id='673455', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 673455.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-353740.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-513736.
+Namespace(sub_id='141422', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='134425', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-485757.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='680250', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 680250.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 136732 2
+Namespace(sub_id='882161', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 882161.
+Namespace(sub_id='793465', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 793465.
+Namespace(sub_id='919966', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='513736', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-826454.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-134425.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='160729', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-673455.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='899885', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 899885.
+Calculating correlation FC for 353740 2
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 513736 2
+Calculating correlation FC for 485757 2
+Namespace(sub_id='139637', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-680250.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-882161.
+ConnectivityMeasure(kind='correlation')
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-793465.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 826454 2
+Calculating correlation FC for 134425 2
+Found 1 rest scans for subject 160729.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-160729.
+Calculating correlation FC for 673455 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-899885.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='176037', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 176037.
+Namespace(sub_id='406836', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='175237', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 175237.
+Namespace(sub_id='930449', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 930449.
+Namespace(sub_id='159441', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 159441.
+Namespace(sub_id='107321', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 107321.
+Calculating correlation FC for 680250 2
+Calculating correlation FC for 882161 2
+Calculating correlation FC for 793465 2
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 160729 2
+Namespace(sub_id='102311', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Calculating correlation FC for 899885 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-176037.
+ConnectivityMeasure(kind='correlation')
+Found 1 rest scans for subject 406836.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-406836.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-175237.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='130316', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 130316.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-930449.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='342129', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 342129.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-159441.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='176239', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 176239.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-107321.
+ConnectivityMeasure(kind='correlation')
+Namespace(sub_id='205220', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 205220.
+Namespace(sub_id='139637', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='552241', ses_id='2', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='correlation', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 552241.
+Found 1 rest scans for subject 102311.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-102311.
+Calculating correlation FC for 176037 2
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 406836 2
+Calculating correlation FC for 175237 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-130316.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 930449 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-342129.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 159441 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-176239.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 107321 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-205220.
+ConnectivityMeasure(kind='correlation')
+Found 1 rest scans for subject 139637.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-552241.
+ConnectivityMeasure(kind='correlation')
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 102311 2
+Calculating correlation FC for 130316 2
+Calculating correlation FC for 342129 2
+Calculating correlation FC for 176239 2
+Calculating correlation FC for 205220 2
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/correlation_blocks/sub-139637.
+ConnectivityMeasure(kind='correlation')
+Calculating correlation FC for 552241 2
+Calculating correlation FC for 139637 2

@@ -1,0 +1,1932 @@
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 41588809 step creation temporarily disabled, retrying (Requested nodes are busy)
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+           ^^^^^
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+           ^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+AssertionError
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+Traceback (most recent call last):
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+Traceback (most recent call last):
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+           ^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+Traceback (most recent call last):
+           ^^^^^
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+    return model
+           ^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^
+           ^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+           ^^^^^
+           ^^^^^
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+Traceback (most recent call last):
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+Traceback (most recent call last):
+    return model
+           ^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+           ^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+    return model
+           ^^^^^
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+           ^^^^^
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+           ^^^^^
+    return model
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    return model
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    return model
+           ^^^^^
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+srun: error: nid005983: task 0: Exited with exit code 1
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: Terminating StepId=41588809.98
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid005983: task 0: Exited with exit code 1
+           ^^^^^
+           ^^^^^
+           ^^^^^
+           ^^^^^
+           ^^^^^
+           ^^^^^
+           ^^^^^
+           ^^^^^
+           ^^^^^
+srun: Terminating StepId=41588809.65
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid005983: task 0: Exited with exit code 1
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid005983: task 0: Exited with exit code 1
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.87
+srun: Terminating StepId=41588809.11
+srun: Terminating StepId=41588809.83
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.32
+srun: Terminating StepId=41588809.78
+srun: Terminating StepId=41588809.33
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.56
+srun: Terminating StepId=41588809.61
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.42
+srun: Step created for StepId=41588809.128
+srun: Step created for StepId=41588809.129
+srun: Step created for StepId=41588809.130
+srun: Step created for StepId=41588809.131
+srun: Step created for StepId=41588809.132
+srun: Step created for StepId=41588809.133
+srun: Step created for StepId=41588809.134
+srun: Step created for StepId=41588809.135
+srun: Step created for StepId=41588809.136
+srun: Step created for StepId=41588809.137
+srun: Step created for StepId=41588809.138
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.107
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.41
+srun: Terminating StepId=41588809.94
+srun: Terminating StepId=41588809.28
+srun: Step created for StepId=41588809.139
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Step created for StepId=41588809.140
+srun: Terminating StepId=41588809.10
+srun: Step created for StepId=41588809.141
+srun: Step created for StepId=41588809.142
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.39
+srun: Step created for StepId=41588809.143
+srun: Step created for StepId=41588809.144
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.47
+srun: Step created for StepId=41588809.145
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.40
+srun: Step created for StepId=41588809.146
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.114
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.67
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.3
+srun: Step created for StepId=41588809.147
+srun: Step created for StepId=41588809.148
+srun: Step created for StepId=41588809.149
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.70
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.46
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.74
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.71
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.49
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.44
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.82
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.60
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.17
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.4
+srun: Step created for StepId=41588809.150
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Step created for StepId=41588809.151
+srun: Step created for StepId=41588809.152
+srun: Step created for StepId=41588809.153
+srun: Step created for StepId=41588809.154
+srun: Terminating StepId=41588809.77
+srun: Step created for StepId=41588809.155
+srun: Step created for StepId=41588809.156
+srun: Step created for StepId=41588809.157
+srun: Step created for StepId=41588809.158
+srun: Step created for StepId=41588809.159
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Step created for StepId=41588809.160
+srun: Terminating StepId=41588809.48
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.18
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.122
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.57
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.38
+srun: Terminating StepId=41588809.31
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Step created for StepId=41588809.161
+srun: Terminating StepId=41588809.72
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.103
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.109
+srun: Step created for StepId=41588809.162
+srun: Step created for StepId=41588809.163
+srun: Step created for StepId=41588809.164
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.75
+srun: Step created for StepId=41588809.165
+srun: Step created for StepId=41588809.166
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Step created for StepId=41588809.167
+srun: Terminating StepId=41588809.101
+srun: Terminating StepId=41588809.108
+srun: Step created for StepId=41588809.168
+srun: Step created for StepId=41588809.169
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.124
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.84
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.126
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.62
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.104
+srun: Terminating StepId=41588809.50
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.76
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.1
+srun: Terminating StepId=41588809.35
+srun: Terminating StepId=41588809.29
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.6
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.45
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.8
+srun: Terminating StepId=41588809.116
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.118
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.110
+srun: Terminating StepId=41588809.43
+srun: Terminating StepId=41588809.123
+srun: Terminating StepId=41588809.25
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.112
+srun: Terminating StepId=41588809.89
+srun: Terminating StepId=41588809.81
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.91
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.64
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.5
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.63
+srun: Terminating StepId=41588809.34
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.85
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.79
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.69
+srun: Terminating StepId=41588809.0
+srun: Terminating StepId=41588809.68
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.23
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.7
+srun: Terminating StepId=41588809.36
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.59
+srun: Terminating StepId=41588809.73
+srun: Terminating StepId=41588809.120
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.20
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.9
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.58
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.24
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.55
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.66
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.88
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.99
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.37
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.111
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.102
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.86
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.53
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.51
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.127
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.113
+srun: Terminating StepId=41588809.95
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.106
+srun: Terminating StepId=41588809.16
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.13
+srun: Terminating StepId=41588809.22
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.52
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.117
+srun: Terminating StepId=41588809.115
+srun: Terminating StepId=41588809.90
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.54
+srun: Terminating StepId=41588809.26
+srun: Terminating StepId=41588809.125
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.19
+srun: Terminating StepId=41588809.14
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.27
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.105
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.92
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.21
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.97
+srun: Terminating StepId=41588809.30
+srun: Terminating StepId=41588809.121
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.80
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.96
+srun: Terminating StepId=41588809.2
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.119
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.93
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.100
+srun: Terminating StepId=41588809.12
+srun: Terminating StepId=41588809.15
+srun: Step created for StepId=41588809.170
+srun: Step created for StepId=41588809.171
+srun: Step created for StepId=41588809.172
+srun: Step created for StepId=41588809.173
+srun: Step created for StepId=41588809.174
+srun: Step created for StepId=41588809.175
+srun: Step created for StepId=41588809.176
+srun: Step created for StepId=41588809.177
+srun: Step created for StepId=41588809.178
+srun: Step created for StepId=41588809.179
+srun: Step created for StepId=41588809.180
+srun: Step created for StepId=41588809.181
+srun: Step created for StepId=41588809.182
+srun: Step created for StepId=41588809.183
+srun: Step created for StepId=41588809.184
+srun: Step created for StepId=41588809.185
+srun: Step created for StepId=41588809.186
+srun: Step created for StepId=41588809.187
+srun: Step created for StepId=41588809.188
+srun: Step created for StepId=41588809.189
+srun: Step created for StepId=41588809.190
+srun: Step created for StepId=41588809.191
+srun: Step created for StepId=41588809.192
+srun: Step created for StepId=41588809.193
+srun: Step created for StepId=41588809.194
+srun: Step created for StepId=41588809.195
+srun: Step created for StepId=41588809.196
+srun: Step created for StepId=41588809.197
+srun: Step created for StepId=41588809.198
+srun: Step created for StepId=41588809.199
+srun: Step created for StepId=41588809.200
+srun: Step created for StepId=41588809.201
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+           ^^^^^
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+usage: calc_fc.py [-h] [--sub_id SUB_ID] [--ses_id SES_ID] [--task_id TASK_ID] [--atlas_spec ATLAS_SPEC] [--n_rois N_ROIS]
+                  [--n_trs N_TRS] [--n_folds N_FOLDS] [--model MODEL] [--cv CV] [--proc_type PROC_TYPE] [--profile]
+                  [--fc_data_path FC_DATA_PATH] [--max_iter MAX_ITER]
+calc_fc.py: error: argument --sub_id: expected one argument
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.136
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.141
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.128
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.133
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.139
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.140
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.135
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.142
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.143
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.134
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.130
+srun: error: nid005983: task 0: Exited with exit code 2
+srun: Terminating StepId=41588809.137
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.132
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.144
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.138
+srun: error: nid005983: task 0: Exited with exit code 2
+srun: Terminating StepId=41588809.131
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.129
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.145
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+    return model
+           ^^^^^
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    return model
+           ^^^^^
+           ^^^^^
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+AssertionError
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.166
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.168
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.147
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.157
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.167
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.152
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.165
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.164
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.151
+srun: Terminating StepId=41588809.161
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.155
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.146
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.169
+srun: Terminating StepId=41588809.179
+srun: Terminating StepId=41588809.150
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.160
+srun: Terminating StepId=41588809.158
+srun: Terminating StepId=41588809.156
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.148
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.154
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.163
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.162
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.153
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.159
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.174
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.149
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 131, in <module>
+    assert len(ts_files) == 1
+           ^^^^^
+Traceback (most recent call last):
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+           ^^^^^
+Traceback (most recent call last):
+           ^^^^^
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+    return model
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    return model
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+           ^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+           ^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 138, in <module>
+    model = init_model(model_str, max_iter, random_state)
+    model = init_model(model_str, max_iter, random_state)
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+  File "/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc/models.py", line 115, in init_model
+    return model
+    return model
+           ^^^^^
+           ^^^^^
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+UnboundLocalError: cannot access local variable 'model' where it is not associated with a value
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.200
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.201
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.197
+srun: Terminating StepId=41588809.198
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.194
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.195
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.193
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.196
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.171
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.177
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.181
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.189
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.183
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.190
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.185
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.187
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.173
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.172
+srun: Terminating StepId=41588809.178
+srun: Terminating StepId=41588809.176
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.170
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.188
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.186
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.175
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.199
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.180
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.191
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.192
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.182
+srun: error: nid005983: task 0: Exited with exit code 1
+srun: Terminating StepId=41588809.184

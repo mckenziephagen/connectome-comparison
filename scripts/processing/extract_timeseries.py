@@ -15,8 +15,6 @@
 
 # This script takes in pre-processed niftis, and outputs a CSV with the timeseries by parcel. 
 
-# [793465, 160729, 173233, 126931]
-
 # +
 import numpy as np
 
@@ -51,9 +49,11 @@ os.environ["PATH"] = "/global/homes/m/mphagen/software/workbench/bin_linux64:" +
 args = argparse.Namespace(verbose=False, verbose_1=False)
 
 parser = argparse.ArgumentParser("extract_timeseries.py")
-parser.add_argument('--sub_id',  default='126931') 
+parser.add_argument('--sub_id',  default='202113') 
 parser.add_argument('--atlas_file', default='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii')
 parser.add_argument('--dataset', default='HCP') 
+parser.add_argument('--MSMAll', default=True ) 
+
 
 #hack argparse to be jupyter friendly AND cmdline compatible
 try: 
@@ -65,7 +65,7 @@ except KeyError:
 sub_id = args.sub_id
 atlas_file = args.atlas_file #from atlaspack
 dataset = args.dataset
-
+MSMAll = args.MSMAll
 print(args)
 
 sub_id = sub_id.replace('sub-', '') #just strip out 
@@ -98,9 +98,9 @@ def define_paths(path_prefix, dataset, results_str, atlas_file):
     """
     if dataset == 'HCP': 
         dataset_path = op.join(path_prefix, 'hcp-functional-connectivity') 
-   
+             
     derivatives_path = op.join(dataset_path, 'derivatives') 
-    results_dir = op.join(derivatives_path, results_str,)
+    results_dir = op.join(derivatives_path, results_str)
     atlas_path = op.join(path_prefix, 'AtlasPack', atlas_file)
     
     path_dict = {
@@ -126,23 +126,33 @@ def parcellate_data(in_file, out_file, dataset_path, ciftiparcel):
     template: atlas file from AtlasPack
 
     """
-    os.system(ciftiparcel.cmdline) 
     
     try: 
-        dl.drop(file, dataset=dataset_path)
+        dl.drop(in_file, dataset=dataset_path)
     except: 
         pass
 
 
 # +
-path_dict = define_paths('/pscratch/sd/m/mphagen', 'HCP', 'timeseries/min-proc', atlas_file)
+if MSMAll: 
+    results_str = 'MSMAll'
+else: 
+    results_str = 'minProc' 
+
+path_dict = define_paths('/pscratch/sd/m/mphagen', 'HCP', f'timeseries/{results_str}', atlas_file)
                        
 os.makedirs(path_dict['results_dir'], exist_ok=True)
 
-rest_scans = glob(op.join(path_dict['dataset_path'], 
+if MSMAll: 
+    rest_scans = glob(op.join(path_dict['dataset_path'], 
                           sub_id, 
                           'MNINonLinear/Results/rfMRI*', 
-                          'rfMRI_REST*Atlas_MSMAll*clean*.dtseries.nii'))
+                          'rfMRI_*_Atlas_MSMAll_hp2000_clean.dtseries.nii'))
+else:   
+    rest_scans = glob(op.join(path_dict['dataset_path'], 
+                          sub_id, 
+                          'MNINonLinear/Results/rfMRI*', 
+                          'rfMRI_*_Atlas_hp2000_clean.dtseries.nii'))
 
 rest_scans = list(filter(lambda x: '_7T_' not in x , rest_scans))
 
@@ -161,14 +171,11 @@ for file in rest_scans:
     
     file_str =  f'sub-{sub_id}_task-{task_id}_dir-{dir_id}_run-{run_id}_space-{atlas_spec}_stat-mean_timeseries.ptseries.nii'
     out_file = op.join(path_dict['results_dir'], f'sub-{sub_id}', file_str)
-    if not op.exists(op.join(out_file, file_str)): 
-
+    if not op.exists(op.join(out_file)): 
+        print("No ptseries file found, parcellating") 
         os.makedirs(os.path.dirname(out_file), exist_ok=True)
-    
-        if not op.exists(file): 
-            print("datalad getting") 
-            dl.get(file, dataset=path_dict['dataset_path'])
 
+        dl.get(file, dataset=path_dict['dataset_path'])
 
         ciftiparcel = CiftiParcellateWorkbench()
         ciftiparcel.inputs.in_file = file
@@ -177,7 +184,11 @@ for file in rest_scans:
         ciftiparcel.inputs.direction = 'COLUMN'
         ciftiparcel.cmdline  
         print(ciftiparcel.cmdline)
+            
+        os.system(ciftiparcel.cmdline) 
 
-        ts = parcellate_data(file, out_file, path_dict['dataset_path'], ciftiparcel)  
-        
+        try: 
+            dl.drop(file, dataset=path_dict['dataset_path'])
+        except: 
+            pass
     #double check BIDS nroi (does this need to be desc instead?

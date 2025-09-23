@@ -1,0 +1,638 @@
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 42059505 step creation temporarily disabled, retrying (Requested nodes are busy)
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.82
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.16
+srun: Step created for StepId=42059505.128
+srun: Step created for StepId=42059505.129
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.41
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.125
+srun: Step created for StepId=42059505.130
+srun: Step created for StepId=42059505.131
+srun: Step created for StepId=42059505.132
+srun: Step created for StepId=42059505.133
+srun: Step created for StepId=42059505.134
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.94
+srun: Step created for StepId=42059505.135
+srun: Step created for StepId=42059505.136
+srun: Step created for StepId=42059505.137
+srun: Step created for StepId=42059505.138
+srun: Step created for StepId=42059505.139
+srun: Step created for StepId=42059505.140
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.78
+srun: Step created for StepId=42059505.141
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.80
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.110
+srun: Step created for StepId=42059505.142
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.26
+srun: Step created for StepId=42059505.143
+srun: Step created for StepId=42059505.144
+srun: Step created for StepId=42059505.145
+srun: Step created for StepId=42059505.146
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.123
+srun: Step created for StepId=42059505.147
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.83
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: Step created for StepId=42059505.148
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.97
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.118
+srun: Step created for StepId=42059505.149
+srun: Step created for StepId=42059505.150
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.112
+srun: Step created for StepId=42059505.151
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.56
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: Step created for StepId=42059505.152
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+Traceback (most recent call last):
+           ^^^^^^^^^^^^^^^^^^
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+AssertionError
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: Step created for StepId=42059505.153
+Traceback (most recent call last):
+  File "/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py", line 134, in <module>
+    assert len(ts_files) == 1
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.106
+srun: Step created for StepId=42059505.154
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.99
+srun: Step created for StepId=42059505.155
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.66
+srun: Terminating StepId=42059505.32
+srun: Step created for StepId=42059505.156
+srun: Step created for StepId=42059505.157
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.74
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.120
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.90
+srun: Step created for StepId=42059505.158
+srun: Step created for StepId=42059505.159
+srun: Step created for StepId=42059505.160
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.91
+srun: Step created for StepId=42059505.161
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.85
+srun: Terminating StepId=42059505.87
+srun: Step created for StepId=42059505.162
+srun: Step created for StepId=42059505.163
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.113
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.92
+srun: Terminating StepId=42059505.108
+srun: Step created for StepId=42059505.164
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.65
+srun: Step created for StepId=42059505.165
+srun: Step created for StepId=42059505.166
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Step created for StepId=42059505.167
+srun: Terminating StepId=42059505.73
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.88
+srun: Step created for StepId=42059505.168
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.116
+srun: Step created for StepId=42059505.169
+srun: Terminating StepId=42059505.105
+srun: Terminating StepId=42059505.122
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.127
+srun: Terminating StepId=42059505.71
+srun: Step created for StepId=42059505.170
+srun: Step created for StepId=42059505.171
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.89
+srun: Step created for StepId=42059505.172
+srun: Step created for StepId=42059505.173
+srun: Step created for StepId=42059505.174
+srun: Step created for StepId=42059505.175
+srun: Terminating StepId=42059505.101
+srun: Step created for StepId=42059505.176
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.115
+srun: Step created for StepId=42059505.177
+srun: Terminating StepId=42059505.51
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.103
+srun: Step created for StepId=42059505.178
+srun: Step created for StepId=42059505.179
+srun: Step created for StepId=42059505.180
+srun: Step created for StepId=42059505.181
+srun: Step created for StepId=42059505.182
+srun: Step created for StepId=42059505.183
+srun: Step created for StepId=42059505.184
+srun: Step created for StepId=42059505.185
+srun: Step created for StepId=42059505.186
+srun: Step created for StepId=42059505.187
+srun: Step created for StepId=42059505.188
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Step created for StepId=42059505.189
+srun: Terminating StepId=42059505.77
+srun: Step created for StepId=42059505.190
+srun: Step created for StepId=42059505.191
+srun: Step created for StepId=42059505.192
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Step created for StepId=42059505.193
+srun: Terminating StepId=42059505.4
+srun: Terminating StepId=42059505.37
+srun: Terminating StepId=42059505.34
+srun: Step created for StepId=42059505.194
+srun: Step created for StepId=42059505.195
+srun: Step created for StepId=42059505.196
+srun: Step created for StepId=42059505.197
+srun: Step created for StepId=42059505.198
+srun: Step created for StepId=42059505.199
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Step created for StepId=42059505.200
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Step created for StepId=42059505.201
+srun: Terminating StepId=42059505.49
+srun: Terminating StepId=42059505.8
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.62
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.42
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.30
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.45
+srun: Terminating StepId=42059505.43
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.48
+srun: Terminating StepId=42059505.39
+srun: Terminating StepId=42059505.53
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.5
+srun: Terminating StepId=42059505.18
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.54
+srun: Terminating StepId=42059505.22
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.61
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.12
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.0
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.60
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.19
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.25
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.58
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.20
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.31
+srun: Terminating StepId=42059505.17
+srun: error: nid005413: task 0: Exited with exit code 1
+srun: Terminating StepId=42059505.11

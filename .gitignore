@@ -9,8 +9,8 @@ renv/
 *.png
 *.pdf
 fmriprep-denoise-benchmark
-data/*
-*ruse* 
 scripts/processing/notebook_results/
+*ruse* 
+*data*
 *pycache* 
 data/hcp_data/*

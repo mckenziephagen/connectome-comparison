@@ -1,0 +1,2637 @@
+/global/common/software/nersc9/jupyter/ex/25-06/nersc-utils:/global/homes/m/mphagen/miniconda3/envs/fc_py311/bin:/global/homes/m/mphagen/miniconda3/condabin:/opt/nersc/pe/bin:/global/common/software/nersc/bin:/global/common/software/nersc9/darshan/default/bin:/global/common/software/nersc9/sqs/2.0/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/compute-sanitizer:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/bin:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/cuda/12.4/libnvvp:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/profilers/Nsight_Compute:/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/profilers/Nsight_Systems/bin:/opt/cray/pe/perftools/24.07.0/bin:/opt/cray/pe/papi/7.1.0.2/bin:/opt/cray/pe/gcc-native/13/bin:/opt/cray/pe/craype/2.7.32/bin:/opt/cray/pe/mpich/8.1.30/ofi/gnu/12.3/bin:/opt/cray/pe/mpich/8.1.30/bin:/opt/cray/libfabric/1.20.1/bin:/global/homes/m/mphagen/bin:/usr/local/bin:/usr/bin:/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/opt/workbench/bin_linux64:/opt/workbench/bin_linux64:/opt/workbench/bin_linux64:/opt/workbench/bin_linux64
+#!/bin/bash
+#SBATCH --qos=debug
+#SBATCH --time=30:00
+#SBATCH --constraint=cpu
+#SBATCH --array=1 #1-100%150
+#SBATCH --error logs/lasso_%A_%a.error
+#SBATCH --out logs/lasso_%A_%a.out
+#SBATCH --account=m1266
+#SBATCH --nodes=1
+#SBATCH --ntasks=100
+
+source /global/homes/m/mphagen/.bash_profile
+conda activate fc_py311
+
+script="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/scripts/processing/calc_fc.py"
+subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/test_subjects.txt"
+
+echo $PATH
+
+cat $0 
+
+idx=$(( $SLURM_ARRAY_TASK_ID )) 
+
+
+for i in {0..100}; do
+
+    sub_id=$( sed -n $(($idx+$i))p $subject_file )
+    echo $sub_id
+    srun -n 1 -c 2 python $script --sub_id $sub_id --ses_id 1 --model 'lasso-bic' --proc_type 'minProc' &  
+
+done
+wait
+
+
+
+102109
+930449
+342129
+159441
+205220
+673455
+204521
+130316
+134425
+141422
+175237
+704238
+680250
+552241
+406836
+139637
+107321
+793465
+368753
+136732
+899885
+353740
+180533
+788674
+485757
+176037
+160729
+513736
+947668
+102311
+822244
+919966
+826454
+878877
+559053
+937160
+742549
+635245
+118932
+130417
+341834
+130114
+113417
+677766
+173233
+202113
+105014
+662551
+300719
+117930
+882161
+134728
+597869
+149236
+336841
+169949
+208428
+531536
+770352
+153126
+908860
+521331
+176239
+979984
+231928
+103010
+176744
+333330
+208630
+159138
+174841
+959574
+887373
+156031
+837560
+107018
+356948
+197651
+352738
+204420
+126931
+195849
+162935
+590047
+154835
+196851
+856463
+188549
+761957
+871762
+870861
+867468
+130013
+118225
+406432
+129533
+601127
+111413
+579665
+454140
+
+Namespace(sub_id='793465', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='173233', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='160729', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='126931', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Namespace(sub_id='141422', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 141422.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-141422.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 141422 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.511422872543335  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.542529582977295  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.632699966430664  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.729466676712036  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7116458415985107  seconds
+Namespace(sub_id='136732', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 136732.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-136732.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 136732 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.585334539413452  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.577455759048462  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7680957317352295  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.750798463821411  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7406809329986572  seconds
+Namespace(sub_id='107321', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 107321.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-107321.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 107321 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5499768257141113  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5547523498535156  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6839423179626465  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7566659450531006  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7588889598846436  seconds
+Namespace(sub_id='704238', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 704238.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-704238.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 704238 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7156527042388916  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5100314617156982  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6960949897766113  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.719195604324341  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7524993419647217  seconds
+Namespace(sub_id='406836', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 406836.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-406836.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 406836 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5813357830047607  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.623737335205078  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7611000537872314  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.776872396469116  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7895233631134033  seconds
+Namespace(sub_id='130316', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 130316.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-130316.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 130316 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.6591947078704834  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.6228954792022705  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.756242513656616  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7737112045288086  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.8168256282806396  seconds
+Namespace(sub_id='673455', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 673455.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-673455.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 673455 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7466578483581543  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8397505283355713  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7941060066223145  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.772362470626831  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.752387285232544  seconds
+Namespace(sub_id='552241', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 552241.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-552241.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 552241 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.710186243057251  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.735020637512207  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.85373592376709  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.833183765411377  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.827881336212158  seconds
+Namespace(sub_id='134425', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 134425.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-134425.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 134425 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.6997017860412598  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7934396266937256  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.8302690982818604  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.778846025466919  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.756204843521118  seconds
+Namespace(sub_id='175237', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 175237.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-175237.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 175237 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.570049285888672  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5471584796905518  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+3.2660279273986816  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.801690101623535  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.779531240463257  seconds
+Namespace(sub_id='102109', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 102109.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-102109.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 102109 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7380220890045166  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7120277881622314  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.868320941925049  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.9363081455230713  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.958585500717163  seconds
+Namespace(sub_id='204521', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 204521.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-204521.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 204521 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+3.1052088737487793  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.655848741531372  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7682485580444336  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.720576047897339  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7244410514831543  seconds
+Namespace(sub_id='159441', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 159441.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-159441.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 159441 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.81998348236084  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8247976303100586  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.971548318862915  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.8648433685302734  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.8471262454986572  seconds
+Namespace(sub_id='680250', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 680250.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-680250.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 680250 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+3.063331127166748  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+3.0553412437438965  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.732314109802246  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7549757957458496  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7704946994781494  seconds
+Namespace(sub_id='139637', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 139637.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-139637.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 139637 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.73689866065979  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.9961063861846924  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+3.2412757873535156  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.797919511795044  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7985892295837402  seconds
+Namespace(sub_id='342129', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 342129.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-342129.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 342129 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.9109203815460205  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.942478895187378  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.9864227771759033  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.905156135559082  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.8733205795288086  seconds
+Namespace(sub_id='205220', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 205220.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-205220.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 205220 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+3.038208484649658  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+3.048201560974121  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+3.060533046722412  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.8874082565307617  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.8888721466064453  seconds
+Namespace(sub_id='899885', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 899885.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-899885.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 899885 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+3.3875608444213867  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+3.1958374977111816  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.884172201156616  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.8689701557159424  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.7739944458007812  seconds
+Namespace(sub_id='930449', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 930449.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-930449.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 930449 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.969618558883667  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+3.911100149154663  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+3.012932538986206  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.8820502758026123  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.746328830718994  seconds
+Namespace(sub_id='513736', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 513736.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-513736.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 513736 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.489034652709961  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.6130712032318115  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.714388132095337  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7441978454589844  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.578679084777832  seconds
+Namespace(sub_id='176037', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 176037.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-176037.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 176037 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5263051986694336  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.641512870788574  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7104947566986084  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7560787200927734  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.546891927719116  seconds
+Namespace(sub_id='368753', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 368753.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-368753.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 368753 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.526632785797119  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.6719257831573486  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6999964714050293  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7093942165374756  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.47395658493042  seconds
+Namespace(sub_id='822244', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 822244.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-822244.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 822244 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.435746908187866  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.638965129852295  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7148208618164062  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.6967766284942627  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.505251884460449  seconds
+Namespace(sub_id='662551', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 662551.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-662551.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 662551 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.6143927574157715  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.6984245777130127  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7654666900634766  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.786609411239624  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.626477003097534  seconds
+Namespace(sub_id='788674', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 788674.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-788674.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 788674 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5103282928466797  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.6463823318481445  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.677690267562866  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.689901113510132  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.526442766189575  seconds
+Namespace(sub_id='102311', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 102311.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-102311.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 102311 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.670809745788574  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8049428462982178  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.800821542739868  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7844793796539307  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.6010901927948  seconds
+Namespace(sub_id='521331', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 521331.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-521331.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 521331 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.6503665447235107  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.831078052520752  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.749457359313965  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.8006703853607178  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5944676399230957  seconds
+Namespace(sub_id='919966', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 919966.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-919966.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 919966 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5863125324249268  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.687256097793579  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.772947311401367  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7690517902374268  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5775527954101562  seconds
+Namespace(sub_id='856463', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 856463.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-856463.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 856463 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5402181148529053  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7323665618896484  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7744455337524414  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.7623138427734375  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.6266558170318604  seconds
+Namespace(sub_id='947668', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 947668.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-947668.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 947668 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.577603340148926  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.732192039489746  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.836719274520874  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.8139889240264893  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5165157318115234  seconds
+Namespace(sub_id='531536', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 531536.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-531536.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 531536 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5724120140075684  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7162888050079346  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7988553047180176  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.808729887008667  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5936758518218994  seconds
+Namespace(sub_id='635245', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 635245.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-635245.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 635245 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.6160736083984375  seconds
+Fold 1:
+  Train: range=0, 2399
+Namespace(sub_id='204420', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 204420.
+  Test:  index=1440, 1919
+2.7308146953582764  seconds
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-204420.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Fold 2:
+  Train: range=0, 2399
+Calculating lasso-bic FC for 204420 1
+lasso-bic
+  Test:  index=960, 1439
+2.806107997894287  seconds
+Fold 0:
+  Train: range=0, 1919
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=1920, 2399
+2.576930522918701  seconds
+  Test:  index=480, 959
+2.795421838760376  seconds
+Fold 1:
+  Train: range=0, 2399
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=1440, 1919
+2.7396786212921143  seconds
+  Test:  index=0, 479
+2.615569829940796  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.8248348236083984  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.8098905086517334  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.6231327056884766  seconds
+Namespace(sub_id='202113', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 202113.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-202113.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 202113 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.768005609512329  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8799619674682617  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.85994291305542  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.8230605125427246  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.570258140563965  seconds
+Namespace(sub_id='485757', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 485757.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-485757.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 485757 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+3.192415714263916  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+3.1304171085357666  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.775070905685425  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.6955065727233887  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5336859226226807  seconds
+Namespace(sub_id='180533', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 180533.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-180533.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 180533 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7280068397521973  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7474617958068848  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7375175952911377  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5620241165161133  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.4661712646484375  seconds
+Namespace(sub_id='130114', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 130114.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-130114.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 130114 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.698756694793701  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7413532733917236  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.772657632827759  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5713467597961426  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.518263816833496  seconds
+Namespace(sub_id='176744', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 176744.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-176744.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 176744 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.765202283859253  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8092315196990967  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.788919687271118  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.608104705810547  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.515624761581421  seconds
+Namespace(sub_id='231928', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 231928.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-231928.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 231928 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7897377014160156  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.748626470565796  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7710235118865967  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5538504123687744  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.496331214904785  seconds
+Namespace(sub_id='826454', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 826454.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-826454.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 826454 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7287213802337646  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.77262282371521  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.753408670425415  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.586838722229004  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5237081050872803  seconds
+Namespace(sub_id='590047', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 590047.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-590047.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 590047 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7698724269866943  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.800044298171997  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.785179376602173  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5899434089660645  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.4799389839172363  seconds
+Namespace(sub_id='134728', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 134728.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-134728.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 134728 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.769244909286499  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.790210485458374  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.784153938293457  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.562720537185669  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.4874258041381836  seconds
+Namespace(sub_id='188549', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 188549.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-188549.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 188549 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.771153688430786  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.775146722793579  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.763665199279785  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+Namespace(sub_id='107018', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 107018.
+2.5887291431427  seconds
+Fold 4:
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-107018.
+LassoLarsIC(criterion='bic', max_iter=1000)
+  Train: range=480, 2399
+  Test:  index=0, 479
+Calculating lasso-bic FC for 107018 1
+lasso-bic
+2.4894561767578125  seconds
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7021212577819824  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8003957271575928  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.8006815910339355  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.6501641273498535  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.463616371154785  seconds
+Namespace(sub_id='406432', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 406432.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-406432.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 406432 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.772843599319458  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.831995964050293  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.812680959701538  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.6074068546295166  seconds
+Fold 4:
+  Train: range=480, 2399
+Namespace(sub_id='353740', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 353740.
+  Test:  index=0, 479
+2.5644373893737793  seconds
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-353740.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 353740 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.8198201656341553  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8377678394317627  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.816413402557373  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.638669490814209  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.562718629837036  seconds
+Namespace(sub_id='559053', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 559053.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-559053.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 559053 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+3.026758909225464  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.758474349975586  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7623238563537598  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.546992778778076  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5078916549682617  seconds
+Namespace(sub_id='597869', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 597869.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-597869.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 597869 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.815267562866211  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8587779998779297  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.8082900047302246  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.6320855617523193  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.585570812225342  seconds
+Namespace(sub_id='159138', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 159138.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-159138.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 159138 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.857876777648926  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8765981197357178  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.8851871490478516  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.655087947845459  seconds
+Namespace(sub_id='742549', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 742549.
+Fold 4:
+  Train: range=480, 2399
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-742549.
+LassoLarsIC(criterion='bic', max_iter=1000)
+  Test:  index=0, 479
+2.5549991130828857  seconds
+Calculating lasso-bic FC for 742549 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.9541993141174316  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7878952026367188  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.8274788856506348  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.63440203666687  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.527419328689575  seconds
+Namespace(sub_id='333330', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 333330.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-333330.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 333330 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.4736361503601074  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.463487148284912  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.496568202972412  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5223159790039062  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.4834184646606445  seconds
+Namespace(sub_id='937160', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 937160.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-937160.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 937160 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5227770805358887  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.480682849884033  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5015971660614014  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5236599445343018  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.513495922088623  seconds
+Namespace(sub_id='111413', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 111413.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-111413.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 111413 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.4939582347869873  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.438087224960327  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.4300639629364014  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.448242425918579  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.439659357070923  seconds
+Namespace(sub_id='908860', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 908860.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-908860.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 908860 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.512402296066284  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.496319055557251  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5153019428253174  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.534137487411499  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5130016803741455  seconds
+Namespace(sub_id='118932', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 118932.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-118932.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 118932 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5180721282958984  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5184850692749023  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.519589424133301  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.515942096710205  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.515587568283081  seconds
+Namespace(sub_id='197651', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 197651.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-197651.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 197651 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5209944248199463  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4838507175445557  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.485715389251709  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5212674140930176  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.491760015487671  seconds
+Namespace(sub_id='130013', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 130013.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-130013.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 130013 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.531057357788086  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4976532459259033  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5484776496887207  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.542219400405884  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.505335807800293  seconds
+Namespace(sub_id='169949', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 169949.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-169949.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 169949 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.518400192260742  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4950485229492188  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.505225658416748  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5460193157196045  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.510531425476074  seconds
+Namespace(sub_id='882161', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 882161.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-882161.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 882161 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.4682912826538086  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4888718128204346  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.513848066329956  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.509052276611328  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5166988372802734  seconds
+Namespace(sub_id='579665', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 579665.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-579665.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 579665 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.568856954574585  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.522651195526123  seconds
+Fold 2:
+  Train: range=0, 2399
+Namespace(sub_id='154835', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 154835.
+  Test:  index=960, 1439
+2.550180435180664  seconds
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-154835.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Fold 3:
+  Train: range=0, 2399
+Calculating lasso-bic FC for 154835 1
+lasso-bic
+  Test:  index=480, 959
+2.568925380706787  seconds
+Fold 0:
+  Train: range=0, 1919
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=1920, 2399
+2.4886152744293213  seconds
+  Test:  index=0, 479
+2.5356156826019287  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4631524085998535  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.4954769611358643  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.500387191772461  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.4826648235321045  seconds
+Namespace(sub_id='149236', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 149236.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-149236.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 149236 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.503868579864502  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4754509925842285  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5182909965515137  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5235402584075928  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5450947284698486  seconds
+Namespace(sub_id='176239', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 176239.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-176239.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 176239 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5454506874084473  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4832100868225098  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5301315784454346  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.530791759490967  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.529099941253662  seconds
+Namespace(sub_id='870861', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 870861.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-870861.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 870861 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.579141139984131  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.486462116241455  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.527256488800049  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.540207862854004  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5313873291015625  seconds
+Namespace(sub_id='162935', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 162935.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-162935.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 162935 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.503783702850342  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5118184089660645  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.546870708465576  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5058252811431885  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.496246814727783  seconds
+Namespace(sub_id='156031', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 156031.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-156031.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 156031 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5309152603149414  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.475281238555908  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5289485454559326  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5226190090179443  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5391299724578857  seconds
+Namespace(sub_id='174841', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 174841.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-174841.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Namespace(sub_id='341834', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 341834.
+Calculating lasso-bic FC for 174841 1
+lasso-bic
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-341834.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Fold 0:
+  Train: range=0, 1919
+Calculating lasso-bic FC for 341834 1
+lasso-bic
+  Test:  index=1920, 2399
+2.5322370529174805  seconds
+Fold 0:
+  Train: range=0, 1919
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1920, 2399
+2.491274833679199  seconds
+  Test:  index=1440, 1919
+2.5030136108398438  seconds
+Fold 1:
+  Train: range=0, 2399
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4733757972717285  seconds
+  Test:  index=960, 1439
+2.4937891960144043  seconds
+Fold 2:
+  Train: range=0, 2399
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5099213123321533  seconds
+  Test:  index=480, 959
+2.5462872982025146  seconds
+Fold 3:
+  Train: range=0, 2399
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=480, 959
+2.501636028289795  seconds
+  Test:  index=0, 479
+2.522582769393921  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.528914213180542  seconds
+Namespace(sub_id='959574', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 959574.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-959574.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 959574 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5727322101593018  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.583829164505005  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.544624090194702  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5738298892974854  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5828566551208496  seconds
+Namespace(sub_id='129533', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 129533.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-129533.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 129533 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7416181564331055  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.703214168548584  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6216931343078613  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.468474864959717  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.4213852882385254  seconds
+Namespace(sub_id='195849', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 195849.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-195849.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 195849 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5693883895874023  seconds
+Fold 1:
+  Train: range=0, 2399
+Namespace(sub_id='878877', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 878877.
+  Test:  index=1440, 1919
+2.5489370822906494  seconds
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-878877.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Fold 2:
+  Train: range=0, 2399
+Calculating lasso-bic FC for 878877 1
+lasso-bic
+  Test:  index=960, 1439
+2.5402331352233887  seconds
+Fold 0:
+  Train: range=0, 1919
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=1920, 2399
+2.579880714416504  seconds
+  Test:  index=480, 959
+2.5719518661499023  seconds
+Fold 1:
+  Train: range=0, 2399
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=1440, 1919
+2.5000083446502686  seconds
+  Test:  index=0, 479
+2.5299201011657715  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5222978591918945  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.548799514770508  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5323259830474854  seconds
+Namespace(sub_id='352738', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 352738.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-352738.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 352738 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5235962867736816  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.484498977661133  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.508608341217041  seconds
+Fold 3:
+  Train: range=0, 2399
+Namespace(sub_id='105014', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 105014.
+  Test:  index=480, 959
+2.524421215057373  seconds
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-105014.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Fold 4:
+  Train: range=480, 2399
+Calculating lasso-bic FC for 105014 1
+lasso-bic
+  Test:  index=0, 479
+2.5131216049194336  seconds
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5054025650024414  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5180745124816895  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5465900897979736  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5167574882507324  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5136570930480957  seconds
+Namespace(sub_id='601127', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 601127.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-601127.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 601127 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.552321434020996  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5156924724578857  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5346126556396484  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5547540187835693  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5258100032806396  seconds
+Namespace(sub_id='196851', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 196851.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-196851.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 196851 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5242109298706055  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.504577398300171  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5209124088287354  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5307328701019287  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.527693271636963  seconds
+Namespace(sub_id='871762', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 871762.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-871762.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 871762 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5210726261138916  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5104830265045166  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.513352394104004  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5423200130462646  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5284979343414307  seconds
+Namespace(sub_id='113417', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 113417.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-113417.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 113417 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7297372817993164  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.727377414703369  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6593165397644043  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.503256320953369  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.41955828666687  seconds
+Namespace(sub_id='103010', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 103010.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-103010.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 103010 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.623680591583252  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5398917198181152  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.598202705383301  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5999855995178223  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.622743606567383  seconds
+Namespace(sub_id='118225', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 118225.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-118225.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 118225 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.506498336791992  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.4868884086608887  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.53745174407959  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.579507350921631  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.52187442779541  seconds
+Namespace(sub_id='837560', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 837560.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-837560.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 837560 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.5796115398406982  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5343711376190186  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5570433139801025  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5447936058044434  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5239670276641846  seconds
+Namespace(sub_id='300719', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 300719.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-300719.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 300719 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.544449806213379  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5112876892089844  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.560739278793335  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.557992458343506  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5679421424865723  seconds
+Namespace(sub_id='208428', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 208428.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-208428.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 208428 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.7423958778381348  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7534546852111816  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.670210599899292  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5258822441101074  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.469956398010254  seconds
+Namespace(sub_id='356948', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 356948.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-356948.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 356948 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.557260751724243  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.546544313430786  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.589296579360962  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5709073543548584  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.571547269821167  seconds
+Namespace(sub_id='887373', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 887373.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-887373.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 887373 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.543998956680298  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5119621753692627  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.5827064514160156  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.6281352043151855  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5662026405334473  seconds
+Namespace(sub_id='979984', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 979984.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-979984.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 979984 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.576198101043701  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.5444040298461914  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.594755172729492  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.595780849456787  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5883400440216064  seconds
+Namespace(sub_id='336841', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 336841.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-336841.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 336841 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+Namespace(sub_id='130417', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 130417.
+2.621565341949463  seconds
+Fold 1:
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-130417.
+LassoLarsIC(criterion='bic', max_iter=1000)
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+Calculating lasso-bic FC for 130417 1
+lasso-bic
+2.616473913192749  seconds
+Fold 2:
+Fold 0:
+  Train: range=0, 1919
+  Train: range=0, 2399
+  Test:  index=960, 1439
+  Test:  index=1920, 2399
+2.807471990585327  seconds
+2.603065252304077  seconds
+Fold 3:
+Namespace(sub_id='761957', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 761957.
+Fold 1:
+  Train: range=0, 2399
+  Train: range=0, 2399
+  Test:  index=480, 959
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-761957.
+LassoLarsIC(criterion='bic', max_iter=1000)
+  Test:  index=1440, 1919
+2.787839889526367  seconds
+2.6071178913116455  seconds
+Fold 4:
+Calculating lasso-bic FC for 761957 1
+lasso-bic
+Fold 2:
+  Train: range=0, 2399
+  Train: range=480, 2399
+  Test:  index=0, 479
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=960, 1439
+2.6884055137634277  seconds
+2.551208734512329  seconds
+  Test:  index=1920, 2399
+2.563227653503418  seconds
+Fold 3:
+  Train: range=0, 2399
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.502394914627075  seconds
+  Test:  index=1440, 1919
+2.576718807220459  seconds
+Fold 4:
+  Train: range=480, 2399
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=0, 479
+2.521028518676758  seconds
+  Test:  index=960, 1439
+2.550935983657837  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.6029794216156006  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.571194648742676  seconds
+Namespace(sub_id='867468', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 867468.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-867468.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 867468 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.79461932182312  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.764573097229004  seconds
+Fold 2:
+Namespace(sub_id='208630', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 208630.
+  Train: range=0, 2399
+  Test:  index=960, 1439
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-208630.
+LassoLarsIC(criterion='bic', max_iter=1000)
+2.63622784614563  seconds
+Fold 3:
+Calculating lasso-bic FC for 208630 1
+lasso-bic
+  Train: range=0, 2399
+  Test:  index=480, 959
+Fold 0:
+  Train: range=0, 1919
+2.540847063064575  seconds
+Fold 4:
+  Test:  index=1920, 2399
+2.632896661758423  seconds
+  Train: range=480, 2399
+  Test:  index=0, 479
+Fold 1:
+  Train: range=0, 2399
+2.5012242794036865  seconds
+  Test:  index=1440, 1919
+2.612384557723999  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6204960346221924  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.6057443618774414  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.6652660369873047  seconds
+Namespace(sub_id='677766', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 677766.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-677766.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 677766 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.754828453063965  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7146644592285156  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.611201047897339  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.471065044403076  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.434051036834717  seconds
+Namespace(sub_id='770352', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 770352.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-770352.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 770352 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.851444721221924  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8017446994781494  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6653506755828857  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5575366020202637  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.478813886642456  seconds
+Namespace(sub_id='153126', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 153126.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-153126.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 153126 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.8109092712402344  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.7734460830688477  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6502864360809326  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.4974923133850098  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.504246473312378  seconds
+Namespace(sub_id='117930', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 117930.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-117930.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 117930 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.794718027114868  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.813530921936035  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.6593849658966064  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.5497589111328125  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.5236756801605225  seconds
+Namespace(sub_id='454140', ses_id='1', task_id='rest', atlas_spec='fsLR_seg-4S156Parcels_den-91k', n_rois=100, n_trs=1200, n_folds=5, model='lasso-bic', cv='blocks', proc_type='minProc', profile=False, fc_data_path='/pscratch/sd/m/mphagen/hcp-functional-connectivity', max_iter=1000)
+Found 1 rest scans for subject 454140.
+Saving results to /pscratch/sd/m/mphagen/hcp-functional-connectivity/derivatives/connectivity-matrices/minProc/lasso-bic-blocks/sub-454140.
+LassoLarsIC(criterion='bic', max_iter=1000)
+Calculating lasso-bic FC for 454140 1
+lasso-bic
+Fold 0:
+  Train: range=0, 1919
+  Test:  index=1920, 2399
+2.797469139099121  seconds
+Fold 1:
+  Train: range=0, 2399
+  Test:  index=1440, 1919
+2.8049488067626953  seconds
+Fold 2:
+  Train: range=0, 2399
+  Test:  index=960, 1439
+2.7574033737182617  seconds
+Fold 3:
+  Train: range=0, 2399
+  Test:  index=480, 959
+2.601527452468872  seconds
+Fold 4:
+  Train: range=480, 2399
+  Test:  index=0, 479
+2.514484167098999  seconds
