@@ -6,11 +6,11 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.16.4
+#       jupytext_version: 1.17.3
 #   kernelspec:
-#     display_name: fc_311
+#     display_name: Python (FC)
 #     language: python
-#     name: fc_311
+#     name: fc
 # ---
 
 # This code expects to find parcellated timeseries data in `f'deriv_dir/timeseries/{proc_type}/sub-{sub_id}/sub-{sub_id}*ses-1*timeseries.ptseries.nii'`. 
@@ -27,8 +27,7 @@ from sklearn.exceptions import ConvergenceWarning
 import warnings
 
 
-#work around until I install fc_comparison as an actual package
-sys.path.append(os.path.dirname('/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc'))
+sys.path.append(os.path.dirname('/mmfs1/gscratch/escience/mphagen/model-fc/src/model_fc'))
 
 # +
 import time
@@ -38,8 +37,6 @@ import nilearn
 from pyuoi.utils import log_likelihood_glm, AIC, BIC
 
 import numpy as np
-
-import matplotlib.pyplot as plt
 
 import argparse
 
@@ -71,12 +68,12 @@ parser.add_argument('--n_trs', default=1200, type=int) #default for hcp;
 parser.add_argument('--n_folds', default=5) 
 parser.add_argument('--model', default='ridgeCV') 
 parser.add_argument('--cv', default='blocks') 
-parser.add_argument('--proc_type', default='MSMAll') 
+parser.add_argument('--proc_type', default='xcpd') 
 
 parser.add_argument('--profile', action='store_true') 
 
 parser.add_argument('--fc_data_path', 
-                    default='/pscratch/sd/m/mphagen/hcp-functional-connectivity') 
+                    default='/gscratch/scrubbed/mphagen') 
 parser.add_argument('--max_iter', default=1000) 
 
 #hack argparse to be jupyter friendly AND cmdline compatible
