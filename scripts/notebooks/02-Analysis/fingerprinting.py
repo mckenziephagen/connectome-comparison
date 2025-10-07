@@ -20,21 +20,24 @@ import os.path as op
 import pickle
 import random
 
+proc_type = 'MSMAll'
+
+correlation_dict = '2025-08-21_task-rest_ses-2_space-fsLR_seg-4S156Parcels_den-91k_model-correlation_stat-median_relmat.pkl' 
+
 # +
-results_path = '/global/homes/m/mphagen/functional-connectivity/connectome-comparison/results'
-date_string='2023-11-07'
-with open(op.join(results_path, f'{date_string}_lasso_dict.pkl'), 'rb') as l:
-        lasso_dict = pickle.load(l)
+results_path = f'/global/homes/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
+# date_string='2023-11-07'
+# with open(op.join(results_path, f'{date_string}_lasso_dict.pkl'), 'rb') as l:
+#         lasso_dict = pickle.load(l)
         
-with open(op.join(results_path, f'{date_string}_uoi_dict.pkl'), 'rb') as u:
-        uoi_dict = pickle.load(u)
+# with open(op.join(results_path, f'{date_string}_uoi_dict.pkl'), 'rb') as u:
+#         uoi_dict = pickle.load(u)
         
-with open(op.join(results_path, f'{date_string}_pearson_dict.pkl'), 'rb') as f:
+with open(op.join(results_path, correlation_dict), 'rb') as f:
         pearson_dict = pickle.load(f)
+
+
 # -
-
-lasso_dict
-
 
 #the data I'm currently working with is done by run, not session
 #this won't be necessary for future analyses
@@ -165,7 +168,3 @@ for key, value in corr_dict.items():
         if corr == max(corr_dict[key].values()): 
             print(sub_id in key) 
             break #stop after found
-
-max(corr_dict['sub-129533_7828'].values()) 
-
-

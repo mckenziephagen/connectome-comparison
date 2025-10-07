@@ -1,25 +1,27 @@
-# ---
-# jupyter:
-#   jupytext:
-#     formats: ipynb,Rmd,R:light
-#     text_representation:
-#       extension: .R
-#       format_name: light
-#       format_version: '1.5'
-#       jupytext_version: 1.16.4
-#   kernelspec:
-#     display_name: R
-#     language: R
-#     name: ir
-# ---
+---
+jupyter:
+  jupytext:
+    formats: ipynb,Rmd,R:light
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.16.4
+  kernelspec:
+    display_name: R
+    language: R
+    name: ir
+---
 
-# #find edges that are consistently higher than 0
+#find edges that are consistently higher than 0
 
+```{r}
 library('I2C2') 
 library('tidyverse') 
+```
 
 
-# +
+```{r}
 icc_calc <- function(df) { 
 
 df$pos <- NULL
@@ -37,11 +39,11 @@ icc_obj = list(i2c2_res, i2c2_ci)
 
 return(icc_obj) 
  } 
-# -
+```
 
-# ### MSMAll
+### MSMAll
 
-# +
+```{r}
 results_path = '/global/homes/m/mphagen/functional-connectivity/connectome-comparison/results/MSMAll'
 
 lasso_df = read.csv(file.path(results_path, 'lasso_icc_df.csv')) 
@@ -53,11 +55,11 @@ pearson_df = read.csv(file.path(results_path, 'pearson_icc_df.csv'))
 pearson_icc <- icc_calc(pearson_df) 
 pearson_icc[[1]]$lambda
 pearson_icc[[2]]
-# -
+```
 
-# #### XCPD
+#### XCPD
 
-# +
+```{r}
 results_path = '/global/homes/m/mphagen/functional-connectivity/connectome-comparison/results/xcpd'
 
 lasso_df = read.csv(file.path(results_path, 'lasso_icc_df.csv')) 
@@ -69,3 +71,4 @@ pearson_df = read.csv(file.path(results_path, 'pearson_icc_df.csv'))
 pearson_icc <- icc_calc(pearson_df) 
 pearson_icc[[1]]$lambda
 pearson_icc[[2]]
+```

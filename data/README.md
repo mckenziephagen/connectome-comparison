@@ -1,1 +1,1 @@
-For storage of organized interim results (i.e. functional connectivity matrices).
+For storage of behavioral data files and list of subjects.  
