@@ -52,12 +52,18 @@ from sklearn.preprocessing import StandardScaler
 import pickle
 
 from model_fc.models import init_model, run_model
+# -
+
+help(init_model) 
 
 # +
 args = argparse.Namespace()
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--sub_id',default='sub-102109')
+parser.add_argument("-f", "--fff", help="a dummy argument to fool ipython", default="1")
+#https://stackoverflow.com/questions/48796169/how-to-fix-ipykernel-launcher-py-error-unrecognized-arguments-in-jupyter
+
+parser.add_argument('--sub_id',default='sub-863570233')
 parser.add_argument('--ses_id', default=1)
 parser.add_argument('--run_id', default=None)
 parser.add_argument('--task_id', default='rest') 
@@ -65,15 +71,16 @@ parser.add_argument('--task_id', default='rest')
 parser.add_argument('--atlas_spec', default='fsLR_seg-4S156Parcels_den-91k')
 parser.add_argument('--n_rois', default=100, type=int) #default for hcp; 
 parser.add_argument('--n_trs', default=1200, type=int) #default for hcp;
-parser.add_argument('--n_folds', default=5) 
-parser.add_argument('--model', default='ridgeCV') 
+parser.add_argument('--n_folds', default=7)
+#must be larger than 6 for PNC
+parser.add_argument('--model', default='lassoBIC') 
 parser.add_argument('--cv', default='blocks') 
 parser.add_argument('--proc_type', default='xcpd') 
 
 parser.add_argument('--profile', action='store_true') 
 
 parser.add_argument('--fc_data_path', 
-                    default='/gscratch/scrubbed/mphagen') 
+                    default='/gscratch/scrubbed/mphagen/pnc') 
 parser.add_argument('--max_iter', default=1000) 
 
 #hack argparse to be jupyter friendly AND cmdline compatible
@@ -139,6 +146,13 @@ def get_ts_files(fc_data_path, proc_type, sub_id, task_id, ses_id, run_id):
                         proc_type,
                         f'sub-{sub_id}',
                         f'sub-{sub_id}*task-{task_id}_dir-LR_*run-{ses_id}**ptseries.nii'))
+    else: 
+        ts_file = glob(op.join(fc_data_path, 
+                'derivatives', 
+                'timeseries',
+                proc_type,
+                f'sub-{sub_id}',
+                f'sub-{sub_id}*task-{task_id}*ptseries.nii'))
 
         return ts_file
 
@@ -190,6 +204,9 @@ def split_kfold(cv, time_series, n_folds):
         group =  repmat(np.arange(1, n_folds+1), 
                         int(time_series.shape[0]/n_folds), 1).T.ravel()
         
+        group = np.concatenate([group, np.ones(time_series.shape[0] - group.shape[0]) * np.max(group)]) 
+
+        
         kfold = GroupKFold(n_splits=n_folds)
         
         splits = kfold.split(X=time_series, groups=group) 
@@ -235,7 +252,8 @@ if model_str in ["lassoCV", "uoiLasso", "enet", "lassoBIC", "ridgeCV"] :
         scaler.transform(test_ts)
 
         start_time = time.time()
-        results_dict[f'fold_{fold_idx}'] = run_model(train_ts, test_ts, n_rois, model=model)
+        results_dict[f'fold_{fold_idx}'] = run_model(train_ts, test_ts,
+                                                     n_rois, model=model)
         results_dict[f'fold_{fold_idx}']['model'] = model
         print(time.time() - start_time, ' seconds')     
 
@@ -257,6 +275,8 @@ config_file = file.replace('_results.pkl', '_results.json')
 with open(op.join(results_path, config_file), "w") as f:
     json.dump(args_dict, f, indent=4)
 # -
+
+
 
 
 
