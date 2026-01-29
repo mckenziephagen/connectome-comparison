@@ -43,24 +43,29 @@ import networkx as nx
 
 results_path = '/global/homes/m/mphagen/functional-connectivity/connectome-comparison/results'
 
-date_string = '2025-09-10'
+date_string = '2025-12-08'
 with open(glob(op.join(results_path, 'xcpd', f'{date_string}*lassoBIC*pkl'))[0],   'rb') as f:
         xcpd_dict = pickle.load(f)
 
-len(xcpd_dict) 
-
-date_string='2025-08-26'
 with open(glob(op.join(results_path, 'MSMAll', f'{date_string}*lasso*pkl'))[0], 'rb') as f:
         msmall_dict = pickle.load(f)
 
-len(msmall_dict) 
+with open(glob(op.join(results_path, 'MSMAll', '*9-15*correlation*pkl'))[0], 'rb') as f:
+    pearson_dict = pickle.load(f)
+
+# +
+# pearson_mat = np.zeros((100,100,0))
+# for participant in pearson_dict.keys():
+#     for ses in pearson_dict[participant].keys():
+#         temp_mat = pearson_dict[participant][ses]
+#         np.fill_diagonal(temp_mat, 0)
+#         pearson_mat = np.dstack((pearson_mat, temp_mat)  ) 
 
 # +
 msmall_mat = np.zeros((100,100, 0))
 
 for participant in msmall_dict.keys():
-    for ses in msmall_dict[participant].keys():
-        temp_mat = msmall_dict[participant][ses]
+        temp_mat = msmall_dict[participant]['ses-full']
         np.fill_diagonal(temp_mat, 0)
         msmall_mat = np.dstack((msmall_mat, temp_mat)  ) 
 
@@ -69,125 +74,108 @@ xcpd_mat = np.zeros((100,100, 0))
 
 for participant in msmall_dict.keys():
     for ses in msmall_dict[participant].keys():
-        temp_mat = xcpd_dict[participant][ses]
+        temp_mat = xcpd_dict[participant]['ses-full']
         np.fill_diagonal(temp_mat, 0)
         xcpd_mat = np.dstack((xcpd_mat, temp_mat)  ) 
 # -
 
-xcpd_mat.shape
+df = pd.DataFrame.from_dict(msmall_dict, orient='index')
 
-msmall_mat.shape
 
 xcpd_mean = np.mean(xcpd_mat, axis=2)
 msmall_mean = np.mean(msmall_mat, axis=2)
+# pearson_mean = np.mean(pearson_mat, axis=2) 
 
-xcpd_mtd = np.std(xcpd_mat, axis=2)
+xcpd_std = np.std(xcpd_mat, axis=2)
 
 
 # +
-ax = plotting.plot_matrix(xcpd_mtd.reshape(100,100) , 
-    reorder=False) 
+fix, ax = plt.subplots(1,2) 
 
-#ax.set_xticklabels([])
-# plotting.plot_matrix(lasso_median_list.reshape(100,100) , 
-#     vmax=.5,
-#     vmin=-0.5, 
-#     reorder=False)
+plotting.plot_matrix(msmall_mean.reshape(100,100) , 
+    vmin=-1, 
+    vmax=1,
+    reorder=False, 
+    axes=ax[0], 
+    title='MSMAll Average') 
+
+plotting.plot_matrix(xcpd_mean.reshape(100,100) , 
+    vmax=1,
+    vmin=-1, 
+    axes=ax[1], 
+    title='XCPD Average')
 plt.savefig('matrix.png') 
 #add in 7 network 
 
-# + jupyter={"source_hidden": true}
-xcpd_edges_list = []
-xcpd_ratio = []
-xcpd_sparsity = [] 
-for outer in msmall_dict.keys():
-    for inner in msmall_dict[outer].keys():
-        xcpd_edges_list.append(xcpd_dict[outer][inner].ravel()) 
+# +
+fig, ax = plt.subplots(1,2, figsize=(10, 5)) 
 
-        xcpd_sparsity.append(sum(xcpd_dict[outer][inner].ravel()  != 0 )  / 10000) 
-        
-        xcpd_ratio.append(sum(sum(xcpd_dict[outer][inner] < 0)) / sum(sum(xcpd_dict[outer][inner] > 0 )))
+plotting.plot_matrix(msmall_mean , 
+    vmin=-1, 
+    vmax=1,
+    reorder=False, 
+    axes=ax[0], 
+    title='Average LASSO Connectome')
+
+plotting.plot_matrix(pearson_mean, 
+    vmin=-1, 
+    vmax=1,
+    axes=ax[1], 
+    title='Average Pearson Connectome')
+
+plt.tight_layout()
+
+plt.savefig('LASSO_Pearson_Matrices.png') 
+plt.show() 
+
+
 # -
 
-np.mean(xcpd_sparsity)
+def selection_ratio(model_dict):
+    ratio_list = [] 
+    for sub in model_dict.keys():
+        sel_ratio = sum(sum(model_dict[sub]['ses-full'] != 0) )/ 10000
+            ratio_list.append(sel_ratio)  
+    return ratio_list
 
-msmall_edges_list = []
-msmall_ratio = []
-msmall_sparsity = [] 
-for outer in msmall_dict.keys():
-    for inner in msmall_dict[outer].keys():
-        msmall_edges_list.append(msmall_dict[outer][inner].ravel()) 
 
-        msmall_sparsity.append(sum(msmall_dict[outer][inner].ravel()  != 0 )  / 10000) 
+xcpd_sel_ratio = selection_ratio(xcpd_dict) 
 
-        msmall_ratio.append(sum(sum(msmall_dict[outer][inner] < 0)) / sum(sum(msmall_dict[outer][inner] > 0 )))
+msmall_sel_ratio = selection_ratio(msmall_dict) 
 
-np.mean(msmall_sparsity)
+np.mean(msmall_sel_ratio)
 
-len(msmall_sparsity) 
-
-len(xcpd_sparsity) 
+np.mean(xcpd_sel_ratio) 
 
 import seaborn as sns
-
-np.corrcoef(xcpd_sparsity, msmall_sparsity)
-
-plt.scatter(xcpd_sparsity, msmall_sparsity, alpha=.1) 
-#correlate participant sparsity and participant qcfc
-plt.xlim([.2,.9])
-plt.ylim([.2,.9]) 
-#put ridge and uoi here too? 
 
 import pandas as pd
 
 # +
 xcpd_df = pd.DataFrame({"proc": "xcpd", 
-                          "sparsity": xcpd_sparsity}) 
+                          "sparsity": xcpd_sel_ratio}) 
 msmall_df = pd.DataFrame({"proc": "msmall", 
-                          "sparsity": msmall_sparsity})
+                          "sparsity": msmall_sel_ratio})
 
 plot_df = pd.concat([xcpd_df, msmall_df]) 
 # -
 
-ax = sns.swarmplot(data=plot_df, x="proc", y="sparsity", size=2) 
+np.mean(xcpd_sel_ratio) 
+
+ax = sns.violinplot(data=plot_df, x="proc", y="sparsity") 
 ax.set_ylim(0, 1.1) 
-
-sns.swarmplot(data=xcpd_df) 
-
-ax = sns.boxplot(data=plot_df, x="proc", y="sparsity") 
-ax.set_ylim(0, 1.1)
-
-import networkx
-
-from infomap import Infomap
-
-xcpd_G = networkx.Graph(xcpd_mean)
-
-im_xcpd = Infomap(flow_model="directed") 
-
-_ = im_xcpd.add_networkx_graph(xcpd_G)
+ax.set_xticklabels(labels=['XCPD', 'Minimally Processed']) 
+plt.title('LASSO Connectome Sparsity') 
+plt.ylabel('Selection Ratio') 
+plt.xlabel('Post-processing Pipeline') 
+plt.savefig('lasso_sparsity.png')
+plt.tight_layout()
+plt.show() 
 
 
-im_xcpd.run()
-
-print(f"Found {im_xcpd.num_top_modules} modules with codelength: {im_xcpd.codelength}")
-
-
-msmall_G = networkx.Graph(msmall_mean)
-
-im_msmall = Infomap(flow_model="directed") 
-
-_ = im_msmall.add_networkx_graph(msmall_G)
-
-
-im_msmall.run()
-
-print(f"Found {im_msmall.num_top_modules} modules with codelength: {im_msmall.codelength}")
-
-
-
-
-
+# +
+#### Everything under here is old 
+# -
 
 
 
@@ -290,6 +278,16 @@ plt.hist(mod_uoi, label='UoI')
 plt.legend()
 plt.title('Modularity Index') 
 # -
+
+
+
+
+
+# +
+
+
+
+
 
 
 

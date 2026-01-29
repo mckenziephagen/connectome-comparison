@@ -112,8 +112,8 @@ with open(glob(op.join(results_path, '*12-10*lassoBIC*relmat.pkl'))[0], 'rb') as
         msmall_lasso_dict = pickle.load(l)
 
     
-msmall_lasso_df = flatten_mat(msmall_lasso_dict, ses_string='ses-1').T
-msmall_lasso_df = msmall_lasso_df.join(qa_df[['RL_1', 'LR_1']].mean(axis=1).rename('mean_framewise_displacement'))
+msmall_lasso_df = flatten_mat(msmall_lasso_dict, ses_string='ses-2').T
+msmall_lasso_df = msmall_lasso_df.join(qa_df[['RL_2', 'LR_2']].mean(axis=1).rename('mean_framewise_displacement'))
 msmall_lasso_results = wrap_qcfc(msmall_lasso_df, covariate_df=covariate_df) 
 #has to be renamed like this for fmriprep_denoise benchmark 
 msmall_lasso_pval, msmall_lasso_sig_list, msmall_lasso_corr_list  = unpack_qcfc(msmall_lasso_results)
@@ -123,8 +123,8 @@ print("LASSO MSMALL", len(msmall_lasso_sig_list) )
 with open(glob(op.join(results_path, '*12-10*correlation*pkl'))[0], 'rb') as f:
         msmall_pearson_dict = pickle.load(f)
 
-msmall_pearson_df = flatten_mat(msmall_pearson_dict, ses_string='ses-1').T
-msmall_pearson_df = msmall_pearson_df.join(qa_df[['RL_1', 'LR_1']].mean(axis=1).rename('mean_framewise_displacement')) 
+msmall_pearson_df = flatten_mat(msmall_pearson_dict, ses_string='ses-2').T
+msmall_pearson_df = msmall_pearson_df.join(qa_df[['RL_2', 'LR_2']].mean(axis=1).rename('mean_framewise_displacement')) 
 
 msmall_pearson_results = wrap_qcfc(msmall_pearson_df, covariate_df=covariate_df) 
 msmall_pearson_pval, msmall_pearson_sig_list, msmall_pearson_corr_list = unpack_qcfc(msmall_pearson_results)
@@ -135,8 +135,8 @@ print("Pearson MSMAll:", len(msmall_pearson_sig_list) )
 with open(glob(op.join(results_path, '*12-10*uoi*pkl'))[0], 'rb') as l:
         msmall_uoi_dict = pickle.load(l)
 
-msmall_uoi_df = flatten_mat(msmall_uoi_dict, ses_string='ses-1').T
-msmall_uoi_df = msmall_uoi_df.join(qa_df[['RL_1', 'LR_1']].mean(axis=1).rename('mean_framewise_displacement'))
+msmall_uoi_df = flatten_mat(msmall_uoi_dict, ses_string='ses-2').T
+msmall_uoi_df = msmall_uoi_df.join(qa_df[['RL_2', 'LR_2']].mean(axis=1).rename('mean_framewise_displacement'))
 msmall_uoi_results = wrap_qcfc(msmall_uoi_df, covariate_df=covariate_df) 
 msmall_uoi_pval, msmall_uoi_sig_list, msmall_uoi_corr_list = unpack_qcfc(msmall_uoi_results)
 
@@ -173,41 +173,36 @@ results_path = '/global/homes/m/mphagen/functional-connectivity/connectome-compa
 with open(glob(op.join(results_path, '*12-10*uoi*pkl'))[0], 'rb') as l:
         xcpd_uoi_dict = pickle.load(l)
 
-xcpd_uoi_df = flatten_mat(xcpd_uoi_dict, ses_string='ses-1').T
-xcpd_uoi_df = xcpd_uoi_df.join(qa_df[['RL_1', 'LR_1']].mean(axis=1).rename('mean_framewise_displacement'))
+
+xcpd_uoi_df = flatten_mat(xcpd_uoi_dict, ses_string='ses-2').T
+xcpd_uoi_df = xcpd_uoi_df.join(qa_df[['RL_2', 'LR_2']].mean(axis=1).rename('mean_framewise_displacement'))
 xcpd_uoi_results = wrap_qcfc(xcpd_uoi_df, covariate_df=covariate_df) 
 xcpd_uoi_pval, xcpd_uoi_sig_list, xcpd_uoi_corr_list = unpack_qcfc(xcpd_uoi_results)
 
 print("UOI XCPD:", len(xcpd_uoi_sig_list))
 
-
 with open(glob(op.join(results_path, '*12-10*lassoBIC*relmat.pkl'))[0], 'rb') as l:
      xcpd_lasso_dict = pickle.load(l)
 
-xcpd_lasso_df = flatten_mat(xcpd_lasso_dict, ses_string='ses-1').T
-xcpd_lasso_df = xcpd_lasso_df.join(qa_df[['RL_1', 'LR_1']].mean(axis=1).rename('mean_framewise_displacement'))
+    
+xcpd_lasso_df = flatten_mat(xcpd_lasso_dict, ses_string='ses-2').T
+xcpd_lasso_df = xcpd_lasso_df.join(qa_df[['RL_2', 'LR_2']].mean(axis=1).rename('mean_framewise_displacement'))
 xcpd_lasso_results = wrap_qcfc(xcpd_lasso_df, covariate_df=covariate_df) 
 #has to be renamed like this for fmriprep_denoise benchmark 
 xcpd_lasso_pval, xcpd_lasso_sig_list, xcpd_lasso_corr_list = unpack_qcfc(xcpd_lasso_results)
 print("LASSO XCPD:", len(xcpd_lasso_sig_list) ) 
 
-
 with open(glob(op.join(results_path, '*12-10*correlation*pkl'))[0], 'rb') as f:
         xcpd_pearson_dict = pickle.load(f)
 
-xcpd_pearson_df = flatten_mat(xcpd_pearson_dict, ses_string='ses-1').T
-xcpd_pearson_df = xcpd_pearson_df.join(qa_df[['RL_1', 'LR_1']].mean(axis=1).rename('mean_framewise_displacement')) 
+xcpd_pearson_df = flatten_mat(xcpd_pearson_dict, ses_string='ses-2').T
+xcpd_pearson_df = xcpd_pearson_df.join(qa_df[['RL_2', 'LR_2']].mean(axis=1).rename('mean_framewise_displacement')) 
 
 xcpd_pearson_results = wrap_qcfc(xcpd_pearson_df, covariate_df=covariate_df) 
 xcpd_pearson_pval, xcpd_pearson_sig_list, xcpd_pearson_corr_list = unpack_qcfc(xcpd_pearson_results)
 
 print("Pearson XCPD:", len(xcpd_pearson_sig_list) ) 
-# -
 
-
-xcpd_corr_plot_df = [] 
-
-xcpd_pearson_results
 
 # +
 xcpd_lasso_plot_df = pd.DataFrame({'model': 'LASSO' , 
@@ -233,8 +228,8 @@ xcpd_uoi_plot_df = pd.DataFrame({'model': 'Pearson' ,
 #             xcpd_lasso_df_cov, xcpd_pearson_df_cov])
 # -
 
-plot_df = pd.concat([msmall_lasso_plot_df, msmall_pearson_plot_df, 
-            xcpd_lasso_plot_df, xcpd_pearson_plot_df])
+plot_df = pd.concat([msmall_lasso_df, msmall_pearson_df, 
+            xcpd_lasso_df, xcpd_pearson_df])
 
 plot_df = plot_df.dropna() 
 
@@ -387,4 +382,27 @@ lasso_pval, lasso_corr_list = unpack_qcfc(lasso_results)
 
 print(len(lasso_corr_list) )
 # -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
