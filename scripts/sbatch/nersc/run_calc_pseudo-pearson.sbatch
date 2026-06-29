@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --qos=debug
-#SBATCH --job-name=corr
+#SBATCH --job-name=pseudo
 
-#SBATCH --time=30:00
+#SBATCH --time=20:00
 #SBATCH --constraint=cpu
 ##SBATCH --array=1 #1-100%150
 #SBATCH --array=0 #1-100%150
@@ -31,12 +31,11 @@ for i in {0..100}; do
     sub_id=$( sed -n $(($idx+$i))p $subject_file )
     echo $sub_id
 
-    srun -n 1 -c 1 --exclusive python $script --sub_id $sub_id --ses_id 'full' --model 'partial_correlation' --proc_type 'MSMAll_FIX' --cv 'ses' &
-   srun -n 1 -c 1 --exclusive python $script --sub_id $sub_id --ses_id 'full' --model 'partial_correlation' --proc_type 'xcpd' --cv 'ses' &
+   # srun -n 1 -c 1 --exclusive python $script --sub_id $sub_id --ses_id 'full' --model 'pearsonRegressor' --proc_type 'xcpd' --cv 'ses' &
 
-   # srun -n 1 -c 1 --exclusive python $script --sub_id $sub_id --ses_id 'full' --model 'correlation' --proc_type 'MSMAll_FIX' --cv 'ses' &
-   # srun -n 1 -c 1 --exclusive python $script --sub_id $sub_id --ses_id 'full' --model 'correlation' --proc_type 'xcpd' --cv 'ses' &
+    srun -n 1 -c 1 --exclusive python $script --sub_id $sub_id  --ses_id 'full' --model 'pearsonRegressor' --proc_type 'MSMAll' --cv 'ses'&
 
+    srun -n 1 -c 1 --exclusive python $script --sub_id $sub_id  --ses_id 'full' --model 'pearsonRegressor' --proc_type 'MSMAll_FIX' --cv 'ses'&
 
 wait
 

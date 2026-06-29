@@ -3,19 +3,17 @@
 #   jupytext:
 #     text_representation:
 #       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.17.3
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.14.1
 #   kernelspec:
-#     display_name: Python (my_env)
+#     display_name: xcpd_dl
 #     language: python
-#     name: fc_analysis
+#     name: xcpd_dl
 # ---
 
-# %% [markdown]
 # Note: takes about two hours 
 
-# %%
 import boto3
 import os 
 import os.path as op

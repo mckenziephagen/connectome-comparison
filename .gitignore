@@ -1,5 +1,3 @@
-*.ipynb*
-Sylvia_code/
 *log*
 *results/*
 .*
@@ -8,7 +6,7 @@ renv/
 *.txt
 *.png
 *.pdf
-fmriprep-denoise-benchmark
+*.ipynb
 scripts/processing/notebook_results/
 *ruse* 
 *data*
