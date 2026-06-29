@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --qos=regular
+#SBATCH --qos=debug
 #SBATCH --time=30:00
 #SBATCH --constraint=cpu
 #SBATCH --array=1 #1-100%150
@@ -23,12 +23,14 @@ idx=$(( $SLURM_ARRAY_TASK_ID ))
 
 
 for i in {0..100}; do
-
+    
     sub_id=$( sed -n $(($idx+$i))p $subject_file )
     echo $sub_id
 
-    srun -n 1 -c 2 python $script --sub_id $sub_id --ses_id 1 --model 'lassoBic' --proc_type 'minProc' &  
-    srun -n 1 -c 2 python $script --sub_id $sub_id --ses_id 2 --model 'lassoBic' --proc_type 'minProc' &  
+    srun -n 1 -c 1 python $script --sub_id $sub_id --ses_id 'full' --model 'lassoBIC' --proc_type 'MSMAll' --cv 'ses' &  
+
+
+    srun -n 1 -c 1 python $script --sub_id $sub_id --ses_id 'full' --model 'lassoBIC' --proc_type 'xcpd' --cv 'ses' &  
 
 done
 wait

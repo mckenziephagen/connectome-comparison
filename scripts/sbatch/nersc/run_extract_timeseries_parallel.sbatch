@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --qos=debug
+#SBATCH --qos=regular
 #SBATCH --time=30:00
 #SBATCH --constraint=cpu
 #SBATCH --array=1
@@ -12,13 +12,14 @@
 
 
 source ${HOME}/.bashrc
-
-script_path="${HOME}/functional-connectivity/connectome-comparison/scripts/processing/extract_timeseries.py" 
-subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/test_subjects.txt"
-
 conda activate xcpd
 
-idx=$(( $SLURM_ARRAY_TASK_ID*100 )) 
+script_path="${HOME}/functional-connectivity/connectome-comparison/scripts/processing/extract_timeseries.py" 
 
-srun parallel python $script_path --sub_id '{}' ::: $( head -n $idx $subject_file  )
+subject_file="/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/unproc_subs.txt"
 
+idx=$(( $SLURM_ARRAY_TASK_ID*200 )) 
+
+## srun parallel python $script_path --sub_id '{}' --MSMAll True --FIX True ::: $( head -n $idx $subject_file | tail -n 200  )
+
+srun parallel python $script_path --sub_id '{}' --proc 'MSMAll_FIX' ::: $( head -n $idx $subject_file | tail -n 200  )
