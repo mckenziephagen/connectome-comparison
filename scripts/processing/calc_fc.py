@@ -4,13 +4,13 @@
 #     formats: ipynb,py:percent
 #     text_representation:
 #       extension: .py
-#       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.16.4
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.17.3
 #   kernelspec:
-#     display_name: fc_311
+#     display_name: Python (FC)
 #     language: python
-#     name: fc_311
+#     name: fc
 # ---
 
 # %% [markdown]
@@ -30,9 +30,7 @@ import warnings
 from copy import deepcopy
 import argparse
 
-# %%
-#work around until I install fc_comparison as an actual package
-sys.path.append(os.path.dirname('/global/homes/m/mphagen/functional-connectivity/model-fc/src/model_fc'))
+sys.path.append(os.path.dirname('/mmfs1/gscratch/escience/mphagen/model-fc/src/model_fc'))
 
 # %%
 import time
@@ -42,6 +40,7 @@ import nilearn
 from pyuoi.utils import log_likelihood_glm, AIC, BIC
 
 import numpy as np
+
 import argparse
 
 import os
@@ -58,6 +57,9 @@ import sklearn
 import pickle
 
 from model_fc.models import init_model, run_model
+# -
+
+help(init_model) 
 
 # %%
 args = argparse.Namespace()
@@ -66,27 +68,25 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--fff", help="a dummy argument to fool ipython", default="1")
 #https://stackoverflow.com/questions/48796169/how-to-fix-ipykernel-launcher-py-error-unrecognized-arguments-in-jupyter
 
-parser.add_argument('--sub_id',default='sub-979984')
-parser.add_argument('--ses_id', default='full')
+parser.add_argument('--sub_id',default='sub-863570233')
+parser.add_argument('--ses_id', default=1)
 parser.add_argument('--run_id', default=None)
 parser.add_argument('--task_id', default='rest') 
 
 parser.add_argument('--atlas_spec', default='fsLR_seg-4S156Parcels_den-91k')
 parser.add_argument('--n_rois', default=100, type=int) #default for hcp; 
 parser.add_argument('--n_trs', default=1200, type=int) #default for hcp;
-parser.add_argument('--n_folds', default=5)
+parser.add_argument('--n_folds', default=7)
 #must be larger than 6 for PNC
-parser.add_argument('--model', default='correlation') 
-parser.add_argument('--cv', default='ses') 
-parser.add_argument('--cv_task', default=None) 
-
-parser.add_argument('--proc_type', default='MSMAll_FIX') 
+parser.add_argument('--model', default='lassoBIC') 
+parser.add_argument('--cv', default='blocks') 
+parser.add_argument('--proc_type', default='xcpd') 
 
 parser.add_argument('--profile', action='store_true', 
                    help="Run single fold for CPU/mem profiling") 
 
 parser.add_argument('--fc_data_path', 
-                    default='/pscratch/sd/m/mphagen/human-connectome-project-openaccess/HCP1200') 
+                    default='/gscratch/scrubbed/mphagen/pnc') 
 parser.add_argument('--max_iter', default=1000) 
 
 #hack argparse to be jupyter friendly AND cmdline compatible
@@ -148,11 +148,14 @@ def get_ts_files(fc_data_path, proc_type, sub_id, task_id, ses_id, run_id):
                         'timeseries',
                         proc_type,
                         f'sub-{sub_id}',
-                        f'sub-{sub_id}*task-{task_id}*ses-{ses_id}*ptseries.nii'))
-        
-        elif run_id == '1' and ses_id != 'full':
-            print(run_id)
-            ts_file = False
+                        f'sub-{sub_id}*task-{task_id}_dir-LR_*run-{ses_id}**ptseries.nii'))
+    else: 
+        ts_file = glob(op.join(fc_data_path, 
+                'derivatives', 
+                'timeseries',
+                proc_type,
+                f'sub-{sub_id}',
+                f'sub-{sub_id}*task-{task_id}*ptseries.nii'))
 
         return ts_file
 
@@ -210,7 +213,11 @@ def split_kfold(cv, time_series, n_folds):
         group =  repmat(np.arange(1, n_folds+1), 
                         int(time_series.shape[0]/n_folds), 1).T.ravel()
         
-        kfold = GroupKFold(n_splits=n_folds)   
+        group = np.concatenate([group, np.ones(time_series.shape[0] - group.shape[0]) * np.max(group)]) 
+
+        
+        kfold = GroupKFold(n_splits=n_folds)
+        
         splits = kfold.split(X=time_series, groups=group) 
         
     if cv == 'timeseries': 
@@ -321,7 +328,9 @@ for fold_idx, (train_idx, test_idx) in enumerate( splits ):
         test_ts = scaler.transform(test_ts)
 
         start_time = time.time()
-        results_dict[f'fold_{fold_idx}'] = run_model(train_ts, test_ts, n_rois, model)       
+        results_dict[f'fold_{fold_idx}'] = run_model(train_ts, test_ts,
+                                                     n_rois, model=model)
+        results_dict[f'fold_{fold_idx}']['model'] = model
         print(time.time() - start_time, ' seconds')     
 
         if profile == True: 
@@ -350,4 +359,5 @@ config_file = file.replace('_results.pkl', '_results.json')
 with open(op.join(results_path, config_file), "w") as f:
     json.dump(args_dict, f, indent=4)
 
-# %%
+
+
