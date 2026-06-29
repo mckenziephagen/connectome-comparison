@@ -19,6 +19,7 @@
 import numpy as np
 
 import argparse
+import json
 
 from glob import glob
 import re
@@ -34,7 +35,6 @@ import datalad.api as dl
 import nibabel as nib
 
 from xcp_d.interfaces.workbench import CiftiMath, CiftiParcellateWorkbench
-
 # -
 
 
@@ -49,11 +49,10 @@ os.environ["PATH"] = "/global/homes/m/mphagen/software/workbench/bin_linux64:" +
 args = argparse.Namespace(verbose=False, verbose_1=False)
 
 parser = argparse.ArgumentParser("extract_timeseries.py")
-parser.add_argument('--sub_id',  default='202113') 
+parser.add_argument('--sub_id',  default='103212') 
 parser.add_argument('--atlas_file', default='tpl-fsLR_atlas-4S156Parcels_den-91k_dseg.dlabel.nii')
-parser.add_argument('--dataset', default='HCP') 
-parser.add_argument('--MSMAll', default=True ) 
-
+parser.add_argument('--dataset', default='human-connectome-project-openaccess') 
+parser.add_argument('--proc', default='MSMAll' ) 
 
 #hack argparse to be jupyter friendly AND cmdline compatible
 try: 
@@ -65,7 +64,10 @@ except KeyError:
 sub_id = args.sub_id
 atlas_file = args.atlas_file #from atlaspack
 dataset = args.dataset
-MSMAll = args.MSMAll
+
+proc = args.proc
+
+
 print(args)
 
 sub_id = sub_id.replace('sub-', '') #just strip out 
@@ -96,9 +98,13 @@ def define_paths(path_prefix, dataset, results_str, atlas_file):
     """
     DOCSTRING
     """
-    if dataset == 'HCP': 
-        dataset_path = op.join(path_prefix, 'hcp-functional-connectivity') 
-             
+    if dataset == 'hcp-functional-connectivity': 
+        dataset_path = op.join(path_prefix, dataset) 
+
+    elif dataset == 'human-connectome-project-openaccess':
+        dataset_path = op.join(path_prefix,  dataset, 'HCP1200') 
+
+     
     derivatives_path = op.join(dataset_path, 'derivatives') 
     results_dir = op.join(derivatives_path, results_str)
     atlas_path = op.join(path_prefix, 'AtlasPack', atlas_file)
@@ -112,47 +118,36 @@ def define_paths(path_prefix, dataset, results_str, atlas_file):
         
     return path_dict
 
-
-def parcellate_data(in_file, out_file, dataset_path, ciftiparcel):
-    """
-    Takes a minimally preprocessed HCP fMRI scan, 
-    downloads with datalad and uses 
-    wb_command -cifti-parcellate to parcellate.
-
-    in_file: /path/to/file.dtseries.nii
-    out_file: /derivatives/
-    
-    dataset_path: for datalad dataset parameter
-    template: atlas file from AtlasPack
-
-    """
-    
-    try: 
-        dl.drop(in_file, dataset=dataset_path)
-    except: 
-        pass
-
-
 # +
-if MSMAll: 
-    results_str = 'MSMAll'
-else: 
-    results_str = 'minProc' 
+results_str = proc
 
-path_dict = define_paths('/pscratch/sd/m/mphagen', 'HCP', f'timeseries/{results_str}', atlas_file)
+path_dict = define_paths('/pscratch/sd/m/mphagen', dataset, f'timeseries/{results_str}', atlas_file)
                        
 os.makedirs(path_dict['results_dir'], exist_ok=True)
 
-if MSMAll: 
-    rest_scans = glob(op.join(path_dict['dataset_path'], 
+dl.get(op.join(path_dict['dataset_path'], sub_id, 'MNINonLinear/Results'), 
+       dataset=op.join('/pscratch/sd/m/mphagen', dataset),
+       recursive=True,
+       get_data=False)
+
+if proc == 'MSMAll_FIX': 
+  
+        rest_scans = glob(op.join(path_dict['dataset_path'], 
                           sub_id, 
                           'MNINonLinear/Results/rfMRI*', 
-                          'rfMRI_*_Atlas_MSMAll_hp2000_clean.dtseries.nii'))
-else:   
-    rest_scans = glob(op.join(path_dict['dataset_path'], 
+                            'rfMRI_*_Atlas_hp2000_clean.dtseries.nii'))
+elif proc == 'MSMAll':     
+        rest_scans = glob(op.join(path_dict['dataset_path'], 
                           sub_id, 
-                          'MNINonLinear/Results/rfMRI*', 
-                          'rfMRI_*_Atlas_hp2000_clean.dtseries.nii'))
+                        'MNINonLinear/Results/rfMRI*', 
+
+                            'rfMRI_*_Atlas_MSMAll.dtseries.nii' ))
+# else: 
+#         rest_scans = glob(op.join(path_dict['dataset_path'], 
+#                       sub_id, 
+#                       'MNINonLinear/Results/rfMRI*', 
+#                       ))
+
 
 rest_scans = list(filter(lambda x: '_7T_' not in x , rest_scans))
 
@@ -171,24 +166,58 @@ for file in rest_scans:
     
     file_str =  f'sub-{sub_id}_task-{task_id}_dir-{dir_id}_run-{run_id}_space-{atlas_spec}_stat-mean_timeseries.ptseries.nii'
     out_file = op.join(path_dict['results_dir'], f'sub-{sub_id}', file_str)
-    if not op.exists(op.join(out_file)): 
-        print("No ptseries file found, parcellating") 
-        os.makedirs(os.path.dirname(out_file), exist_ok=True)
+    # if not op.exists(op.join(out_file)): 
+    print("No ptseries file found, parcellating") 
+    os.makedirs(os.path.dirname(out_file), exist_ok=True)
+    
+    dl.get(file, dataset=op.join(path_dict['dataset_path'], sub_id))
 
-        dl.get(file, dataset=path_dict['dataset_path'])
+    ciftiparcel = CiftiParcellateWorkbench()
+    ciftiparcel.inputs.in_file = file
+    ciftiparcel.inputs.out_file = out_file
+    ciftiparcel.inputs.atlas_label =  path_dict['atlas_path']
+    ciftiparcel.inputs.direction = 'COLUMN'
+    ciftiparcel.cmdline  
+    print(ciftiparcel.cmdline)
+    ciftiparcel.run()
+        # os.system(ciftiparcel.cmdline) 
 
-        ciftiparcel = CiftiParcellateWorkbench()
-        ciftiparcel.inputs.in_file = file
-        ciftiparcel.inputs.out_file = out_file
-        ciftiparcel.inputs.atlas_label =  path_dict['atlas_path']
-        ciftiparcel.inputs.direction = 'COLUMN'
-        ciftiparcel.cmdline  
-        print(ciftiparcel.cmdline)
-            
-        os.system(ciftiparcel.cmdline) 
-
-        try: 
-            dl.drop(file, dataset=path_dict['dataset_path'])
-        except: 
-            pass
+        # try: 
+        #     dl.drop(file, dataset=path_dict['dataset_path'])
+        # except: 
+        #     pass
     #double check BIDS nroi (does this need to be desc instead?
+    with open( out_file.replace('ptseries.nii', 'json'), "w") as f:
+        json.dump(vars(args), f)
+
+
+dl.drop(op.join(path_dict['dataset_path'], sub_id, 'MNINonLinear/Results'), 
+       dataset=op.join('/pscratch/sd/m/mphagen', dataset))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
