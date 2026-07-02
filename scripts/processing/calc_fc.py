@@ -15,7 +15,7 @@
 
 # This code expects to find parcellated timeseries data from `extract_timeseries.py` and `concat_timeseries.py` in `{bids_dir}/derivatives/timeseries/{proc_type}/sub-{sub_id}/sub-{sub_id}*ses-*timeseries.ptseries.nii`. 
 #
-# It outputs data into `{bids_dir}/derivatives/connectome-matrices/{proc_type}/sub-{sub-id}`. Each subject has their own results saved to a pkl file for Analysis. 
+# It outputs data into `{bids_dir}/derivatives/connectome-matrices/{proc_type}/sub-{sub-id}`. Each subject has their own results saved to a pickle file for Analysis. 
 
 import configparser
 config = configparser.ConfigParser()
@@ -51,15 +51,14 @@ from model_fc.models import init_model, run_model
 
 
 def glob_ts_file(fc_data_path, dataset, proc_type, sub_id, 
-                 task_id, ses_id, run_id): 
+                 **kwargs): 
     ts_file = []
     sub_dir = op.join(fc_data_path, 
                         'derivatives', 
                         'timeseries',
                         proc_type,
                         f'sub-{sub_id}') 
-                      
-    if dataset == 'hcp': 
+    if dataset == 'hcp':                   
         if ses_id is None and run_id is None: 
             # if you want to run on runs concatonated into sessions
             # and both sessions
@@ -69,21 +68,20 @@ def glob_ts_file(fc_data_path, dataset, proc_type, sub_id,
             #YES, future self, it is supposed to be run-{ses_id}, 
             #not run-{run_id}. 
             #This is consistent with XCPDs HCP renaming code.
-            file_str = [f'sub-{sub_id}*task-{task_id}_dir-RL_*run-{ses_id}**ptseries.nii']
-            
-    elif dataset == 'pnc':
-        file_str = [f'sub-{sub_id}*task-{task_id}_*ptseries.nii']
+            file_str = [f'sub-{sub_id}*task-{task_id}_dir-RL_*run-{ses_id}**ptseries.nii', 
+                        f'sub-{sub_id}*task-{task_id}_dir-RL_*run-{ses_id}**ptseries.nii']
         
+    elif dataset == 'pnc': 
+        #the PNC xcpd data has ses- and task- swapped. 
+        file_str =  [f'sub-{sub_id}*ses-*task-{task_id}*ptseries.nii']
+
     if cv == 'task': 
-            file_str = file_str.append(f'sub-{sub_id}*task-{cv_task}_*space*ptseries.nii')
-                           
-    print(file_str)           
+        file_str.append(f'sub-{sub_id}*task-{cv_task}_*space*ptseries.nii')
+    print(file_str)                      
     for file in file_str: 
-        globbed = glob(op.join(sub_dir, file))
-        print(globbed)
-        for ii in globbed: 
+        globbed_files = glob(op.join(sub_dir, file))
+        for ii in globbed_files: 
             ts_file.append(ii)
-                    
     return ts_file
 
 
@@ -100,11 +98,11 @@ def filter_singleband(ts_files):
 
 
 def filter_ts_files(ts_files, dataset, proc_type):
-    if dataset == 'pnc': 
-        if len(ts_files) > 1:
-          ts_files = filter_singleband(ts_files)
+    # if dataset == 'pnc': 
+    #     if len(ts_files) > 1:
+    #       ts_files = filter_singleband(ts_files)
             
-    if dataset == 'hcp' and proc_type == 'MSMAll_FIX': 
+    if proc_type == 'MSMAll_FIX': 
         ts_files[:] = [x for x in ts_files if 'NORMED' in x]
    
     return ts_files
@@ -114,9 +112,7 @@ def set_warnings_filters():
     warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
 
-def split_kfold(cv, time_series, n_folds, task_file=None, seed=None):
-    if seed is not None: 
-        pass
+def split_kfold(cv, n_trs, time_series, **kwargs):
     if cv == 'random': 
         
         kfolds = KFold(n_splits=n_folds,
@@ -162,7 +158,7 @@ def split_kfold(cv, time_series, n_folds, task_file=None, seed=None):
         ses = sklearn.model_selection.PredefinedSplit(ses_idx)
         splits = ses.split(time_series)
         
-    return splits, time_series
+    return splits
 
 
 def fit_model_full(model, model_str, sub_id, ses_id, time_series, n_rois, cv): 
@@ -177,7 +173,7 @@ def fit_model_full(model, model_str, sub_id, ses_id, time_series, n_rois, cv):
     full_fc_mat = np.empty((n_rois, n_rois))
     ts = scaler.fit_transform(ts)
     if model_str in ['lassoBIC', "uoiLasso", "pearsonRegressor", 
-                     "partialPearson",  "ridgeCV"]: 
+                     "partialCorrelationRegressor",  "ridgeCV"]: 
         for target_idx in range(ts.shape[1]):
             y_ts = np.array(ts[:, target_idx])
             X_ts = np.delete(ts, target_idx, axis=1)
@@ -207,10 +203,11 @@ def fit_model_cv(model, model_str, splits, time_series,
     print(f"Calculating {model_str} FC for {sub_id} {ses_id}")
     scaler = StandardScaler()
 
-    if model_str in ["lassoCV", "uoiLasso", "enet", "lassoBIC", "ridgeCV"] :
-        print(model_str) 
+    for fold_idx, (train_idx, test_idx) in enumerate(splits): 
+        if model_str in ["lassoCV", "uoiLasso", "enet", "lassoBIC", "ridgeCV",
+                    "partialCorrelationRegressor", "pearsonRegressor"]:
+            print(model_str) 
     
-        for fold_idx, (train_idx, test_idx) in enumerate(splits): 
             
             print(f"Fold {fold_idx}:")
             print(f"  Train: range={train_idx[0]}, {train_idx[-1]}")
@@ -219,7 +216,6 @@ def fit_model_cv(model, model_str, splits, time_series,
             train_ts = time_series[train_idx, :]
             test_ts = time_series[test_idx, :]
             
-            scaler = StandardScaler()
             train_ts = scaler.fit_transform(train_ts)
             test_ts = scaler.transform(test_ts)
     
@@ -228,18 +224,23 @@ def fit_model_cv(model, model_str, splits, time_series,
                                                          n_rois, model=model)
             print(time.time() - start_time, ' seconds')    
             print(model)
-                
-            return results_dict 
-        
-    elif model_str in ['correlation', 'tangent', 'partial_correlation']: 
-        corr_mat = model.fit_transform(np.array(time_series))[0]
-        np.fill_diagonal(corr_mat, 1)
+                        
+        elif model_str in ['correlation', 'tangent', 'partial_correlation']: 
+            #we're not really using "train" and "test" 
+            #but this seperates by session, and keeps the 
+            #terminology consistent
+
+            #nilearn.ConnectivityMeasure norms, 
+            #no need for scaler()
+            train_ts = time_series[train_idx, :]
     
-        results_dict['fc_matrix'] = corr_mat
-        results_dict['model'] = model
+            corr_mat_train = model.fit_transform(np.array(train_ts))[0]
+            np.fill_diagonal(corr_mat_train, 1)
+    
+            results_dict[f'fold_{fold_idx}']['fc_matrix'] = corr_mat_train        
+            results_dict[f'fold_{fold_idx}']['model'] = deepcopy(model)        
 
     return results_dict
-
 
 # +
 args = argparse.Namespace()
@@ -248,22 +249,21 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--fff", help="a dummy argument to fool ipython", default="1")
 #https://stackoverflow.com/questions/48796169/how-to-fix-ipykernel-launcher-py-error-unrecognized-arguments-in-jupyter
 
-parser.add_argument('--dataset',default='hcp')
-parser.add_argument('--sub_id',default='sub-100206')
+parser.add_argument('--dataset',default='pnc')
+parser.add_argument('--sub_id',default='sub-97005004')
 parser.add_argument('--ses_id', default=None)
 parser.add_argument('--run_id', default=None)
 parser.add_argument('--task_id', default='rest') 
 
 parser.add_argument('--atlas_spec', default='fsLR_seg-4S156Parcels_den-91k')
-parser.add_argument('--n_rois', default=100, type=int) #default for hcp; 
-parser.add_argument('--n_trs', default=1200, type=int) #default for hcp;
+parser.add_argument('--n_rois', default=100, type=int) #default 100-schaefer
 parser.add_argument('--n_folds', default=None)
 parser.add_argument('--model', default='lassoBIC') 
 
-parser.add_argument('--cv', default='ses')
-parser.add_argument('--cv_task', default=None)
+parser.add_argument('--cv', default='task')
+parser.add_argument('--cv_task', default='idemo')
 
-parser.add_argument('--proc_type', default='MSMAll_FIX') 
+parser.add_argument('--proc_type', default='xcpd') 
 parser.add_argument('--max_iter', default=1000) 
 parser.add_argument('--test', default=False) 
 
@@ -293,7 +293,7 @@ dataset = args.dataset
 task_id = args.task_id
 atlas_spec = args.atlas_spec 
 n_rois = args.n_rois
-n_trs = args.n_trs
+# n_trs = args.n_trs
 n_folds = args.n_folds
 model_str = args.model
 cv = args.cv
@@ -325,19 +325,17 @@ os.makedirs(results_path, exist_ok=True)
 
 # +
 ts_files = glob_ts_file(fc_data_path, dataset, proc_type, sub_id,
-                        task_id, ses_id, run_id)
+                        cv_task=cv_task, cv=cv)
 
 ts_files = filter_ts_files(ts_files, dataset, proc_type)
-
-model = init_model(model_str, max_iter, random_state)
 # -
 
-print(f"Found {len(ts_files)} rest scans for subject {sub_id}.") 
+print(f"Found {len(ts_files)} scans for subject {sub_id}.") 
 print(f"Saving results to {results_path}.")
 
 
 def trim_ts(file): 
-    """ Trims Schaefer 156 to 100"""
+    """ Trims the 56 subcortical regions off of '4S' Schaefer"""
     time_series = nib.load(file).get_fdata(dtype=np.float32)
     if n_rois != time_series.shape[1]: 
         time_series = time_series[:, :n_rois]
@@ -356,7 +354,6 @@ def read_ts(ts_files):
     return time_series, n_trs
 
 
-
 # +
 time_series, n_trs = read_ts(ts_files) 
 
@@ -365,7 +362,7 @@ model = init_model(model_str, max_iter, random_state)
 full_model_dict = fit_model_full(model, model_str, sub_id, ses_id, time_series,
                                  n_rois, cv)
 
-splits, time_series = split_kfold(cv, time_series, n_folds, n_trs)
+splits = split_kfold(cv, n_trs, time_series)
 
 results_dict = fit_model_cv(model, model_str, splits, time_series, 
                             max_iter, n_rois, random_state, sub_id, ses_id)
