@@ -17,11 +17,20 @@
 #
 # It outputs data into `{bids_dir}/derivatives/connectome-matrices/{proc_type}/sub-{sub-id}`. Each subject has their own results saved to a pickle file for Analysis. 
 
+# +
 import os
 import os.path as op
 import configparser
+
+try:
+    # Works in standard Python scripts
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    # fallback for Jupyter Notebooks
+    current_dir = os.getcwd()
+
 config = configparser.ConfigParser()
-config.read(op.join(os.getcwd(), 'config.ini')) 
+config.read(op.join(current_dir, 'config.ini') ) 
 
 # +
 import sys
