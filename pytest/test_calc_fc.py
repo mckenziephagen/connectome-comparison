@@ -75,3 +75,24 @@ def test_hcp_ses_fail():
     assert output.returncode == 1
 
 
+def test_pnc_task():
+    """ Test whether calc_fc.pu runs for HCP. """ 
+    script = op.join(config['General']['script_dir'], 
+                     'connectome-comparison', 'scripts', 'processing', 'calc_fc.py')
+    python=sys.executable
+    
+    
+    test_id = '97005004'  
+    [os.remove(ii) for ii in glob(op.join('test_results', f'*{test_id}*'))]
+       
+    
+    output = run_calc_fc(python, script, flags = ['--sub_id', test_id,
+                                              '--proc_type', 'xcpd',
+                                              '--dataset', 'pnc',
+                                              '--cv', 'task',
+                                              '--test', 'True'] )
+    
+    output_files = glob(op.join('test_results', f'*{test_id}*'))
+    
+    assert output.returncode == 0
+    assert len(output_files) == 2 
