@@ -17,14 +17,15 @@
 #
 # It outputs data into `{bids_dir}/derivatives/connectome-matrices/{proc_type}/sub-{sub-id}`. Each subject has their own results saved to a pickle file for Analysis. 
 
+import os
+import os.path as op
 import configparser
 config = configparser.ConfigParser()
-config.read('/global/u1/m/mphagen/functional-connectivity/connectome-comparison/scripts/config.ini')
+config.read(op.join(os.getcwd(), 'config.ini')) 
 
 # +
 import sys
 from copy import deepcopy
-import os
 from numpy.matlib import repmat
 import nibabel as nib
 import json
@@ -36,8 +37,6 @@ import nilearn
 from pyuoi.utils import log_likelihood_glm, AIC, BIC
 import numpy as np
 import argparse
-import os
-import os.path as op
 from glob import glob
 from sklearn.model_selection import KFold, GroupKFold, TimeSeriesSplit
 from sklearn.preprocessing import StandardScaler
@@ -73,7 +72,8 @@ def glob_ts_file(fc_data_path, dataset, proc_type, sub_id,
         
     elif dataset == 'pnc': 
         #the PNC xcpd data has ses- and task- swapped. 
-        file_str =  [f'sub-{sub_id}*ses-*task-{task_id}*ptseries.nii']
+        # and some participants have an extra, shorter rest scan we want to filter out
+        file_str =  [f'sub-{sub_id}*ses-*task-{task_id}*singleband*ptseries.nii']
 
     if cv == 'task': 
         file_str.append(f'sub-{sub_id}*task-{cv_task}_*space*ptseries.nii')
@@ -250,7 +250,7 @@ parser.add_argument("-f", "--fff", help="a dummy argument to fool ipython", defa
 #https://stackoverflow.com/questions/48796169/how-to-fix-ipykernel-launcher-py-error-unrecognized-arguments-in-jupyter
 
 parser.add_argument('--dataset',default='pnc')
-parser.add_argument('--sub_id',default='sub-97005004')
+parser.add_argument('--sub_id',default='sub-1057423710')
 parser.add_argument('--ses_id', default=None)
 parser.add_argument('--run_id', default=None)
 parser.add_argument('--task_id', default='rest') 
@@ -260,10 +260,10 @@ parser.add_argument('--n_rois', default=100, type=int) #default 100-schaefer
 parser.add_argument('--n_folds', default=None)
 parser.add_argument('--model', default='lassoBIC') 
 
-parser.add_argument('--cv', default='task')
-parser.add_argument('--cv_task', default='idemo')
+parser.add_argument('--cv', default='task') #rest 
+parser.add_argument('--cv_task', default='idemo') #None
 
-parser.add_argument('--proc_type', default='xcpd') 
+parser.add_argument('--proc_type', default='xcpd') #MSMAll_FIX
 parser.add_argument('--max_iter', default=1000) 
 parser.add_argument('--test', default=False) 
 
