@@ -67,7 +67,7 @@ def glob_ts_file(fc_data_path, dataset, proc_type, sub_id,
                         proc_type,
                         f'sub-{sub_id}') 
     if dataset == 'hcp':                   
-        if ses_id is None and run_id is None: 
+        if ses_id == 'full' and run_id is None: 
             # if you want to run on runs concatonated into sessions
             # and both sessions
             file_str =  [f'sub-{sub_id}*task-{task_id}*ses-*ptseries.nii']
@@ -258,7 +258,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--fff", help="a dummy argument to fool ipython", default="1")
 #https://stackoverflow.com/questions/48796169/how-to-fix-ipykernel-launcher-py-error-unrecognized-arguments-in-jupyter
 
-parser.add_argument('--dataset',default='pnc')
+parser.add_argument('--dataset',default='hcp')
 parser.add_argument('--sub_id',default='sub-1057423710')
 parser.add_argument('--ses_id', default=None)
 parser.add_argument('--run_id', default=None)
@@ -270,9 +270,9 @@ parser.add_argument('--n_folds', default=None)
 parser.add_argument('--model', default='lassoBIC') 
 
 parser.add_argument('--cv', default='task') #rest 
-parser.add_argument('--cv_task', default='idemo') #None
+parser.add_argument('--cv_task', default=None)
 
-parser.add_argument('--proc_type', default='xcpd') #MSMAll_FIX
+parser.add_argument('--proc_type', default='MSMAll_FIX')
 parser.add_argument('--max_iter', default=1000) 
 parser.add_argument('--test', default=False) 
 
