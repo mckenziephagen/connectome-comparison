@@ -6,15 +6,29 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.16.4
+#       jupytext_version: 1.16.7
 #   kernelspec:
-#     display_name: fc_311
+#     display_name: Python [conda env:base]
 #     language: python
-#     name: fc_311
+#     name: conda-base-py
 # ---
 
-import os
+# +
 import os.path as op
+import os 
+import configparser
+
+current_dir = os.getcwd()
+base_dir = current_dir.split('scripts')[0]
+script_dir = op.join(base_dir , 'scripts')
+results_dir = op.join(base_dir, 'results') 
+analysis_dir = op.join(script_dir, 'notebooks', '02-Analysis')
+config = configparser.ConfigParser()
+config.read(op.join(current_dir.split('scripts')[0],  'config.ini') )
+# -
+
+pkl_dir = config['Paths']['pkls']
+
 from glob import glob
 import pickle
 import numpy as np
@@ -23,12 +37,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import re
 import seaborn as sns
-atlas_spec = 'fsLR_seg-4S156Parcels_den-91k'
-
-test_subjects = pd.read_csv('/global/homes/m/mphagen/functional-connectivity/connectome-comparison/data/test_subjects.txt',
-                           header=None)
-# test_subjects = list(test_subjects) 
-test_subjects = list(test_subjects[0]) 
 
 
 def bids_entities(file): 
@@ -43,35 +51,19 @@ def bids_entities(file):
 def unpack_and_save_results(result_files, atlas_spec, model_id, organized_data_path):     
     results_dict = {} 
     for file in result_files: 
-        sub_id, task_id, ses_id = bids_entities(file)    
+        sub_id, task_id, ses_id = bids_entities(file)  
+        # print(sub_id, task_id, ses_id)
         
         with open(file, 'rb') as f:
              mat = pickle.load(f) 
 
-        if model_id in ['correlation_ses', 'partial_correlation_ses']:
-            print('model id == corr') 
-            conn_mat = mat['full_fc_matrix']
-            if f'sub-{sub_id}' not in results_dict.keys(): 
-            # print(f"adding sub_id, {sub_id}, {ses_id}") 
-                results_dict[f'sub-{sub_id}'] = {} 
-                results_dict[f'sub-{sub_id}'][f'ses-1'] = mat['fold_0']
-                results_dict[f'sub-{sub_id}'][f'ses-2'] = mat['fold_1']
-                results_dict[f'sub-{sub_id}'][f'ses-full'] = conn_mat
+        conn_mat = mat['full_fc_matrix']
+        if f'sub-{sub_id}' not in results_dict.keys(): 
+            results_dict[f'sub-{sub_id}'] = {} 
+            results_dict[f'sub-{sub_id}'][f'ses-1'] = mat['fold_0']['fc_matrix']
+            results_dict[f'sub-{sub_id}'][f'ses-2'] = mat['fold_1']['fc_matrix']
+            results_dict[f'sub-{sub_id}'][f'ses-full'] = conn_mat
     
-        elif model_id not in ['correlation_ses', 'partial_correlation_ses']:
-            print('model id != corr') 
-            try: 
-                conn_mat = mat['full_fc_matrix']
-            except KeyError: 
-                print('key error') 
-                conn_mat = np.nan
-            if f'sub-{sub_id}' not in results_dict.keys(): 
-            # print(f"adding sub_id, {sub_id}, {ses_id}") 
-                results_dict[f'sub-{sub_id}'] = {} 
-                results_dict[f'sub-{sub_id}'][f'ses-1'] = mat['fold_0']['fc_matrix']
-                results_dict[f'sub-{sub_id}'][f'ses-2'] = mat['fold_1']['fc_matrix']
-                results_dict[f'sub-{sub_id}'][f'ses-full'] = conn_mat
-            
     with open(op.join(organized_data_path, 
                       f'{str(datetime.date.today())}_task-{task_id}_space-{atlas_spec}_model-{model_id}_relmat.pkl'), 'wb') as f:
         pickle.dump(results_dict, f) 
@@ -84,15 +76,11 @@ def get_files(derivatives, proc_type, model_id):
     return result_files
 
 
-# ## HCP 
+# ## Human Connectome Project 
 
-fc_bids = '/pscratch/sd/m/mphagen/human-connectome-project-openaccess/HCP1200'
+atlas_spec = 'fsLR_seg-4S156Parcels_den-91k'
+fc_bids = config['Paths']['hcp']
 derivatives = op.join(fc_bids, 'derivatives')
-
-# +
-# fc_bids = '/pscratch/sd/m/mphagen/hcp-functional-connectivity/'
-# derivatives = op.join(fc_bids, 'derivatives') 
-# -
 
 # #### MSMAll FIX
 
@@ -101,59 +89,47 @@ proc_type = 'MSMAll_FIX'
 model_id = 'correlation_ses'
 fix_corr_results = get_files(derivatives, proc_type, model_id)
 print(len(fix_corr_results)) 
+organized_data_path = op.join(pkl_dir, proc_type)
 
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
 os.makedirs(organized_data_path, exist_ok=True) 
 
 results_dict = unpack_and_save_results(fix_corr_results, atlas_spec, model_id, organized_data_path)
 
 # +
-proc_type = 'MSMAll_FIX' 
 model_id = 'partial_correlation_ses'
-msmall_corr_results = get_files(derivatives, proc_type, model_id)
-print(len(msmall_corr_results)) 
-
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
+fix_pcorr_results = get_files(derivatives, proc_type, model_id)
+print(len(fix_pcorr_results)) 
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(msmall_corr_results, atlas_spec, model_id, organized_data_path)
+results_dict = unpack_and_save_results(fix_pcorr_results, atlas_spec, model_id, organized_data_path)
 
 # +
-proc_type = 'MSMAll_FIX' 
 model_id = 'ridgeCV_ses'
-
-fc_bids = '/pscratch/sd/m/mphagen/human-connectome-project-openaccess/HCP1200'
-derivatives = op.join(fc_bids, 'derivatives') 
 
 fix_ridge_results = get_files(derivatives, proc_type, model_id)
 print(len(fix_ridge_results)) 
 
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
 os.makedirs(organized_data_path, exist_ok=True) 
 
 results_dict = unpack_and_save_results(fix_ridge_results, atlas_spec, model_id, organized_data_path)
 
 # +
-proc_type = 'MSMAll_FIX' 
 model_id = 'lassoBIC_ses'
 fix_lasso_results = get_files(derivatives, proc_type, model_id)
 print(len(fix_lasso_results)) 
 
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(fix_lasso_results, atlas_spec, model_id, organized_data_path)
+results_dict = unpack_and_save_results(fix_lasso_results, atlas_spec, model_id, organized_data_path)
 
 # +
-proc_type = 'MSMAll_FIX' 
 model_id = 'uoiLasso_ses'
 fix_uoi_results = get_files(derivatives, proc_type, model_id)
 print(len(fix_uoi_results)) 
 
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(fix_uoi_results, atlas_spec, model_id, organized_data_path)
+uoi_fix_results = unpack_and_save_results(fix_uoi_results, atlas_spec, model_id, organized_data_path)
 # -
 
 # #### XCPD 
@@ -164,115 +140,94 @@ model_id = 'correlation_ses'
 xcpd_corr_results = get_files(derivatives, proc_type, model_id)
 print(len(xcpd_corr_results)) 
 
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
+organized_data_path = op.join(pkl_dir, proc_type)
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(xcpd_corr_results, atlas_spec, model_id, organized_data_path)
+xcpd_corr_dict = unpack_and_save_results(xcpd_corr_results, atlas_spec, model_id, organized_data_path)
 # +
-proc_type = 'xcpd' 
 model_id = 'partial_correlation_ses'
 xcpd_pcorr_results = get_files(derivatives, proc_type, model_id)
 print(len(xcpd_pcorr_results)) 
 
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(xcpd_pcorr_results, atlas_spec, model_id, organized_data_path)
+xcpd_pcorr_dict = unpack_and_save_results(xcpd_pcorr_results, atlas_spec, model_id, organized_data_path)
 # +
-proc_type = 'xcpd' 
 model_id = 'lassoBIC_ses'
-result_files = get_files(derivatives, proc_type, model_id)
-xcpd_lasso_results = []
-for ii in result_files: 
-    sub = int(ii.split('/')[-2].split('-')[-1])
-    if sub in test_subjects: 
-        xcpd_lasso_results.append(ii) 
-        
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
+xcpd_lasso_results = get_files(derivatives, proc_type, model_id)
+print(len(xcpd_lasso_results))
+
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(xcpd_lasso_results, atlas_spec, model_id, organized_data_path)
+xcpd_lasso_results_dict = unpack_and_save_results(xcpd_lasso_results, atlas_spec, model_id, organized_data_path)
 
 # +
-proc_type = 'xcpd' 
 model_id = 'ridgeCV_ses'
 xcpd_ridge_results = get_files(derivatives, proc_type, model_id)
 print(len(xcpd_ridge_results)) 
 
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(xcpd_ridge_results, atlas_spec, model_id, organized_data_path)
+ridge_xcpd_results = unpack_and_save_results(xcpd_ridge_results, atlas_spec, model_id, organized_data_path)
 
 # +
-proc_type = 'xcpd' 
 model_id = 'uoiLasso_ses'
 xcpd_uoi_results = get_files(derivatives, proc_type, model_id)
 print(len(xcpd_uoi_results)) 
 
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(xcpd_uoi_results, atlas_spec, model_id, organized_data_path)
+uoi_xcpd_results = unpack_and_save_results(xcpd_uoi_results, atlas_spec, model_id, organized_data_path)
 # -
-
-# ### MSMAll 
-
-# +
-proc_type = 'MSMAll' 
-model_id = 'correlation_ses'
-msmall_corr_results = get_files(derivatives, proc_type, model_id)
-print(len(msmall_corr_results)) 
-
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
-os.makedirs(organized_data_path, exist_ok=True) 
-
-unpack_and_save_results(msmall_corr_results, atlas_spec, model_id, organized_data_path)
-
-# +
-proc_type = 'MSMAll' 
-model_id = 'lassoBIC_ses'
-msmall_lasso_results = get_files(derivatives, proc_type, model_id)
-print(len(msmall_lasso_results)) 
-
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
-os.makedirs(organized_data_path, exist_ok=True) 
-
-unpack_and_save_results(msmall_lasso_results, atlas_spec, model_id, organized_data_path)
-
-
-# +
-proc_type = 'MSMAll' 
-model_id = 'uoiLasso_ses'
-msmall_uoi_results = get_files(derivatives, proc_type, model_id)
-print(len(msmall_uoi_results)) 
-
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/{proc_type}'
-os.makedirs(organized_data_path, exist_ok=True) 
-
-unpack_and_save_results(msmall_uoi_results, atlas_spec, model_id, organized_data_path)
-# -
-
 
 # ## PNC 
 
-fc_bids = '/pscratch/sd/m/mphagen/PNC'
+fc_bids = config['Paths']['pnc']
 derivatives = op.join(fc_bids, 'derivatives')
 
 # +
 proc_type = 'xcpd' 
 model_id = 'lassoBIC_task'
-result_files = get_files(derivatives, proc_type, model_id)
-pnc_xcpd_results = []
-for ii in result_files: 
-    sub = int(ii.split('/')[-2].split('-')[-1])
-    # if sub in test_subjects: 
-    pnc_xcpd_results.append(ii) 
-        
-organized_data_path = f'/global/u1/m/mphagen/functional-connectivity/connectome-comparison/results/pnc_{proc_type}'
+pnc_lasso_results = get_files(derivatives, proc_type, model_id)
+print(len(pnc_lasso_results))
+
+organized_data_path = op.join(pkl_path, proc_type)
 os.makedirs(organized_data_path, exist_ok=True) 
 
-unpack_and_save_results(pnc_xcpd_results, atlas_spec, model_id, organized_data_path)
+results_dict = unpack_and_save_results(pnc_lasso_results, atlas_spec, model_id, organized_data_path)
+# +
+model_id = 'correlation_task'
+pnc_corr_results = get_files(derivatives, proc_type, model_id)
+print(len(pnc_corr_results))
+        
+os.makedirs(organized_data_path, exist_ok=True) 
+
+results_dict = unpack_and_save_results(pnc_corr_results, atlas_spec, model_id, organized_data_path)
+# +
+model_id = 'partial_correlation_task'
+pnc_pcorr_results = get_files(derivatives, proc_type, model_id)
+print(len(pnc_corr_results))
+
+os.makedirs(organized_data_path, exist_ok=True) 
+
+results_dict = unpack_and_save_results(pnc_pcorr_results, atlas_spec, model_id, organized_data_path)
+# +
+model_id = 'ridgeCV_task'
+pnc_ridge_results = get_files(derivatives, proc_type, model_id)
+print(len(pnc_ridge_results))
+
+os.makedirs(organized_data_path, exist_ok=True) 
+
+results_dict = unpack_and_save_results(pnc_ridge_results, atlas_spec, model_id, organized_data_path)
+
+# +
+model_id = 'uoiLasso_task'
+pnc_uoi_results = get_files(derivatives, proc_type, model_id)
+print(len(pnc_uoi_results))
+        
+os.makedirs(organized_data_path, exist_ok=True) 
+
+results_dict = unpack_and_save_results(pnc_uoi_results, atlas_spec, model_id, organized_data_path)
 # -
 
 
