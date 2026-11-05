@@ -47,19 +47,20 @@ TODO: add an `environment.yml` or `requirements.txt` (the notebooks use the `fc`
 
 FC estimation depends on [`model-fc`](TODO: link), which is expected to be checked out next to this repo.
 
-### R
+### R (TODO: test install steps)
 
-The R environment is managed with renv:
+The R environment is managed with rig and renv:
+Install rig: https://opensource.posit.co/software/rig
 
-TODO: add renv install instructions and test
-
-```r
-renv::restore()
+```bash 
+rig add 4.4.2
+rig default 4.4.2
 ```
 
+Setup renv:
 ```r
-install.packages("devtools")
-devtools::install_github("muschellij2/I2C2")
+install.packages('renv') 
+renv::restore()
 ```
 
 ### Notebooks
@@ -69,7 +70,6 @@ Notebooks are paired with `.py` / `.R` scripts using jupytext (see `jupytext.tom
 ## Configuration
 
 Copy the template for your machine to the repo root and fill in the paths:
-
 
 | Key | Description |
 |---|---|
