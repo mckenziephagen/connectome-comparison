@@ -22,7 +22,7 @@ current_dir = os.getcwd()
 base_dir = current_dir.split('scripts')[0]
 script_dir = op.join(base_dir , 'scripts')
 results_dir = op.join(base_dir, 'results') 
-analysis_dir = op.join(script_dir, 'annalysis', '02-Analysis')
+analysis_dir = op.join(script_dir, 'analysis', '02-Analysis')
 
 config = configparser.ConfigParser()
 config.read(op.join(base_dir,  'config.ini') )
@@ -56,12 +56,8 @@ lasso_fix_df['resid'] = lasso_fix_df.groupby('pos',
 
 
 # %%
-lasso_fix_resid_df = lasso_fix_df.loc[lasso_fix_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-lasso_fix_resid_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 
+lasso_fix_df[['sub', 'ses', 'pos', 
+              'movement', 'resid']].to_csv(op.join(results_dir, 'MSMAll-FIX', 
                                   'proc-FIX_model-lassoBIC_residual-edges.csv'))
 
 # %%
@@ -72,12 +68,8 @@ uoi_fix_df['resid'] = uoi_fix_df.groupby('pos',
 
 
 # %%
-uoi_fix_resid_df = uoi_fix_df.loc[uoi_fix_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-uoi_fix_resid_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 
+uoi_fix_df[['sub', 'ses', 'pos', 
+            'movement', 'resid']].to_csv(op.join(results_dir, 'MSMAll-FIX', 
                                   'proc-FIX_model-uoiLasso_residual-edges.csv'))
 
 # %%
@@ -88,12 +80,8 @@ ridge_fix_df['resid'] = ridge_fix_df.groupby('pos',
 
 
 # %%
-ridge_fix_resid_df = ridge_fix_df.loc[ridge_fix_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-ridge_fix_resid_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 
+ridge_fix_df[['sub', 'ses', 'pos', 
+              'movement', 'resid']].to_csv(op.join(results_dir, 'MSMAll-FIX', 
                                   'proc-FIX_model-ridgeCV_residual-edges.csv'))
 
 # %%
@@ -104,12 +92,8 @@ pearson_fix_df['resid'] = pearson_fix_df.groupby('pos',
 
 
 # %%
-pearson_fix_resid_df = pearson_fix_df.loc[pearson_fix_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-pearson_fix_resid_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 
+pearson_fix_df[['sub', 'ses', 'pos', 
+                'movement', 'resid']].to_csv(op.join(results_dir, 'MSMAll-FIX', 
                                   'proc-FIX_model-Pearson_residual-edges.csv'))
 
 # %%
@@ -120,12 +104,8 @@ pcorr_fix_df['resid'] = pcorr_fix_df.groupby('pos',
 
 
 # %%
-pcorr_fix_resid_df = pcorr_fix_df.loc[pcorr_fix_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-pcorr_fix_resid_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 
+pcorr_fix_df[['sub', 'ses', 'pos', 
+              'movement', 'resid']].to_csv(op.join(results_dir, 'MSMAll-FIX', 
                                   'proc-FIX_model-partial-correlation_residual-edges.csv'))
 
 # %% [markdown]
@@ -139,12 +119,8 @@ lasso_xcpd_df['resid'] = lasso_xcpd_df.groupby('pos',
 
 
 # %%
-lasso_xcpd_resid_df = lasso_xcpd_df.loc[lasso_xcpd_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-lasso_xcpd_resid_df.to_csv(op.join(results_dir, 'XCPD', 
+lasso_xcpd_df[['sub', 'ses', 'pos', 
+               'movement', 'resid']].to_csv(op.join(results_dir, 'XCPD', 
                                   'proc-XCPD_model-lassoBIC_residual-edges.csv'))
 
 # %%
@@ -155,12 +131,8 @@ uoi_xcpd_df['resid'] = uoi_xcpd_df.groupby('pos',
 
 
 # %%
-uoi_xcpd_resid_df = uoi_xcpd_df.loc[uoi_xcpd_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-uoi_xcpd_resid_df.to_csv(op.join(results_dir, 'XCPD', 
+uoi_xcpd_df[['sub', 'ses', 'pos', 
+             'movement', 'resid']].to_csv(op.join(results_dir, 'XCPD', 
                                   'proc-XCPD_model-uoiLasso_residual-edges.csv'))
 
 # %%
@@ -171,12 +143,8 @@ ridge_xcpd_df['resid'] = ridge_xcpd_df.groupby('pos',
 
 
 # %%
-ridge_xcpd_resid_df = ridge_xcpd_df.loc[ridge_xcpd_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-ridge_xcpd_resid_df.to_csv(op.join(results_dir, 'XCPD', 
+ridge_xcpd_df[['sub', 'ses', 'pos', 
+               'movement', 'resid']].to_csv(op.join(results_dir, 'XCPD', 
                                   'proc-XCPD_model-ridgeCV_residual-edges.csv'))
 
 # %%
@@ -187,12 +155,8 @@ pearson_xcpd_df['resid'] = pearson_xcpd_df.groupby('pos',
 
 
 # %%
-pearson_xcpd_resid_df = pearson_xcpd_df.loc[pearson_xcpd_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-pearson_xcpd_resid_df.to_csv(op.join(results_dir, 'XCPD', 
+pearson_xcpd_df[['sub', 'ses', 'pos', 
+                 'movement', 'resid']].to_csv(op.join(results_dir, 'XCPD', 
                                   'proc-XCPD_model-Pearson_residual-edges.csv'))
 
 # %%
@@ -203,10 +167,6 @@ pcorr_xcpd_df['resid'] = pcorr_xcpd_df.groupby('pos',
 
 
 # %%
-pcorr_xcpd_resid_df = pcorr_xcpd_df.loc[pcorr_xcpd_df['ses'] == 'ses-1'].pivot(columns='pos', 
-                                                       index='sub',
-                                                       values='resid')
-
-# %%
-pcorr_xcpd_resid_df.to_csv(op.join(results_dir, 'XCPD', 
+pcorr_xcpd_df[['sub', 'ses', 'pos', 
+               'movement', 'resid']].to_csv(op.join(results_dir, 'XCPD', 
                                   'proc-XCPD_model-partial-correlation_residual-edges.csv'))
