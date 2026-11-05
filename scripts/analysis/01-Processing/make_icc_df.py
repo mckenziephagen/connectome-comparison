@@ -6,12 +6,23 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.16.7
+#       jupytext_version: 1.19.6
 #   kernelspec:
-#     display_name: Python [conda env:fc]
+#     display_name: fc
 #     language: python
-#     name: conda-env-fc-py
+#     name: python3
 # ---
+
+# %% [markdown]
+# Organizes connectomes into long format for reliabilitiy analyses in R. 
+#
+# **Inputs:**
+#
+# - {pkl_dir}/{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-{model_str}_ses_relmat.pkl
+# - data/{dataset}_relative_movement.csv
+#
+# **Outputs:**
+# - results/proc-{proc_type}_model-{model_str}_reliability-edges.csv
 
 # %%
 import os 
@@ -22,18 +33,17 @@ current_dir = os.getcwd()
 base_dir = current_dir.split('scripts')[0]
 script_dir = op.join(base_dir , 'scripts')
 results_dir = op.join(base_dir, 'results') 
-analysis_dir = op.join(script_dir, 'notebooks', '02-Analysis')
+analysis_dir = op.join(script_dir, 'analysis', '02-Analysis')
 
 config = configparser.ConfigParser()
 config.read(op.join(base_dir,  'config.ini') )
-pkl_dir = config['Paths']['pkls']
+pkl_dir = config['Paths']['pkl_dir']
 
 # %%
 from glob import glob 
 import pickle
 import pandas as pd
 import numpy as np
-import datetime
 
 # %%
 date_str = '2026-10-04' 
@@ -56,13 +66,20 @@ movement_df.index = movement_df.index.astype(str)
 
 
 # %%
-def make_icc_df(fc_dict, movement_df):
+def make_icc_df(fc_dict, movement_df, dataset='hcp'):
     temp_list = []
     icc_df = pd.DataFrame(columns=['values', 'ses', 'sub', 'pos'] )
     for sub in list(fc_dict.keys()):
         # print(sub)
         for ses in fc_dict[sub].keys():
-            movement = np.mean(movement_df.loc[sub.split('-')[-1], [f'rfMRI_REST{ses[-1]}_RL', f'rfMRI_REST{ses[-1]}_LR']]) 
+            if dataset == 'hcp':
+                movement = np.mean(movement_df.loc[sub.split('-')[-1], [f'rfMRI_REST{ses[-1]}_RL', f'rfMRI_REST{ses[-1]}_LR']]) 
+            elif dataset == 'pnc': 
+                try: 
+                  movement = movement_df.loc[sub.split('-')[-1]][f'mean_relative_rms_{ses.split('-')[-1]}']
+                #   print(movement)
+                except KeyError: 
+                    movement = np.nan
             temp_list.append(pd.DataFrame(data = {'values': fc_dict[sub][ses].ravel(), 
 
                                'sub':  sub, 
@@ -98,42 +115,26 @@ with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parce
     fix_ridge_dict = pickle.load(l)  
 fix_ridge_dict = delete_full(fix_ridge_dict)
 
-# with open(glob(op.join(results_path, f'*{date_str}*corr-uoiThresh*pkl'))[0], 'rb') as l:
-#     fix_pearson_uoiThresh_dict = pickle.load(l)   
-# fix_pearson_uoiThresh_dict = delete_full(fix_pearson_uoiThresh_dict)
-
-# with open(glob(op.join(results_path, f'*{date_str}*corr-lassoThresh*pkl'))[0], 'rb') as l:
-#     fix_pearson_lassoThresh_dict = pickle.load(l)   
-# fix_pearson_lassoThresh_dict = delete_full(fix_pearson_lassoThresh_dict)
-
 
 # %%
 lasso_fix_icc_df = make_icc_df(fix_lasso_dict, movement_df)
-lasso_fix_icc_df.to_csv(op.join(results_path, f'{date_str}_lasso_fix_icc_df.csv')) 
+lasso_fix_icc_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-lassoBIC_reliability-edges.csv')) 
 
 # %%
 ridge_fix_icc_df = make_icc_df(fix_ridge_dict, movement_df)
-ridge_fix_icc_df.to_csv(op.join(results_path,  f'{date_str}_ridge_fix_icc_df.csv')) 
+ridge_fix_icc_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-ridgeCV_reliability-edges.csv')) 
 
 # %%
 uoi_fix_icc_df = make_icc_df(fix_uoi_dict, movement_df)
-uoi_fix_icc_df.to_csv(op.join(results_path,  f'{date_str}_uoi_fix_icc_df.csv')) 
+uoi_fix_icc_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-uoiLasso_reliability-edges.csv')) 
 
 # %%
 pearson_fix_icc_df = make_icc_df(fix_pearson_dict, movement_df)
-pearson_fix_icc_df.to_csv(op.join(results_path,  f'{date_str}_pearson_fix_icc_df.csv')) 
+pearson_fix_icc_df.to_csv(op.join(results_dir,'MSMAll-FIX',  'proc-FIX_model-Pearson_reliability-edges.csv')) 
 
 # %%
 pcorr_fix_icc_df = make_icc_df(fix_pcorr_dict, movement_df)
-pcorr_fix_icc_df.to_csv(op.join(results_path,  f'{date_str}_pcorr_fix_icc_df.csv')) 
-
-# %%
-pearson_uoiThresh_fix_icc_df = make_icc_df(fix_pearson_uoiThresh_dict, movement_df)
-pearson_uoiThresh_fix_icc_df.to_csv(op.join(results_path,  f'{date_str}_uoiThresh_fix_icc_df.csv')) 
-
-# %%
-pearson_lassoThresh_fix_icc_df = make_icc_df(fix_pearson_lassoThresh_dict, movement_df)
-pearson_lassoThresh_fix_icc_df.to_csv(op.join(results_path,  f'{date_str}_lassoThresh_fix_icc_df.csv')) 
+pcorr_fix_icc_df.to_csv(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-partial-correlation_reliability-edges.csv')) 
 
 # %% [markdown]
 # ### XCPD
@@ -144,103 +145,143 @@ results_path = op.join(pkl_dir, proc_type)
 
 
 # %%
-with open(glob(op.join(results_path, f'*model-correlation*pkl'))[0], 'rb') as l:
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-correlation_ses_relmat.pkl'), 'rb') as l:
     xcpd_pearson_dict = pickle.load(l)
 xcpd_pearson_dict = delete_full(xcpd_pearson_dict)
 
-with open(glob(op.join(results_path, f'*partial*pkl'))[0], 'rb') as l:
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-partial_correlation_ses_relmat.pkl'), 'rb') as l:
     xcpd_pcorr_dict = pickle.load(l)
 xcpd_pcorr_dict = delete_full(xcpd_pcorr_dict)
 
-with open(glob(op.join(results_path, f'*ridgeCV*pkl'))[0], 'rb') as l:
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-ridgeCV_ses_relmat.pkl'), 'rb') as l:
     xcpd_ridge_dict = pickle.load(l)
 xcpd_ridge_dict = delete_full(xcpd_ridge_dict)
 
-with open(glob(op.join(results_path, f'*lassoBIC*pkl'))[0], 'rb') as l:
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-lassoBIC_ses_relmat.pkl'), 'rb') as l:
     xcpd_lasso_dict = pickle.load(l)
 xcpd_lasso_dict = delete_full(xcpd_lasso_dict)
 
-with open(glob(op.join(results_path, f'*uoiLasso*pkl'))[0], 'rb') as l:
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-uoiLasso_ses_relmat.pkl'), 'rb') as l:
     xcpd_uoi_dict = pickle.load(l)
 xcpd_uoi_dict = delete_full(xcpd_uoi_dict)
 
 # %%
 pearson_xcpd_icc_df = make_icc_df(xcpd_pearson_dict, movement_df)
-pearson_xcpd_icc_df.to_csv(op.join(results_path, f'{date_str}_pearson_xcpd_icc_df.csv')) 
+pearson_xcpd_icc_df.to_csv(op.join(results_dir, 'XCPD', 'proc-XCPD_model-Pearson_reliability-edges.csv')) 
 
 # %%
 pcorr_xcpd_icc_df = make_icc_df(xcpd_pcorr_dict, movement_df)
-pcorr_xcpd_icc_df.to_csv(op.join(results_path, f'{date_str}_pcorr_xcpd_icc_df.csv')) 
+pcorr_xcpd_icc_df.to_csv(op.join(results_dir, 'XCPD', 'proc-XCPD_model-partial-correlation_reliability-edges.csv')) 
 
 # %%
 ridge_xcpd_icc_df = make_icc_df(xcpd_ridge_dict, movement_df)
-ridge_xcpd_icc_df.to_csv(op.join(results_path, f'{date_str}_ridge_xcpd_icc_df.csv')) 
+ridge_xcpd_icc_df.to_csv(op.join(results_dir, 'XCPD', 'proc-XCPD_model-ridgeCV_reliability-edges.csv')) 
 
 # %%
 lasso_xcpd_icc_df = make_icc_df(xcpd_lasso_dict, movement_df)
-lasso_xcpd_icc_df.to_csv(op.join(results_path, f'{date_str}_lasso_xcpd_icc_df.csv')) 
+lasso_xcpd_icc_df.to_csv(op.join(results_dir,'XCPD',  'proc-XCPD_model-lassoBIC_reliability-edges.csv')) 
 
 # %%
 uoi_xcpd_icc_df = make_icc_df(xcpd_uoi_dict, movement_df)
-uoi_xcpd_icc_df.to_csv(op.join(results_path, f'{date_str}_uoi_xcpd_icc_df.csv')) 
+uoi_xcpd_icc_df.to_csv(op.join(results_dir,'XCPD', 'proc-XCPD_model-uoiLasso_reliability-edges.csv')) 
 
 # %% [markdown]
 # #### PNC XCPD
 
 # %%
 proc_type = 'pnc_xcpd'
-results_path = f'/pscratch/sd/m/mphagen/storage/results/{proc_type}'
+results_path = op.join(pkl_dir, proc_type)
 
 # %%
-with open(glob(op.join(results_path, f'*-correlation*pkl'))[0], 'rb') as l:
+movement_df = pd.read_csv(op.join(base_dir, 'data', 'pnc_relative_movement.csv'), index_col=0)
+movement_df.index = movement_df.index.astype(str)
+
+# %%
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-correlation_task_relmat.pkl'), 'rb') as l:
     pnc_pearson_dict = pickle.load(l)
 
 # %%
-for sub in pnc_pearson_dict.keys():
-    pnc_pearson_dict[sub].pop('ses-full') 
+pnc_pearson_dict = delete_full(pnc_pearson_dict)
+
+for sub in pnc_pearson_dict.keys(): 
+    pnc_pearson_dict[sub]['ses-rest'] = pnc_pearson_dict[sub].pop('ses-2')
+    pnc_pearson_dict[sub]['ses-idemo'] = pnc_pearson_dict[sub].pop('ses-1')
+
 
 # %%
-with open(glob(op.join(results_path, f'*-lassoBIC*pkl'))[0], 'rb') as l:
+pearson_pnc_icc_df = make_icc_df(pnc_pearson_dict, movement_df, dataset='pnc')
+
+# %%
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-lassoBIC_task_relmat.pkl'), 'rb') as l:
     pnc_lasso_dict = pickle.load(l)
 
-pnc_lasso_dict = delete_full(pnc_lasso_dict) 
+# %%
+pnc_lasso_dict = delete_full(pnc_lasso_dict)
+
+for sub in pnc_lasso_dict.keys(): 
+    pnc_lasso_dict[sub]['ses-rest'] = pnc_lasso_dict[sub].pop('ses-2')
+    pnc_lasso_dict[sub]['ses-idemo'] = pnc_lasso_dict[sub].pop('ses-1')
+
 
 # %%
-with open(glob(op.join(results_path, f'*-ridge*pkl'))[0], 'rb') as l:
+lasso_pnc_icc_df = make_icc_df(pnc_lasso_dict, movement_df, dataset='pnc')
+
+# %%
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-ridgeCV_task_relmat.pkl'), 'rb') as l:
     pnc_ridge_dict = pickle.load(l)
 
+# %%
 pnc_ridge_dict = delete_full(pnc_ridge_dict)
 
+for sub in pnc_ridge_dict.keys(): 
+    pnc_ridge_dict[sub]['ses-rest'] = pnc_ridge_dict[sub].pop('ses-2')
+    pnc_ridge_dict[sub]['ses-idemo'] = pnc_ridge_dict[sub].pop('ses-1')
+
+
 # %%
-with open(glob(op.join(results_path, f'*-partial_correlation*pkl'))[0], 'rb') as l:
+ridge_pnc_icc_df = make_icc_df(pnc_ridge_dict, movement_df, dataset='pnc')
+
+# %%
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-partial_correlation_task_relmat.pkl'), 'rb') as l:
     pnc_pcorr_dict = pickle.load(l)
 
+# %%
 pnc_pcorr_dict = delete_full(pnc_pcorr_dict)
 
+for sub in pnc_pcorr_dict.keys(): 
+    pnc_pcorr_dict[sub]['ses-rest'] = pnc_pcorr_dict[sub].pop('ses-2')
+    pnc_pcorr_dict[sub]['ses-idemo'] = pnc_pcorr_dict[sub].pop('ses-1')
+
+
 # %%
-with open(glob(op.join(results_path, f'*-uoiLasso*pkl'))[0], 'rb') as l:
+pcorr_pnc_icc_df = make_icc_df(pnc_pcorr_dict, movement_df, dataset='pnc')
+
+# %%
+with open(op.join(results_path, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-uoiLasso_task_relmat.pkl'), 'rb') as l:
     pnc_uoi_dict = pickle.load(l)
 
+# %%
 pnc_uoi_dict = delete_full(pnc_uoi_dict)
 
-# %%
-pnc_pearson_df = make_icc_df(pnc_pearson_dict, movement_df) 
-pnc_pearson_df.to_csv(op.join(results_path,  f'{date_str}_pearson_pnc_icc_df.csv')) 
+for sub in pnc_uoi_dict.keys(): 
+    pnc_uoi_dict[sub]['ses-rest'] = pnc_uoi_dict[sub].pop('ses-2')
+    pnc_uoi_dict[sub]['ses-idemo'] = pnc_uoi_dict[sub].pop('ses-1')
+
 
 # %%
-pnc_lasso_df = make_icc_df(pnc_lasso_dict, movement_df) 
-pnc_lasso_df.to_csv(op.join(results_path,  f'{date_str}_lasso_pnc_icc_df.csv')) 
+uoi_pnc_icc_df = make_icc_df(pnc_uoi_dict, movement_df, dataset='pnc')
 
 # %%
-pnc_ridge_df = make_icc_df(pnc_ridge_dict, movement_df) 
-pnc_ridge_df.to_csv(op.join(results_path,  f'{date_str}_ridge_pnc_icc_df.csv')) 
+pearson_pnc_icc_df.to_csv(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-Pearson_reliability-edges.csv')) 
 
 # %%
-pnc_pcorr_df = make_icc_df(pnc_pcorr_dict, movement_df) 
-pnc_pcorr_df.to_csv(op.join(results_path,  f'{date_str}_pcorr_pnc_icc_df.csv')) 
+lasso_pnc_icc_df.to_csv(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-lassoBIC_reliability-edges.csv')) 
 
 # %%
-pnc_uoi_df = make_icc_df(pnc_uoi_dict, movement_df) 
-pnc_uoi_df.to_csv(op.join(results_path,  f'{date_str}_uoi_pnc_icc_df.csv')) 
+ridge_pnc_icc_df.to_csv(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-ridgeCV_reliability-edges.csv')) 
 
 # %%
+pcorr_pnc_icc_df.to_csv(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-partial-correlation_reliability-edges.csv')) 
+
+# %%
+uoi_pnc_icc_df.to_csv(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-uoiLasso_reliability-edges.csv')) 
