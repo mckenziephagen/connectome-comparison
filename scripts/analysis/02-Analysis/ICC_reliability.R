@@ -33,16 +33,16 @@ config <- read.ini("../../../config.ini")
 #
 
 # %% vscode={"languageId": "r"}
-proc_type = 'MSMAll_FIX'
-results_path  <- file.path(config$General$script_dir, 'results')
-plotting_path = file.path(config$General$script_dir, 'results', 'plotting')
+proc_type <- 'MSMAll_FIX'
+results_path  <- file.path(config$Paths$script_dir, 'results')
+plotting_path <- file.path(config$Paths$script_dir, 'results', 'plotting')
 
 # %% vscode={"languageId": "r"}
-lasso_fix_df = read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-lassoBIC_reliability-edges.csv')) 
-pearson_fix_df = read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-Pearson_reliability-edges.csv')) 
-uoi_fix_df = read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-uoiLasso_reliability-edges.csv')) 
-ridge_fix_df = read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-ridgeCV_reliability-edges.csv')) 
-pcorr_fix_df = read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-partial-correlation_reliability-edges.csv')) 
+lasso_fix_df <- read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-lassoBIC_reliability-edges.csv')) 
+pearson_fix_df <- read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-Pearson_reliability-edges.csv')) 
+uoi_fix_df <- read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-uoiLasso_reliability-edges.csv')) 
+ridge_fix_df <- read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-ridgeCV_reliability-edges.csv')) 
+pcorr_fix_df <- read.csv(file.path(results_path, 'MSMAll-FIX', 'proc-FIX_model-partial-correlation_reliability-edges.csv')) 
 
 # %% [markdown]
 # #### ICC 
@@ -62,7 +62,7 @@ lasso_split_df <- split(lasso_fix_df, lasso_fix_df$pos)
 lasso_fix_results <- lapply(lasso_split_df, function(df) {
   edge_icc(df)
 })
-write.csv(lasso_fix_results,file=glue("{plotting_path}/proc-FIX_model-lassoBIC_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
+write.csv(lasso_fix_results,file=glue("{plotting_path}/MSMAll-FIX/proc-FIX_model-lassoBIC_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
 
 # %% vscode={"languageId": "r"}
 pearson_split_df <- split(pearson_fix_df, pearson_fix_df$pos)
@@ -70,7 +70,7 @@ pearson_split_df <- split(pearson_fix_df, pearson_fix_df$pos)
 pearson_fix_results <- lapply(pearson_split_df, function(df) {
   edge_icc(df)
 })
-write.csv(pearson_fix_results,file=glue("{plotting_path}/proc-FIX_model-pearson_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
+write.csv(pearson_fix_results,file=glue("{plotting_path}/MSMAll-FIX/proc-FIX_model-Pearson_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
 
 # %% vscode={"languageId": "r"}
 ridge_split_df <- split(ridge_fix_df, ridge_fix_df$pos)
@@ -79,7 +79,7 @@ ridge_fix_results <- lapply(ridge_split_df, function(df) {
   edge_icc(df)
 })
 
-write.csv(ridge_fix_results,file=glue("{plotting_path}/proc-FIX_model-ridgeCV_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
+write.csv(ridge_fix_results,file=glue("{plotting_path}/MSMAll-FIX/proc-FIX_model-ridgeCV_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
 
 # %% vscode={"languageId": "r"}
 uoi_split_df <- split(uoi_fix_df, uoi_fix_df$pos)
@@ -88,25 +88,25 @@ uoi_fix_results <- lapply(uoi_split_df, function(df) {
   edge_icc(df)
 })
 
-write.csv(uoi_fix_results,file=glue("{plotting_path}/proc-FIX_model-uoiLasso_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
+write.csv(uoi_fix_results,file=glue("{plotting_path}/MSMAll-FIX/proc-FIX_model-uoiLasso_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
 
 # %% vscode={"languageId": "r"}
-pcorr_split_df <- split(pcorr_fix_df, lasso_fix_df$pos)
+pcorr_split_df <- split(pcorr_fix_df, pcorr_fix_df$pos)
 
 pcorr_fix_results <- lapply(pcorr_split_df, function(df) {
   edge_icc(df)
 })
-write.csv(pcorr_fix_results,file=glue("{plotting_path}/proc-FIX_model-partial-correlation_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
+write.csv(pcorr_fix_results,file=glue("{plotting_path}/MSMAll-FIX/proc-FIX_model-partial-correlation_stat-ICC.csv"), row.names=FALSE, col.names=FALSE)
 
 # %% [markdown]
 # ### XCPD
 
 # %% vscode={"languageId": "r"}
-lasso_xcpd_df = read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-lassoBIC_reliability-edges.csv'))
-pearson_xcpd_df = read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-Pearson_reliability-edges.csv')) 
-uoi_xcpd_df = read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-uoiLasso_reliability-edges.csv')) 
-ridge_xcpd_df = read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-ridgeCV_reliability-edges.csv')) 
-pcorr_xcpd_df = read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-partial-correlation_reliability-edges.csv')) 
+lasso_xcpd_df <- read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-lassoBIC_reliability-edges.csv'))
+pearson_xcpd_df <- read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-Pearson_reliability-edges.csv')) 
+uoi_xcpd_df <- read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-uoiLasso_reliability-edges.csv')) 
+ridge_xcpd_df <- read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-ridgeCV_reliability-edges.csv')) 
+pcorr_xcpd_df <- read.csv(file.path(results_path, 'XCPD', 'proc-XCPD_model-partial-correlation_reliability-edges.csv')) 
 
 
 # %% vscode={"languageId": "r"}
