@@ -40,14 +40,12 @@ connectome_type = 'uoiLasso'
 with open(f'results/{connectome_type}-bb_dict.pkl', 'rb') as f:
     uoi_results_dict = pickle.load(f)
 
-# %%
-connectome_type = 'ridgeCV'
+    connectome_type = 'ridgeCV'
 
 with open(f'results/{connectome_type}-bb_dict.pkl', 'rb') as f:
     ridge_results_dict = pickle.load(f)
 
-# %%
-connectome_type = 'correlation'
+    connectome_type = 'correlation'
 
 with open(f'results/{connectome_type}-bb_dict.pkl', 'rb') as f:
     corr_results_dict = pickle.load(f)
@@ -84,6 +82,15 @@ ortho_array = error_long.to_numpy()     # shape (n_subjects * n_phenos, 3)
 error_long.to_csv(op.join(results_dir, 'pred_error_df.csv'))
 
 # %%
+error_long.describe()
+
+# %%
+import seaborn as sns
+
+# %%
+sns.histplot(error_long, alpha=.5)
+
+# %%
 from sklearn.decomposition import PCA
 
 pca = PCA()
@@ -92,7 +99,7 @@ ortho_df = pd.DataFrame(ortho_scores, index=error_long.index,
                         columns=[f'PC{i+1}' for i in range(ortho_scores.shape[1])])
 
 print('explained variance ratio:', pca.explained_variance_ratio_.round(3))
-print('loadings (rows = PCs):')
+print('loadings:')
 print(pd.DataFrame(pca.components_, columns=error_long.columns,
                    index=ortho_df.columns).round(3))
 
@@ -100,10 +107,9 @@ print(pd.DataFrame(pca.components_, columns=error_long.columns,
 # %%
 # Project ortho_array onto PC1
 pc1 = pca.components_[0]                          
-centered = ortho_array - pca.mean_
 
-# 1) PC1 coordinates: one score per (subject, pheno); same as ortho_df['PC1']
-pc1_scores = centered @ pc1                       # shape (n,)
+# 1) PC1 scores
+pc1_scores = ortho_df['PC1']                  
 
 # 2) The same projection expressed in the original 3 error columns
 #    shared error component for each connectome type)
@@ -120,3 +126,47 @@ from scipy.stats import friedmanchisquare as fried
 # %%
 fried(pc1_proj_df['correlation'], 
       pc1_proj_df['uoiLasso'], pc1_proj_df['ridgeCV'])
+
+# %% [markdown]
+# Okay, let's try again: 
+
+# %%
+pca = PCA()
+
+# %%
+corr_df = get_errors(corr_results_dict).dropna()
+
+uoi_df = get_errors(uoi_results_dict).dropna()
+
+# %%
+corr_scores = pca.fit_transform(corr_df)
+
+# %%
+corr_scores[0]
+
+# %%
+pca.components_.shape
+
+# %%
+np.outer(uoi_df,pca.components_[0] )
+
+# %%
+np.outer(uoi_df,pca.components_[0])
+
+# %% [markdown]
+# Ariel's second idea: 
+
+# %%
+error_long
+
+# %%
+error_long
+
+# %%
+error_long.reset_index().groupby('subject_id').mean
+
+# %%
+error_long.mean(axis=1)
+
+# %% [markdown]
+#
