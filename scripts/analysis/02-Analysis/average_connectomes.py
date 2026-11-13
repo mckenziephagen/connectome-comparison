@@ -49,14 +49,7 @@ fix_pearson_dict, fix_uoi_dict, fix_lasso_dict, fix_pcorr_dict, fix_ridge_dict =
 
 xcpd_pearson_dict, xcpd_uoi_dict, xcpd_lasso_dict, xcpd_pcorr_dict, xcpd_ridge_dict = read_pickles(date_str, 'xcpd', pkl_dir)
 
-
-# %% [markdown]
-# ### PNC 
-
-# %%
-# for sub in pnc_lasso_dict.keys(): 
-#     pnc_lasso_dict[sub]['ses-median'] = np.median([pnc_lasso_dict[sub]['ses-1'], pnc_lasso_dict[sub]['ses-2']], axis=0) 
-# pnc_lasso_dict = delete_ses(pnc_lasso_dict)
+pnc_pearson_dict, pnc_uoi_dict, pnc_lasso_dict, pnc_pcorr_dict, pnc_ridge_dict = read_pickles(date_str, 'pnc_xcpd', pkl_dir, cv_type='task')
 
 
 # %% [markdown]
@@ -84,72 +77,108 @@ xcpd_pcorr_mat = make_mat(xcpd_pcorr_dict)
 
 xcpd_uoi_mat = make_mat(xcpd_uoi_dict)
 
+# %% [markdown]
+# ### PNC
+#
+# PNC has no "full" connectome like HCP, so use ses-2 (rest; ses-1 is the idemo task).
+
+# %%
+pnc_lasso_mat = make_mat(pnc_lasso_dict, ses='2')
+
+pnc_pearson_mat = make_mat(pnc_pearson_dict, ses='2')
+
+pnc_ridge_mat = make_mat(pnc_ridge_dict, ses='2')
+
+pnc_pcorr_mat = make_mat(pnc_pcorr_dict, ses='2')
+
+pnc_uoi_mat = make_mat(pnc_uoi_dict, ses='2')
+
 
 # %%
 xcpd_lasso_mean = np.mean(xcpd_lasso_mat, axis=2)
 fix_lasso_mean = np.mean(fix_lasso_mat, axis=2)
+pnc_lasso_mean = np.mean(pnc_lasso_mat, axis=2)
 
 xcpd_ridge_mean = np.mean(xcpd_ridge_mat, axis=2)
 fix_ridge_mean = np.mean(fix_ridge_mat, axis=2)
+pnc_ridge_mean = np.mean(pnc_ridge_mat, axis=2)
 
 xcpd_uoi_mean = np.mean(xcpd_uoi_mat, axis=2)
 fix_uoi_mean = np.mean(fix_uoi_mat, axis=2)
+pnc_uoi_mean = np.mean(pnc_uoi_mat, axis=2)
 
 
 fix_pcorr_mean = np.mean(fix_pcorr_mat, axis=2)
+pnc_pcorr_mean = np.mean(pnc_pcorr_mat, axis=2)
 xcpd_pcorr_mean = np.mean(xcpd_pcorr_mat, axis=2)
 
 xcpd_pearson_mean = np.mean(xcpd_pearson_mat, axis=2)
 fix_pearson_mean = np.mean(fix_pearson_mat, axis=2)
+pnc_pearson_mean = np.mean(pnc_pearson_mat, axis=2)
 
 
 # %%
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-lassoBIC_stat-mean_connectome.txt'), fix_lasso_mean)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-lassoBIC_stat-mean_connectome.txt'), xcpd_lasso_mean)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-lassoBIC_stat-mean_connectome.txt'), pnc_lasso_mean)
 
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-ridgeCV_stat-mean_connectome.txt'), fix_ridge_mean)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-ridgeCV_stat-mean_connectome.txt'), xcpd_ridge_mean) 
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-ridgeCV_stat-mean_connectome.txt'), pnc_ridge_mean)
 
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-uoiLasso_stat-mean_connectome.txt'), fix_uoi_mean)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-uoiLasso_stat-mean_connectome.txt'), xcpd_uoi_mean)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-uoiLasso_stat-mean_connectome.txt'), pnc_uoi_mean)
 
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-Pearson_stat-mean_connectome.txt'), fix_pearson_mean)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-Pearson_stat-mean_connectome.txt'), xcpd_pearson_mean)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-Pearson_stat-mean_connectome.txt'), pnc_pearson_mean)
 
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-partial-correlation_stat-mean_connectome.txt'), fix_pcorr_mean)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-partial-correlation_stat-mean_connectome.txt'), xcpd_pcorr_mean)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-partial-correlation_stat-mean_connectome.txt'), pnc_pcorr_mean)
 
 # %%
 xcpd_lasso_median = np.median(xcpd_lasso_mat, axis=2)
 fix_lasso_median = np.median(fix_lasso_mat, axis=2)
+pnc_lasso_median = np.median(pnc_lasso_mat, axis=2)
 
 xcpd_uoi_median = np.median(xcpd_uoi_mat, axis=2)
 fix_uoi_median = np.median(fix_uoi_mat, axis=2)
+pnc_uoi_median = np.median(pnc_uoi_mat, axis=2)
 
 xcpd_ridge_median = np.median(xcpd_ridge_mat, axis=2)
 fix_ridge_median = np.median(fix_ridge_mat, axis=2)
+pnc_ridge_median = np.median(pnc_ridge_mat, axis=2)
 
 xcpd_pearson_median = np.median(xcpd_pearson_mat, axis=2)
 fix_pearson_median = np.median(fix_pearson_mat, axis=2)
+pnc_pearson_median = np.median(pnc_pearson_mat, axis=2)
 
 xcpd_pcorr_median = np.median(xcpd_pcorr_mat, axis=2)
 fix_pcorr_median = np.median(fix_pcorr_mat, axis=2)
+pnc_pcorr_median = np.median(pnc_pcorr_mat, axis=2)
 
 # %%
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-lassoBIC_stat-median_connectome.txt'), fix_lasso_median)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-lassoBIC_stat-median_connectome.txt'), xcpd_lasso_median)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-lassoBIC_stat-median_connectome.txt'), pnc_lasso_median)
 
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-ridgeCV_stat-median_connectome.txt'), fix_ridge_median)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-ridgeCV_stat-median_connectome.txt'), xcpd_ridge_median)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-ridgeCV_stat-median_connectome.txt'), pnc_ridge_median)
 
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-uoiLasso_stat-median_connectome.txt'), fix_uoi_median)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-uoiLasso_stat-median_connectome.txt'), xcpd_uoi_median)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-uoiLasso_stat-median_connectome.txt'), pnc_uoi_median)
 
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-Pearson_stat-median_connectome.txt'), fix_pearson_median)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-Pearson_stat-median_connectome.txt'), xcpd_pearson_median)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-Pearson_stat-median_connectome.txt'), pnc_pearson_median)
 
 np.savetxt(op.join(results_dir, 'MSMAll-FIX', 'proc-FIX_model-partial-correlation_stat-median_connectome.txt'), fix_pcorr_median)
 np.savetxt(op.join(results_dir, 'XCPD', 'proc-XCPD_model-partial-correlation_stat-median_connectome.txt'), xcpd_pcorr_median)
+np.savetxt(op.join(results_dir, 'PNC_XCPD', 'proc-PNC_model-partial-correlation_stat-median_connectome.txt'), pnc_pcorr_median)
 
 # %% [markdown]
 # Save csvs for Talita. 
