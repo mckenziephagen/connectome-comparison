@@ -113,18 +113,6 @@ def two_samp_discrim(x1_fc_dict, x2_fc_dict):
 fix_pearson_stat = one_samp_discrim(fix_pearson_dict).stat
 
 # %%
-two_samp_discrim(fix_pearson_dict, fix_lasso_dict) 
-
-# %%
-two_samp_discrim(fix_pearson_dict, fix_ridge_dict) 
-
-# %%
-two_samp_discrim(fix_pearson_dict, fix_uoi_dict) 
-
-# %%
-two_samp_discrim(fix_pearson_dict, fix_pcorr_dict) 
-
-# %%
 fix_lasso_stat = one_samp_discrim(fix_lasso_dict).stat
 
 # %%
@@ -137,7 +125,19 @@ fix_pcorr_stat = one_samp_discrim(fix_pcorr_dict).stat
 fix_uoi_stat = one_samp_discrim(fix_uoi_dict).stat
 
 # %%
-fix_uoi_stat
+two_samp_discrim(fix_pearson_dict, fix_lasso_dict) 
+
+# %%
+two_samp_discrim(fix_pearson_dict, fix_ridge_dict) 
+
+# %%
+two_samp_discrim(fix_pearson_dict, fix_uoi_dict) 
+
+# %%
+two_samp_discrim(fix_pearson_dict, fix_pcorr_dict) 
+
+# %% [markdown]
+# #### XCPD
 
 # %%
 two_samp_discrim(xcpd_pearson_dict, xcpd_lasso_dict) 
@@ -158,25 +158,16 @@ xcpd_pearson_stat = one_samp_discrim(xcpd_pearson_dict).stat
 xcpd_lasso_stat = one_samp_discrim(xcpd_lasso_dict).stat
 
 # %%
-xcpd_lasso_stat
-
-# %%
 xcpd_ridge_stat = one_samp_discrim(xcpd_ridge_dict).stat
 
 # %%
 xcpd_pcorr_stat = one_samp_discrim(xcpd_pcorr_dict).stat
 
 # %%
-xcpd_ridge_stat
-
-# %%
-xcpd_pcorr_stat
-
-# %%
 xcpd_uoi_stat = one_samp_discrim(xcpd_uoi_dict).stat
 
-# %%
-xcpd_uoi_stat
+# %% [markdown]
+# ### PNC
 
 # %%
 with open(op.join(pkl_dir, 'pnc_xcpd', f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-lassoBIC_task_relmat.pkl'),   'rb') as f:
@@ -223,16 +214,7 @@ pnc_ridge_stat = one_samp_discrim(pnc_ridge_dict).stat
 pnc_pcorr_stat = one_samp_discrim(pnc_pcorr_dict).stat
 
 # %%
-pnc_ridge_stat
-
-# %%
-pnc_pcorr_stat
-
-# %%
 pnc_uoi_stat = one_samp_discrim(pnc_uoi_dict).stat
-
-# %%
-pnc_uoi_stat
 
 # %%
 fix_discrim_dict = {'fix_lasso': fix_lasso_stat, 
@@ -271,4 +253,4 @@ results_df = pd.DataFrame({'MSMAll_FIX': list(fix_discrim_dict.values()),
 
 
 # %%
-results_df.to_csv('results/2026-10-05_discrim.csv') 
+results_df.to_csv(op.join(results_dir, 'plotting', 'stat-discrim.csv') )
