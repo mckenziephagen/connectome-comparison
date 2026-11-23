@@ -2,6 +2,19 @@ import os.path as op
 import pickle
 import numpy as np
 
+PHENO_LIST = [
+    'Age_in_Yrs',
+    'CogCrystalComp_Unadj',
+    'CogFluidComp_Unadj',
+    'CogTotalComp_Unadj',
+    'DDisc_AUC_200',
+    'Endurance_Unadj',
+    'IWRD_TOT',
+    'ReadEng_Unadj',
+    'SCPT_SEN',
+    'VSPLOT_TC'
+]
+
 def read_pickles(date_str, proc_type, results_dir, cv_type='ses'): 
 
     with open(op.join(results_dir, proc_type, f'{date_str}_task-rest_space-fsLR_seg-4S156Parcels_den-91k_model-correlation_{cv_type}_relmat.pkl'), 'rb') as f:
@@ -41,3 +54,4 @@ def glob_pkls(cm_path, proc_type, connectome_type):
     pkl_path = op.join(cm_path, proc_type, connectome_type, 'sub-*', '*pkl')
     pkl_files = glob(pkl_path)
     return pkl_files
+
