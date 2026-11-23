@@ -29,11 +29,12 @@ config.read(op.join(current_dir.split('scripts')[0],  'config.ini') )
 
 
 # %%
-from sklearn.linear_model import LassoCV
+from sklearn.linear_model import LassoLarsIC, LassoCV
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
-from sklearn.model_selection import GroupKFold
+from sklearn.model_selection import GroupKFold, LeaveOneGroupOut
+from joblib import Parallel, delayed
 import pandas as pd
 import numpy as np
 from copy import deepcopy
@@ -54,6 +55,16 @@ args = argparse.Namespace()
 
 parser = argparse.ArgumentParser()
 #https://stackoverflow.com/questions/48796169/how-to-fix-ipykernel-launcher-py-error-unrecognized-arguments-in-jupyter
+
+def str2bool(v):
+    # type=bool treats any non-empty string (including 'False') as True
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('true', 't', '1', 'yes'):
+        return True
+    if v.lower() in ('false', 'f', '0', 'no'):
+        return False
+    raise argparse.ArgumentTypeError(f'expected a boolean, got {v!r}')
 
 parser.add_argument('--seed',default=1)
 parser.add_argument('--date_str', default='2026-10-04')
@@ -77,6 +88,17 @@ parser.add_argument('--out_dir', default=None,
                     help='output directory (default: results/predictions[/resamples])')
 parser.add_argument('--suffix', default='',
                     help='string appended to the non-resampled output filename, e.g. _NO-GROUP')
+parser.add_argument('--cv_group', default=None, choices=['family', 'subject'],
+                    help='unit kept together in CV folds (default: family for hcp, subject for pnc). '
+                         'HCP is a twin/sibling sample, so grouping by subject lets relatives '
+                         'land in both train and test')
+parser.add_argument('--cv', default='kfold', choices=['kfold', 'logo'],
+                    help="'kfold': 5-fold GroupKFold. 'logo': leave one group out, i.e. "
+                         "leave-one-family-out with --cv_group family")
+parser.add_argument('--pheno', default=None,
+                    help='run one phenotype, by index into PHENO_LIST or by name (default: all)')
+parser.add_argument('--n_jobs', default=1, type=int,
+                    help='number of CV folds fitted in parallel')
 
 
 try: 
@@ -99,9 +121,23 @@ ses = args.ses
 n_boot = args.n_boot
 boot_start = args.boot_start
 resample = args.resample if args.resample is not None else n_boot > 1
-save_models = args.save_models if args.save_models is not None else not resample
+cv = args.cv
+# a fitted PCA pipeline per family (~430 folds) is too large to keep, so models
+# are only saved by default for 5-fold runs without resampling
+save_models = (args.save_models if args.save_models is not None
+               else not resample and cv == 'kfold')
+cv_group = args.cv_group or ('family' if dataset == 'hcp' else 'subject')
+n_jobs = args.n_jobs
+if args.pheno is None:
+    pheno_list = PHENO_LIST
+elif str(args.pheno).isdigit():
+    pheno_list = [PHENO_LIST[int(args.pheno)]]
+else:
+    assert args.pheno in PHENO_LIST, f'{args.pheno} is not in PHENO_LIST'
+    pheno_list = [args.pheno]
 
 assert dataset in ['hcp', 'pnc']
+assert not (cv_group == 'family' and dataset != 'hcp'), 'family grouping is only defined for hcp'
 assert proc_type in ['MSMAll-FIX', 'xcpd']
 assert predictors in ['edges', 'ave_cont', 'degree_weighted', 'degree_unweighted']
 
@@ -112,7 +148,7 @@ random.seed(seed)
 np.random.seed(seed)
 
 print(f'{connectome_type}: resample={resample}, boots {boot_start}-{boot_start + n_boot - 1}, '
-      f'seed={seed}, save_models={save_models}')
+      f'seed={seed}, save_models={save_models}, cv_group={cv_group}')
 
 # %%
 with open(op.join(base_dir, 'data', f'documented_subs.txt'), 'r') as file:
@@ -123,6 +159,22 @@ cog_df = pd.read_csv(op.join(base_dir, 'data', 'restricted',
                               'hcp_phenotype_cleaned.csv'), 
                               index_col=0)
 
+# %%
+# CV group label for each subject. With 'family', twins/siblings always fall in
+# the same fold; with 'subject', each subject is its own group (bootstrap
+# duplicates still stay together either way)
+if cv_group == 'family':
+    restricted_df = pd.read_csv(op.join(base_dir, 'data', 'restricted',
+                                        'RESTRICTED_1_31_2022_23_26_45.csv'),
+                                usecols=['Subject', 'Family_ID'])
+    group_map = pd.Series(restricted_df['Family_ID'].values,
+                          index=[f'sub-{s}' for s in restricted_df['Subject']])
+else:
+    group_map = None
+
+
+# %% [markdown]
+#
 
 # %%
 def calc_bic(pipeline, X_train, y_train):
@@ -155,7 +207,7 @@ fc_df = fc_df.dropna(axis=1)
 # random_state is only consumed by LassoCV when selection='random' and by PCA
 # when the randomized/arpack solver is used, but pinning it makes the pipeline
 # deterministic regardless of which solver sklearn picks for a given data shape
-model = LassoCV(random_state=seed)
+model = LassoCV()
 if pca == True: 
     pl = Pipeline([ ('scaler', StandardScaler()), ('PCA', PCA(random_state=seed)), ('model', model)])
 else: 
@@ -167,19 +219,31 @@ def predict_pheno(data, pl, pheno):
     results_dict = {} 
     X = np.array(data.drop(pheno, axis=1) )
     y = np.array(data[pheno] ) 
-    groups = np.array(data.index)
-    kf = GroupKFold(n_folds)
+    sub_ids = np.array(data.index)
+    if group_map is not None:
+        missing = data.index.difference(group_map.index)
+        assert len(missing) == 0, f'no Family_ID for {len(missing)} subjects, e.g. {list(missing[:3])}'
+        groups = group_map.loc[data.index].values
+    else:
+        groups = sub_ids
+    kf = GroupKFold(n_folds) if cv == 'kfold' else LeaveOneGroupOut()
 
-    for fold, (train_index, test_index) in enumerate(kf.split(X, y, groups)):
+    # folds are independent, so they can be fitted in parallel (--n_jobs); with
+    # n_jobs > 1 each worker gets its own copy of pl
+    def fit_fold(fold, train_index, test_index):
+        results_dict = {}
         results_dict[f'fold_{fold}'] = {}
 
         target_scaler = StandardScaler() 
         train_X = X[train_index]
         train_y = target_scaler.fit_transform(y[train_index].reshape(-1, 1)).ravel()
-        train_y = y[train_index]
         test_X = X[test_index]
-        test_y = y[test_index]
         test_y = target_scaler.transform(y[test_index].reshape(-1, 1)).ravel()
+
+        # LassoCV chooses alpha with its own internal CV; by default that's plain
+        # KFold, which splits relatives. Give it splits grouped like the outer CV.
+        inner_splits = list(GroupKFold(n_folds).split(train_X, groups=groups[train_index]))
+        pl.set_params(model__cv=inner_splits)
 
         pl.fit(X= train_X, y=train_y)      
         r2 = pl.score(test_X, test_y)
@@ -190,7 +254,13 @@ def predict_pheno(data, pl, pheno):
                                         "ll": ll,
                                         "bic": bic, 
                                         "error": error, 
-                                        "sub_order": groups[test_index],
+                                        "sub_order": sub_ids[test_index],
+                                        "cv_group": cv_group,
+                                        # original units, so predictions can be pooled across folds
+                                        # (per-fold r2 is undefined for 1-4 person LOFO test folds)
+                                        "y_true": y[test_index],
+                                        "y_pred": target_scaler.inverse_transform(
+                                            pl.predict(test_X).reshape(-1, 1)).ravel(),
                                         # lightweight model summary, kept even when models aren't saved
                                         "alpha": pl['model'].alpha_,
                                         "coef": pl['model'].coef_.copy(),
@@ -198,6 +268,13 @@ def predict_pheno(data, pl, pheno):
         if save_models:
             results_dict[f'fold_{fold}']["model"] = deepcopy(pl)
             # print(acc)
+        return results_dict
+
+    fold_results = Parallel(n_jobs=n_jobs)(
+        delayed(fit_fold)(fold, train_index, test_index)
+        for fold, (train_index, test_index) in enumerate(kf.split(X, y, groups)))
+    for fold_result in fold_results:
+        results_dict.update(fold_result)
     return results_dict
 
 
@@ -205,7 +282,7 @@ def predict_pheno(data, pl, pheno):
 results_dict = {}  
 sub_order = [] 
 #if resample: 
-for pheno in PHENO_LIST:
+for pheno in pheno_list:
     results_dict[pheno] = {}
     pheno_data = pd.concat([fc_df, cog_df[pheno]], join='inner', axis=1).dropna(axis=0)
 
@@ -224,7 +301,12 @@ for pheno in PHENO_LIST:
 # %%
 
 out_dir = args.out_dir or op.join(analysis_dir, 'results', 'predictions')
-out_name = f'{proc_type}_{dataset}_{connectome_type}_pca-{pca}-nboots_{n_boot}_dict{args.suffix}.pkl'
+# 5-fold keeps its original name; leave-one-group-out runs are tagged so they don't overwrite it
+cv_part = '' if cv == 'kfold' else {'family': '_cv-lofo', 'subject': '_cv-loso'}[cv_group]
+# a single-phenotype run (--pheno) is tagged so array tasks don't overwrite each other;
+# combine them with merge_predictions.py --mode lofo
+pheno_part = f'_pheno-{pheno_list[0]}' if args.pheno is not None else ''
+out_name = f'{proc_type}_{dataset}_{connectome_type}_pca-{pca}-nboots_{n_boot}{cv_part}{pheno_part}_dict{args.suffix}.pkl'
 
 # only skip saving inside an interactive kernel; checking ipykernel directly is
 # more robust than the os.environ['_'] test, which isn't guaranteed under Slurm
