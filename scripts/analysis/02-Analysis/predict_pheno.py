@@ -27,12 +27,13 @@ config = configparser.ConfigParser()
 config.read(op.join(current_dir.split('scripts')[0],  'config.ini') )
 
 
+
 # %%
 from sklearn.linear_model import LassoCV
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
-from sklearn.model_selection import GroupKFold, KFold
+from sklearn.model_selection import GroupKFold
 import pandas as pd
 import numpy as np
 from copy import deepcopy
@@ -54,19 +55,10 @@ args = argparse.Namespace()
 parser = argparse.ArgumentParser()
 #https://stackoverflow.com/questions/48796169/how-to-fix-ipykernel-launcher-py-error-unrecognized-arguments-in-jupyter
 
-def str2bool(v):
-    # type=bool treats any non-empty string (including 'False') as True
-    if isinstance(v, bool):
-        return v
-    if v.lower() in ('true', 't', '1', 'yes'):
-        return True
-    if v.lower() in ('false', 'f', '0', 'no'):
-        return False
-    raise argparse.ArgumentTypeError(f'expected a boolean, got {v!r}')
-
-parser.add_argument('--seed', default=1, type=int)
+parser.add_argument('--seed',default=1)
+parser.add_argument('--date_str', default='2026-10-04')
 parser.add_argument('--proc_type', default='MSMAll-FIX')
-parser.add_argument('--connectome_type', default='correlation')
+parser.add_argument('--connectome_type', default='lassoBIC')
 parser.add_argument('--ses', default='full')
 parser.add_argument('--dataset', default='hcp')
 parser.add_argument('--predictors', default='edges')
@@ -96,6 +88,7 @@ except KeyError:
     notebook = True
 
 seed = args.seed
+date_str = args.date_str
 proc_type = args.proc_type
 
 dataset = args.dataset
@@ -109,7 +102,7 @@ resample = args.resample if args.resample is not None else n_boot > 1
 save_models = args.save_models if args.save_models is not None else not resample
 
 assert dataset in ['hcp', 'pnc']
-assert proc_type in ['MSMAll-FIX', 'xcpd', 'PNC_XCPD']
+assert proc_type in ['MSMAll-FIX', 'xcpd']
 assert predictors in ['edges', 'ave_cont', 'degree_weighted', 'degree_unweighted']
 
 n_folds = 5
@@ -122,20 +115,13 @@ print(f'{connectome_type}: resample={resample}, boots {boot_start}-{boot_start +
       f'seed={seed}, save_models={save_models}')
 
 # %%
-if dataset == 'hcp': 
-    with open(op.join(base_dir, 'data', f'documented_subs.txt'), 'r') as file:
-        sub_list = file.read().splitlines()
-    print(len(sub_list))
+with open(op.join(base_dir, 'data', f'documented_subs.txt'), 'r') as file:
+    sub_list = file.read().splitlines()
+print(len(sub_list))
 
-    cog_df = pd.read_csv(op.join(base_dir, 'data', 'restricted',
+cog_df = pd.read_csv(op.join(base_dir, 'data', 'restricted',
                               'hcp_phenotype_cleaned.csv'), 
                               index_col=0)
-elif dataset == 'pnc':
-    cog_df = pd.read_csv(op.join(base_dir, 'data', 
-                               'study-PNC_desc-participants.tsv'), sep='\t')
-    cog_df.index = [f'sub-{sub}' for sub in cog_df['participant_id']]
-
-    PHENO_LIST = ['age', 'p_factor_mcelroy_harmonized_all_samples']
 
 
 # %%
@@ -161,9 +147,8 @@ if dataset == 'hcp':
     index_col=0)
 elif dataset == 'pnc': 
     fc_df = pd.read_csv(op.join(
-                     results_dir, 'PNC_XCPD', 
-    f'proc-PNC_model-{connectome_type}_ses-full_connectome-edges.csv'), index_col=0  ) 
-    
+                     results_dir, 'pnc_xcpd', 
+    f'{date_str}_model-{connectome_type}_ses-{ses}.csv'), index_col=0  ) 
 fc_df = fc_df.dropna(axis=1)
 
 # %%
@@ -178,18 +163,17 @@ else:
 
 
 # %%
-def predict_pheno(data, pl, pheno):
-    results_dict = {}
+def predict_pheno(data, pl, pheno): 
+    results_dict = {} 
     X = np.array(data.drop(pheno, axis=1) )
-    y = np.array(data[pheno] )
-    # grouping by subject ID keeps bootstrap duplicates of a subject in the same fold
+    y = np.array(data[pheno] ) 
     groups = np.array(data.index)
     kf = GroupKFold(n_folds)
 
     for fold, (train_index, test_index) in enumerate(kf.split(X, y, groups)):
         results_dict[f'fold_{fold}'] = {}
 
-       target_scaler = StandardScaler() 
+        target_scaler = StandardScaler() 
         train_X = X[train_index]
         train_y = target_scaler.fit_transform(y[train_index].reshape(-1, 1)).ravel()
         train_y = y[train_index]
@@ -197,7 +181,7 @@ def predict_pheno(data, pl, pheno):
         test_y = y[test_index]
         test_y = target_scaler.transform(y[test_index].reshape(-1, 1)).ravel()
 
-        pl.fit(X= train_X, y=train_y)
+        pl.fit(X= train_X, y=train_y)      
         r2 = pl.score(test_X, test_y)
         ll, bic = calc_bic(pl, train_X, train_y)
 
@@ -218,7 +202,9 @@ def predict_pheno(data, pl, pheno):
 
 
 # %%
-results_dict = {}
+results_dict = {}  
+sub_order = [] 
+#if resample: 
 for pheno in PHENO_LIST:
     results_dict[pheno] = {}
     pheno_data = pd.concat([fc_df, cog_df[pheno]], join='inner', axis=1).dropna(axis=0)
@@ -236,14 +222,9 @@ for pheno in PHENO_LIST:
         print(f'{pheno} boot {boot} done', flush=True)
 
 # %%
-if resample:
-    out_dir = args.out_dir or op.join(analysis_dir, 'results', 'predictions', 'resamples')
-    # zero-padded boot range so merge_resamples.py can glob and sort the chunks
-    out_name = (f'{proc_type}_{dataset}_{connectome_type}_pca-{pca}_seed-{seed}'
-                f'_boot-{boot_start:04d}-{boot_start + n_boot - 1:04d}.pkl')
-else:
-    out_dir = args.out_dir or op.join(analysis_dir, 'results', 'predictions')
-    out_name = f'{proc_type}_{dataset}_{connectome_type}_pca-{pca}-nboots_{n_boot}_dict{args.suffix}.pkl'
+
+out_dir = args.out_dir or op.join(analysis_dir, 'results', 'predictions')
+out_name = f'{proc_type}_{dataset}_{connectome_type}_pca-{pca}-nboots_{n_boot}_dict{args.suffix}.pkl'
 
 # only skip saving inside an interactive kernel; checking ipykernel directly is
 # more robust than the os.environ['_'] test, which isn't guaranteed under Slurm
