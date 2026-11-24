@@ -99,6 +99,12 @@ parser.add_argument('--pheno', default=None,
                     help='run one phenotype, by index into PHENO_LIST or by name (default: all)')
 parser.add_argument('--n_jobs', default=1, type=int,
                     help='number of CV folds fitted in parallel')
+parser.add_argument('--scale_y', default=True, type=str2bool,
+                    help='z-score the target within each training fold (default: True); '
+                         'if False, the model is fit on y in its original units')
+
+parser.add_argument('--n_folds', default=5,
+                    help='')
 
 
 try: 
@@ -128,6 +134,8 @@ save_models = (args.save_models if args.save_models is not None
                else not resample and cv == 'kfold')
 cv_group = args.cv_group or ('family' if dataset == 'hcp' else 'subject')
 n_jobs = args.n_jobs
+scale_y = args.scale_y
+n_folds = args.n_folds
 if args.pheno is None:
     pheno_list = PHENO_LIST
 elif str(args.pheno).isdigit():
@@ -141,7 +149,6 @@ assert not (cv_group == 'family' and dataset != 'hcp'), 'family grouping is only
 assert proc_type in ['MSMAll-FIX', 'xcpd']
 assert predictors in ['edges', 'ave_cont', 'degree_weighted', 'degree_unweighted']
 
-n_folds = 5
 
 # seed the global RNGs too, as a backstop for anything that doesn't take a random_state
 random.seed(seed)
@@ -234,7 +241,8 @@ def predict_pheno(data, pl, pheno):
         results_dict = {}
         results_dict[f'fold_{fold}'] = {}
 
-        target_scaler = StandardScaler() 
+        # with scale_y=False this is an identity transform, so y stays in original units
+        target_scaler = StandardScaler(with_mean=scale_y, with_std=scale_y)
         train_X = X[train_index]
         train_y = target_scaler.fit_transform(y[train_index].reshape(-1, 1)).ravel()
         test_X = X[test_index]
@@ -306,7 +314,9 @@ cv_part = '' if cv == 'kfold' else {'family': '_cv-lofo', 'subject': '_cv-loso'}
 # a single-phenotype run (--pheno) is tagged so array tasks don't overwrite each other;
 # combine them with merge_predictions.py --mode lofo
 pheno_part = f'_pheno-{pheno_list[0]}' if args.pheno is not None else ''
-out_name = f'{proc_type}_{dataset}_{connectome_type}_pca-{pca}-nboots_{n_boot}{cv_part}{pheno_part}_dict{args.suffix}.pkl'
+# unscaled-y runs are tagged so they don't overwrite the default (scaled) output
+scale_part = '' if scale_y else '_scaleY-False'
+out_name = f'{proc_type}_{dataset}_{connectome_type}_pca-{pca}-nboots_{n_boot}{cv_part}{scale_part}{pheno_part}_dict{args.suffix}.pkl'
 
 # only skip saving inside an interactive kernel; checking ipykernel directly is
 # more robust than the os.environ['_'] test, which isn't guaranteed under Slurm
